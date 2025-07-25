@@ -1,0 +1,1 @@
+import{w as a}from"./CziIFdrQ.js";import"./NZTpNUN0.js";import"./Da2KnwWg.js";import{l as e,m as o}from"./DqKU3bFU.js";const s={userLoggedIn:!1,userType:"private",allowGuest:!0,showLibraryForGuests:!0,theme:"light",themeSwitcher:!1},p=a(s);var i=e('<a class="navbar-brand fw-bold" href="/">CORE Platform</a>');function u(t){var r=i();o(t,r)}export{u as L,p as s};
