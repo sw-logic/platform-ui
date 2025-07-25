@@ -8,6 +8,7 @@
 
 	onMount(async () => {
 		const bootstrap = await import('bootstrap');
+		console.log('Haliho!');
 		if (bootstrap) console.log('Bootstrap JS bundle created successfully');
 		else console.error('Failed to load Bootstrap JS bundle');
 	});
