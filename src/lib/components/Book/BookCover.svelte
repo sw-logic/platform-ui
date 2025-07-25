@@ -1,5 +1,5 @@
 <script>
-	export let cover = 'book-1.png';
+	export let cover = 'book-1.webp';
 </script>
 
 <picture class="ratio ratio-book">

@@ -4,6 +4,8 @@ import type { SettingsState } from './types.js';
 const defaultSettings: SettingsState = {
 	userLoggedIn: false,
 	userType: 'private',
+	allowGuest: true,
+	showLibraryForGuests: true,
 	theme: 'light',
 	themeSwitcher: false
 };

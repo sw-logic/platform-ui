@@ -16,7 +16,7 @@
 	<div class="carousel-inner">
 		<div class="carousel-item active">
 			<picture class="bg-image">
-				<img src="images/header/home-dark.png">
+				<img src="images/header/home-dark.webp">
 			</picture>
 			<div class="container text-light">
 				<div class="row">
@@ -47,12 +47,12 @@
 			<button class="btn btn-outline-primary ms-auto">All items <Icon icon="arrow-right" /></button>
 		</div>
 		<div class="grid mt-4">
-			<Book cover="book-1.png" />
-			<Book cover="book-2.png" />
-			<Book cover="book-3.png" />
-			<Book cover="book-4.png" />
-			<Book cover="book-5.png" />
-			<Book cover="book-1.png" />
+			<Book cover="book-1.webp" />
+			<Book cover="book-2.webp" />
+			<Book cover="book-3.webp" />
+			<Book cover="book-4.webp" />
+			<Book cover="book-5.webp" />
+			<Book cover="book-1.webp" />
 		</div>
 		<div class="d-flex justify-content-center mt-5">
 			<button class="btn btn-outline-primary">More history items...</button>
@@ -64,12 +64,12 @@
 			<button class="btn btn-outline-primary ms-auto">All items <Icon icon="arrow-right" /></button>
 		</div>
 		<div class="grid mt-4">
-			<Book cover="book-1.png" />
-			<Book cover="book-2.png" />
-			<Book cover="book-3.png" />
-			<Book cover="book-4.png" />
-			<Book cover="book-5.png" />
-			<Book cover="book-1.png" />
+			<Book cover="book-1.webp" />
+			<Book cover="book-2.webp" />
+			<Book cover="book-3.webp" />
+			<Book cover="book-4.webp" />
+			<Book cover="book-5.webp" />
+			<Book cover="book-1.webp" />
 		</div>
 		<div class="d-flex justify-content-center mt-5">
 			<button class="btn btn-outline-primary">More novelities...</button>
@@ -81,12 +81,12 @@
 			<button class="btn btn-outline-primary ms-auto">All items <Icon icon="arrow-right" /></button>
 		</div>
 		<div class="grid mt-4">
-			<Book cover="book-1.png" />
-			<Book cover="book-2.png" />
-			<Book cover="book-3.png" />
-			<Book cover="book-4.png" />
-			<Book cover="book-5.png" />
-			<Book cover="book-1.png" />
+			<Book cover="book-1.webp" />
+			<Book cover="book-2.webp" />
+			<Book cover="book-3.webp" />
+			<Book cover="book-4.webp" />
+			<Book cover="book-5.webp" />
+			<Book cover="book-1.webp" />
 		</div>
 		<div class="d-flex justify-content-center mt-5">
 			<button class="btn btn-outline-primary">More favorites...</button>

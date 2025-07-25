@@ -1,14 +1,6 @@
 <script lang="ts">
 	import { settings } from '$lib';
 
-	let { showModal = $bindable() } = $props();
-
-	function handleBackdropClick(event) {
-		if (event.target === event.currentTarget) {
-			showModal = false;
-		}
-	}
-
 	function updateUserType(value) {
 		settings.update(s => ({ ...s, userType: value }));
 	}
@@ -19,6 +11,14 @@
 
 	function toggleUserLoggedIn() {
 		settings.update(s => ({ ...s, userLoggedIn: !s.userLoggedIn }));
+	}
+
+	function toggleAllowGuest() {
+		settings.update(s => ({ ...s, allowGuest: !s.allowGuest }));
+	}
+
+	function toggleShowLibraryForGuests() {
+		settings.update(s => ({ ...s, showLibraryForGuests: !s.showLibraryForGuests }));
 	}
 
 	function toggleThemeSwitcher() {
@@ -34,19 +34,18 @@
 				<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
 			</div>
 			<div class="modal-body">
-				<div class="mb-3">
-					<div class="form-check">
-						<input
-							class="form-check-input"
-							type="checkbox"
-							id="userLoggedIn"
-							checked={$settings.userLoggedIn}
-							on:change={toggleUserLoggedIn}
-						>
-						<label class="form-check-label" for="userLoggedIn">
-							User Logged In
-						</label>
-					</div>
+
+				<div class="form-check mb-3">
+					<input
+						class="form-check-input"
+						type="checkbox"
+						id="userLoggedIn"
+						checked={$settings.userLoggedIn}
+						on:change={toggleUserLoggedIn}
+					>
+					<label class="form-check-label" for="userLoggedIn">
+						User Logged In
+					</label>
 				</div>
 
 				<div class="mb-3">
@@ -63,6 +62,34 @@
 						<option value="institutional">Institutional</option>
 					</select>
 				</div>
+
+				<div class="form-check mb-3">
+					<input
+						class="form-check-input"
+						type="checkbox"
+						id="allowGuest"
+						checked={$settings.allowGuest}
+						on:change={toggleAllowGuest}
+					>
+					<label class="form-check-label" for="allowGuest">
+						Allow Guest Access
+					</label>
+				</div>
+
+				<div class="form-check mb-3">
+					<input
+						class="form-check-input"
+						type="checkbox"
+						id="showBooksForGuests"
+						checked={$settings.showLibraryForGuests}
+						on:change={toggleShowLibraryForGuests}
+					>
+					<label class="form-check-label" for="showLibraryForGuests">
+						Show Library for Guests
+					</label>
+				</div>
+
+				<hr>
 
 				<div class="mb-3">
 					<label for="theme" class="form-label">Theme</label>

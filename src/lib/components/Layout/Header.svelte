@@ -2,14 +2,19 @@
 	import ThemeToggle from '../ThemeToggle.svelte';
 	import NavLink from '$lib/components/NavLink.svelte';
 	import SettingsModal from '$lib/components/Modals/SettingsModal.svelte';
-	import { settings } from '$lib/stores/settings.js';
+	import { settings } from '$lib';
 	import ControlIcon from '$lib/components/ControlIcon.svelte';
+	import Logo from '$lib/components/Layout/Logo.svelte';
+
+	function logOut() {
+		settings.update(s => ({ ...s, userLoggedIn: false }));
+	}
 </script>
 
 <header class="shadow-none">
 	<nav class="bg-light navbar navbar-expand-md">
 		<div class="container">
-			<a class="navbar-brand fw-bold" href="/static">CORE Platform</a>
+			<Logo />
 
 			<div class="w-50">
 				<input type="text" class="form-control" placeholder="Search..." aria-label="Search" />
@@ -22,8 +27,8 @@
 					<nav class="navbar py-0 navbar-expand-md">
 						<div class="container">
 							<ul class="navbar-nav gap-3">
-								<li class="nav-item"><NavLink title="Login"/></li>
-								<li class="nav-item"><NavLink title="Register" /></li>
+								<li class="nav-item"><NavLink title="Login" icon="filled-user"/></li>
+								<li class="nav-item"><NavLink title="Register" icon="filled-document-signed" /></li>
 							</ul>
 						</div>
 					</nav>
@@ -37,7 +42,7 @@
 								<li><a class="dropdown-item" href="#">Profile</a></li>
 								<li><a class="dropdown-item" href="#">My subscription</a></li>
 								<li><hr class="dropdown-divider"></li>
-								<li><a class="dropdown-item" href="#">Log out</a></li>
+								<li><a class="dropdown-item" href="#" on:click={logOut}>Log out</a></li>
 							</ul>
 						</li>
 					</ul>
