@@ -43,6 +43,9 @@ To deploy to GitHub Pages:
 yarn deploy
 ```
 
+### <span style="color: red;">⚠️ Important!</span>
+<span style="color: red;">**Deployment changes may take 1–2 minutes to appear on the live site.**</span>
+
 This will build the project and deploy it to GitHub Pages using the gh-pages branch.
 
 You can view the deployed application at: https://sw-logic.github.io/platform-ui
