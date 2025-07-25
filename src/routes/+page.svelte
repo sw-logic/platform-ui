@@ -8,7 +8,7 @@
 
 	onMount(async () => {
 		const bootstrap = await import('bootstrap');
-		if (bootstrap) console.log(`Bootstrap JS bundle loaded at ${new Date().toLocaleTimeString()}`);
+		if (bootstrap) console.log('Bootstrap JS bundle created successfully');
 		else console.error('Failed to load Bootstrap JS bundle');
 	});
 </script>
