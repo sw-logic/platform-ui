@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
 	import Book from '$lib/components/Book/Book.svelte';
 	import Icon from '$lib/components/Icon.svelte';
 	import InfoModal from '$lib/components/Modals/InfoModal.svelte';
@@ -8,7 +8,8 @@
 
 	onMount(async () => {
 		const bootstrap = await import('bootstrap');
-		if (bootstrap) console.log('Bootstrap JS bundle loaded.');
+		if (bootstrap) console.log('Bootstrap JS bundle created successfully');
+		else console.error('Failed to load Bootstrap JS bundle');
 	});
 </script>
 

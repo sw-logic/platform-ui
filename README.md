@@ -35,4 +35,19 @@ npm run build
 
 You can preview the production build with `npm run preview`.
 
-> To deploy your app, you may need to install an [adapter](https://svelte.dev/docs/kit/adapters) for your target environment.
+## Deploying
+
+To deploy to GitHub Pages:
+
+```bash
+yarn deploy
+```
+
+### <span style="color: red;">⚠️ Important!</span>
+<span style="color: red;">**Deployment changes may take 1–2 minutes to appear on the live site.**</span>
+
+This will build the project and deploy it to GitHub Pages using the gh-pages branch.
+
+You can view the deployed application at: https://sw-logic.github.io/platform-ui
+
+> The project uses `@sveltejs/adapter-static` for static site generation and is configured for GitHub Pages deployment.
