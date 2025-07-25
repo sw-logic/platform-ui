@@ -1,0 +1,7 @@
+
+// Generate height utility classes from 50px to 500px with 50px steps
+@for $i from 1 through 10 {
+  .height-#{$i * 50} {
+    height: #{$i * 50}px !important;
+  }
+}

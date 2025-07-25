@@ -1,0 +1,120 @@
+// Variables for the custom theme
+
+// Options for the custom theme
+$enable-rounded: false;
+$enable-cssgrid: true;
+
+// Colors for the custom theme
+$red: #E5202E;
+$blue: #007AC3;
+$cyan: #66CCFF;
+$green: #85BC20;
+$pink: #FF6ECF;
+$yellow: #FFFF00;
+$orange: #EA8F00;
+$purple: #940C72;
+
+$white:    #ffffff;
+$gray-100: #f7f7f7;
+$gray-200: #e7e7e7;
+$gray-300: #c7c7c7;
+$gray-400: #b7b7b7;
+$gray-500: #979797;
+$gray-600: #676767;
+$gray-700: #474747;
+$gray-800: #373737;
+$gray-900: #272727;
+$black:    #000000;
+
+$colors: (
+        "blue":       $blue,
+        "purple":     $purple,
+        "pink":       $pink,
+        "red":        $red,
+        "orange":     $orange,
+        "yellow":     $yellow,
+        "green":      $green,
+        "cyan":       $cyan,
+        "black":      $black,
+        "white":      $white,
+        "gray-light": $gray-200,
+        "gray":       $gray-600,
+        "gray-dark":  $gray-800
+);
+
+$primary:       $blue;
+$secondary:     $green;
+$tertiary:      $red;
+$success:       $green;
+$info:          $blue;
+$warning:       $orange;
+$danger:        $red;
+$lighter:       $gray-100;
+$light:         $gray-200;
+$middle:        $gray-500;
+$dark:          $gray-800;
+$darker:        $gray-900;
+// scss-docs-end theme-color-variables
+
+// scss-docs-start theme-colors-map
+$theme-colors: (
+  "primary":    $primary,
+  "secondary":  $secondary,
+  "success":    $success,
+  "info":       $info,
+  "warning":    $warning,
+  "danger":     $danger,
+  "lighter":    $lighter,
+  "light":      $light,
+  "middle":     $middle,
+  "dark":       $dark,
+  "darker":     $darker
+);
+
+// Grid system for the custom theme
+$grid-breakpoints: ( xs: 0, sm: 600px, md: 1024px, lg: 1366px, xl: 1600px );
+$container-max-widths: ( sm: 100%, md: 100%, lg: 100%, xl: 1540px );
+$grid-gutter-width: 32px;
+
+// Typography for the custom theme
+$font-family-monospace: Fira Mono;
+$font-family-sans-serif: Fira Sans;
+
+$font-size-base: 1rem;
+
+$font-weight-light:     300;
+$font-weight-normal:    400;
+$font-weight-medium:    500;
+$font-weight-semibold:  600;
+$font-weight-bold:      700;
+
+$h1-font-size: $font-size-base * 2;
+$h2-font-size: $font-size-base * 1.75;
+$h3-font-size: $font-size-base * 1.5;
+$h4-font-size: $font-size-base * 1.25;
+$h5-font-size: $font-size-base * 1.125;
+$display1-size: 4,75rem;
+$display2-size: 3rem;
+$display4-size: 2.25rem;
+$enable-shadows: true;
+
+// Spacing for the custom theme
+$spacer: 1rem;
+$spacers: (
+  0: 0,
+  1: $spacer * .25,
+  2: $spacer * .5,
+  3: $spacer,
+  4: $spacer * 1.5,
+  5: $spacer * 3,
+  6: $spacer * 5,
+  7: $spacer * 10,
+);
+
+$badge-font-size:   .75em;
+$badge-font-weight: $font-weight-normal;
+$badge-color:       $white;
+$badge-padding-y:   .5em;
+$badge-padding-x:   .75em;
+
+@import "../../node_modules/bootstrap/scss/bootstrap";

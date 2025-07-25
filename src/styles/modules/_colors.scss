@@ -1,0 +1,11 @@
+@import '../bootstrap-override';
+
+@each $name, $color in $theme-colors {
+  .bg-hover-#{$name}:hover {
+    background-color: shift-color($color, 10%) !important;
+  }
+
+  .text-hover-#{$name}:hover {
+    color: shift-color($color, 20%) !important;
+  }
+}

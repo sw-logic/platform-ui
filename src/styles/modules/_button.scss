@@ -1,0 +1,21 @@
+.btn-control {
+  border: none !important;
+  box-shadow: none !important;
+  background-color: transparent !important;   
+
+  &:hover {
+    background-color: var(--bs-gray-200) !important;
+  }
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+.badge-btn {
+  cursor: pointer;
+
+  &:hover {
+    background-color: var(--bs-gray-200) !important;
+  }
+}
