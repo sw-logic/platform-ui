@@ -14,7 +14,7 @@
 <div class="flex-grow-1 d-flex flex-row">
 	<div class="flex-grow-1 w-50 position-relative">
 		<picture class="bg-image">
-			<img src="images/header/login.webp" alt="">
+			<img src="/images/header/login.webp" alt="">
 		</picture>
 	</div>
 	<div class="flex-grow-1 w-50 d-flex flex-column">

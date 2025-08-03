@@ -3,12 +3,11 @@
 	import Icon from '$lib/components/Icon.svelte';
 	import InfoModal from '$lib/components/Modals/InfoModal.svelte';
 	import ReferenceModal from '$lib/components/Modals/ReferenceModal.svelte';
-
+	import { settings } from '$lib';
 	import { onMount } from 'svelte';
 
 	onMount(async () => {
 		const bootstrap = await import('bootstrap');
-		console.log('Haliho!');
 		if (bootstrap) console.log('Bootstrap JS bundle created successfully');
 		else console.error('Failed to load Bootstrap JS bundle');
 	});
@@ -18,7 +17,7 @@
 	<div class="carousel-inner">
 		<div class="carousel-item active">
 			<picture class="bg-image">
-				<img src="images/header/home-dark.webp">
+				<img alt="Name of the image" src="images/header/home-dark.webp">
 			</picture>
 			<div class="container text-light">
 				<div class="row">
@@ -43,24 +42,7 @@
 </div>
 
 <div class="container py-5">
-	<section>
-		<div class="d-flex align-items-center">
-			<h2>History</h2>
-			<button class="btn btn-outline-primary ms-auto">All items <Icon icon="arrow-right" /></button>
-		</div>
-		<div class="grid mt-4">
-			<Book cover="book-1.webp" />
-			<Book cover="book-2.webp" />
-			<Book cover="book-3.webp" />
-			<Book cover="book-4.webp" />
-			<Book cover="book-5.webp" />
-			<Book cover="book-1.webp" />
-		</div>
-		<div class="d-flex justify-content-center mt-5">
-			<button class="btn btn-outline-primary">More history items...</button>
-		</div>
-	</section>
-	<section class="mt-6">
+	<section class="mb-6">
 		<div class="d-flex align-items-center">
 			<h2>Novelities</h2>
 			<button class="btn btn-outline-primary ms-auto">All items <Icon icon="arrow-right" /></button>
@@ -77,23 +59,48 @@
 			<button class="btn btn-outline-primary">More novelities...</button>
 		</div>
 	</section>
-	<section class="mt-6">
-		<div class="d-flex align-items-center">
-			<h2>Favorites</h2>
-			<button class="btn btn-outline-primary ms-auto">All items <Icon icon="arrow-right" /></button>
-		</div>
-		<div class="grid mt-4">
-			<Book cover="book-1.webp" />
-			<Book cover="book-2.webp" />
-			<Book cover="book-3.webp" />
-			<Book cover="book-4.webp" />
-			<Book cover="book-5.webp" />
-			<Book cover="book-1.webp" />
-		</div>
-		<div class="d-flex justify-content-center mt-5">
-			<button class="btn btn-outline-primary">More favorites...</button>
-		</div>
-	</section>
+
+	<!-- This sections are only visible if the user is logged in -->
+	{#if $settings.userLoggedIn}
+
+		<!-- User's history -->
+		<section class="mb-6">
+			<div class="d-flex align-items-center">
+				<h2>History</h2>
+				<button class="btn btn-outline-primary ms-auto">All items <Icon icon="arrow-right" /></button>
+			</div>
+			<div class="grid mt-4">
+				<Book cover="book-1.webp" />
+				<Book cover="book-2.webp" />
+				<Book cover="book-3.webp" />
+				<Book cover="book-4.webp" />
+				<Book cover="book-5.webp" />
+				<Book cover="book-1.webp" />
+			</div>
+			<div class="d-flex justify-content-center mt-5">
+				<button class="btn btn-outline-primary">More history items...</button>
+			</div>
+		</section>
+
+		<!-- User's favorites -->
+		<section class="mb-6">
+			<div class="d-flex align-items-center">
+				<h2>Favorites</h2>
+				<button class="btn btn-outline-primary ms-auto">All items <Icon icon="arrow-right" /></button>
+			</div>
+			<div class="grid mt-4">
+				<Book cover="book-1.webp" />
+				<Book cover="book-2.webp" />
+				<Book cover="book-3.webp" />
+				<Book cover="book-4.webp" />
+				<Book cover="book-5.webp" />
+				<Book cover="book-1.webp" />
+			</div>
+			<div class="d-flex justify-content-center mt-5">
+				<button class="btn btn-outline-primary">More favorites...</button>
+			</div>
+		</section>
+	{/if}
 </div>
 
 <InfoModal />

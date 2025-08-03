@@ -12,7 +12,7 @@
 </script>
 
 <header class="shadow-none">
-	<nav class="bg-light navbar navbar-expand-md">
+	<nav class="navbar navbar-expand-md">
 		<div class="container">
 			<Logo />
 
@@ -52,18 +52,20 @@
 					<ThemeToggle />
 				{/if}
 
-				<ControlIcon icon="settings" title="Show settings" data-bs-toggle="modal" data-bs-target="#settingsModal" class="ms-auto" />
+				<ControlIcon icon="settings" title="Show settings" data-bs-toggle="offcanvas" data-bs-target="#settingsOffcanvas" class="ms-auto" />
 			</div>
 		</div>
 	</nav>
-	<nav class="bg-dark text-bg-dark navbar py-0 navbar-expand-md" data-bs-theme="dark">
-		<div class="container">
-			<ul class="navbar-nav gap-3">
+	<nav class="bg-dark navbar py-0 navbar-expand-md" data-bs-theme="dark">
+		<div class="container d-flex align-items-center">
+			<ul class="navbar-nav gap-3 align-items-center">
 				<li class="nav-item"><NavLink title="Library" icon="filled-book-open" /></li>
-				<li class="nav-item"><NavLink title="Favorites" icon="filled-heart" /></li>
-				<li class="nav-item"><NavLink title="Folders" icon="filled-folder" /></li>
-				<li class="nav-item"><NavLink title="Downloads" icon="download-line" /></li>
+				<li class="nav-item"><NavLink userLoggedIn={$settings.userLoggedIn} title="Favorites" icon="filled-heart" /></li>
+				<li class="nav-item"><NavLink userLoggedIn={$settings.userLoggedIn} title="Folders" icon="filled-folder" /></li>
+				<li class="nav-item"><NavLink userLoggedIn={$settings.userLoggedIn} title="Downloads" icon="download-line" /></li>
 			</ul>
+
+			<p class="text-center m-0">Please login or register a new account to use our comprehensive toolset.</p>
 		</div>
 	</nav>
 </header>

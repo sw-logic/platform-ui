@@ -37,10 +37,14 @@
 							<div><strong>ISBN</strong>: 978 963 664 115 3</div>
 							<div><strong>DOI</strong>: 10.1556/9789636640118</div>
 							<div><strong>ISSN</strong>: 2786-4324</div>
+							<div><strong>Link</strong>: <a href="#">This is the info link</a></div>
 						</div>
-					</div>
-					<div class="d-flex gap-2 mt-3">
-						<button class="btn btn-sm btn-outline-dark"><Icon icon="download-line" /> Link</button>
+						<div class="d-flex gap-2 mt-3">
+							<button class="btn btn-sm btn-outline-dark"><Icon icon="download-line" /> BibTeX</button>
+							<button class="btn btn-sm btn-outline-dark"><Icon icon="download-line" /> EndNote</button>
+							<button class="btn btn-sm btn-outline-dark"><Icon icon="download-line" /> Mendeley</button>
+							<button class="btn btn-sm btn-outline-dark"><Icon icon="download-line" /> Zotero</button>
+						</div>
 					</div>
 				</div>
 				<hr>
