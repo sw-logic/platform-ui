@@ -1,7 +1,7 @@
 <script>
 	import ThemeToggle from '../ThemeToggle.svelte';
 	import NavLink from '$lib/components/NavLink.svelte';
-	import SettingsModal from '$lib/components/Modals/SettingsModal.svelte';
+	import LoginModal from '$lib/components/Modals/LoginModal.svelte';
 	import { settings } from '$lib';
 	import ControlIcon from '$lib/components/ControlIcon.svelte';
 	import Logo from '$lib/components/Layout/Logo.svelte';
@@ -27,7 +27,7 @@
 					<nav class="navbar py-0 navbar-expand-md">
 						<div class="container">
 							<ul class="navbar-nav gap-3">
-								<li class="nav-item"><NavLink title="Login" icon="filled-user"/></li>
+								<li class="nav-item"><NavLink title="Login" icon="filled-user" data-bs-toggle="modal" data-bs-target="#loginModal"/></li>
 								<li class="nav-item"><NavLink title="Register" icon="filled-document-signed" /></li>
 							</ul>
 						</div>
@@ -37,7 +37,12 @@
 				{:else}
 					<ul class="navbar-nav mx-3">
 						<li class="nav-item dropdown">
-							<a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">John Doe</a>
+							<a class="nav-link dropdown-toggle p-0 d-flex align-items-center" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+								<span>John Doe</span>
+								<picture class="avatar ms-2">
+									<img src="/images/misc/avatar.jpg" alt="">
+								</picture>
+							</a>
 							<ul class="dropdown-menu">
 								<li><a class="dropdown-item" href="#">Profile</a></li>
 								<li><a class="dropdown-item" href="#">My subscription</a></li>
@@ -60,14 +65,14 @@
 		<div class="container d-flex align-items-center">
 			<ul class="navbar-nav gap-3 align-items-center">
 				<li class="nav-item"><NavLink title="Library" icon="filled-book-open" /></li>
-				<li class="nav-item"><NavLink userLoggedIn={$settings.userLoggedIn} title="Favorites" icon="filled-heart" /></li>
-				<li class="nav-item"><NavLink userLoggedIn={$settings.userLoggedIn} title="Folders" icon="filled-folder" /></li>
-				<li class="nav-item"><NavLink userLoggedIn={$settings.userLoggedIn} title="Downloads" icon="download-line" /></li>
+				<li class="nav-item"><NavLink bind:active={$settings.userLoggedIn} title="Favorites" icon="filled-heart" /></li>
+				<li class="nav-item"><NavLink bind:active={$settings.userLoggedIn} title="Folders" icon="filled-folder" /></li>
+				<li class="nav-item"><NavLink bind:active={$settings.userLoggedIn} title="Downloads" icon="download-line" /></li>
 			</ul>
 
-			<p class="text-center m-0">Please login or register a new account to use our comprehensive toolset.</p>
+			<p class="text-center text-muted m-0">Please login or register a new account to use our comprehensive toolset.</p>
 		</div>
 	</nav>
 </header>
 
-<SettingsModal />
+<LoginModal />

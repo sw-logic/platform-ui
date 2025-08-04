@@ -1,27 +1,25 @@
 <script>
 	import Icon from '$lib/components/Icon.svelte';
 
-	let props = $props();
-	let userLoggedIn = 'userLoggedIn' in props ? props.userLoggedIn : true;
-	console.log('userLoggedIn: ', userLoggedIn);
+	let { title, icon, link, class: className, active = $bindable(true), ...props } = $props()
 </script>
 
-{#if userLoggedIn}
-	<a class="nav-link d-flex align-items-center {props.class}" href={props.link || '#'}>
-		{#if props.icon}
-			<Icon icon={props.icon} class="me-2" />
+{#if active}
+	<a class="nav-link d-flex align-items-center {className}" href={link || '#'} {...props}>
+		{#if icon}
+			<Icon icon={icon} class="me-2" />
 		{/if}
-		{#if props.title}
-			{props.title}
+		{#if title}
+			{title}
 		{/if}
 	</a>
 {:else}
-	<span class="text-muted d-flex align-items-center {props.class}">
-		{#if props.icon}
-			<Icon icon={props.icon} class="me-2" />
+	<span class="text-disabled px-2 d-flex align-items-center {className}">
+		{#if icon}
+			<Icon icon={icon} class="me-2" />
 		{/if}
-		{#if props.title}
-			{props.title}
+		{#if title}
+			{title}
 		{/if}
 	</span>
 {/if}

@@ -9,3 +9,7 @@
     color: shift-color($color, 20%) !important;
   }
 }
+
+.text-disabled {
+  color: fade-out($middle, .5) !important;
+}

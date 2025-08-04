@@ -3,5 +3,5 @@
 </script>
 
 <picture class="ratio ratio-book">
-	<img src="images/book/{cover}" class="fit-cover" alt="Name of the book">
+	<img src="/images/book/{cover}" class="fit-cover" alt="Name of the book">
 </picture>
