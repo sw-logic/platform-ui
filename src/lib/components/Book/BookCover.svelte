@@ -3,8 +3,6 @@
 	export let cover = 'book-1.webp';
 	export let type = 'book';
 	export let tag = '';
-
-	console.log('base', base);
 </script>
 
 
