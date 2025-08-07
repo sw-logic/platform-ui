@@ -6,7 +6,7 @@
 
 
 <picture class="book {type}">
-	<img src="/images/book/{cover}" alt="Name of the book">
+	<img src="images/book/{cover}" alt="Name of the book">
 	{#if tag}
 		<span class="book-tag">{tag}</span>
 	{/if}
