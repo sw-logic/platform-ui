@@ -47,7 +47,7 @@
 			<h2>Novelities</h2>
 			<button class="btn btn-outline-primary ms-auto">All items <Icon icon="arrow-right" /></button>
 		</div>
-		<div class="grid mt-4">
+		<div class="grid grid-cols-6 mt-4">
 			<Book cover="book-1.webp" />
 			<Book cover="book-2.webp" />
 			<Book cover="book-3.webp" />
@@ -69,7 +69,7 @@
 				<h2>History</h2>
 				<button class="btn btn-outline-primary ms-auto">All items <Icon icon="arrow-right" /></button>
 			</div>
-			<div class="grid mt-4">
+			<div class="grid grid-cols-6 mt-4">
 				<Book cover="book-1.webp" />
 				<Book cover="book-2.webp" />
 				<Book cover="book-3.webp" />
@@ -88,7 +88,7 @@
 				<h2>Favorites</h2>
 				<button class="btn btn-outline-primary ms-auto">All items <Icon icon="arrow-right" /></button>
 			</div>
-			<div class="grid mt-4">
+			<div class="grid grid-cols-6 mt-4">
 				<Book cover="book-1.webp" />
 				<Book cover="book-2.webp" />
 				<Book cover="book-3.webp" />
