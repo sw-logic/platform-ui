@@ -1,0 +1,27 @@
+@import "../bootstrap-override";
+
+.list-filter {
+  .list-filter-header {
+    padding: .5rem .75rem;
+    background-color: $light;
+
+    input, h5, h6 {
+      margin: 0;
+      line-height: 1;
+    }
+  }
+
+  .list-filter-items {
+    padding: .75rem;
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+  }
+
+  label {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: .5rem;
+  }
+}

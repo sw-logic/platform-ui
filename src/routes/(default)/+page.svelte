@@ -102,6 +102,3 @@
 		</section>
 	{/if}
 </div>
-
-<InfoModal />
-<ReferenceModal />

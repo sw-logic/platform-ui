@@ -1,0 +1,9 @@
+[data-bs-toggle="collapse"] i {
+  transition: .25s all;
+}
+
+[data-bs-toggle="collapse"][aria-expanded="true"] {
+  i {
+    transform: rotate(90deg);
+  }
+}

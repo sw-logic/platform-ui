@@ -1,3 +1,5 @@
+@import "../bootstrap-override";
+
 body {
   display: flex;
   flex-direction: column;
@@ -49,6 +51,18 @@ body {
 
   * {
     z-index: 1;
+  }
+}
+
+.flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@each $breakpoint, $breakpoint-width in $grid-breakpoints {
+  .max-width-#{$breakpoint} {
+    max-width: #{$breakpoint-width} !important;
   }
 }
 

@@ -1,7 +1,8 @@
 .btn-control {
   border: none !important;
   box-shadow: none !important;
-  background-color: transparent !important;   
+  background-color: transparent !important;
+  padding: 3px 7px !important;
 
   &:hover {
     background-color: var(--bs-gray-200) !important;

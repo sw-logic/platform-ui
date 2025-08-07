@@ -1,5 +1,5 @@
-<script>
-import NavLink from '$lib/components/NavLink.svelte';
+<script lang="ts">
+	import NavLink from '$lib/components/NavLink.svelte';
 </script>
 
 <footer class="bg-light py-3 mt-auto">
@@ -10,9 +10,9 @@ import NavLink from '$lib/components/NavLink.svelte';
 				<nav class="navbar py-0 navbar-expand-md">
 					<div class="container">
 						<ul class="navbar-nav gap-3">
-							<li class="nav-item small"><NavLink title="Disclaimer" /></li>
-							<li class="nav-item small"><NavLink title="Privacy statement" /></li>
-							<li class="nav-item small"><NavLink title="Terms & conditions" /></li>
+							<li class="nav-item small"><NavLink href="/docs/disclaimer" title="Disclaimer" /></li>
+							<li class="nav-item small"><NavLink href="/docs/privacy-policy" title="Privacy Policy" /></li>
+							<li class="nav-item small"><NavLink href="/docs/terms-and-conditions" title="Terms & conditions" /></li>
 						</ul>
 					</div>
 				</nav>

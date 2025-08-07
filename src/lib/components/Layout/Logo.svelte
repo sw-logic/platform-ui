@@ -1,1 +1,1 @@
-<a class="navbar-brand fw-bold" href="/">CORE Platform</a>
+<a class="navbar-brand fw-bold" href="/">PLATFORM</a>

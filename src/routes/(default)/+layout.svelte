@@ -5,6 +5,8 @@
 	import { settings } from '$lib';
 	import { goto } from '$app/navigation';
 	import SettingsOffcanvas from '$lib/components/Modals/SettingsOffcanvas.svelte';
+	import ReferenceModal from '$lib/components/Modals/ReferenceModal.svelte';
+	import InfoModal from '$lib/components/Modals/InfoModal.svelte';
 
 	$: if (!$settings.userLoggedIn && !$settings.allowGuest) {
 		document.querySelector('.modal-backdrop')?.remove();
@@ -22,5 +24,6 @@
 <Footer />
 <!-- This is the end of the page -->
 
-
+<InfoModal />
+<ReferenceModal />
 <SettingsOffcanvas />

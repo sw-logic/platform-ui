@@ -1,16 +1,16 @@
 <script lang="ts">
 	import { settings } from '$lib';
 
+	function toggleUserLoggedIn() {
+		settings.update(s => ({ ...s, userLoggedIn: !s.userLoggedIn }));
+	}
+
 	function updateUserType(value) {
 		settings.update(s => ({ ...s, userType: value }));
 	}
 
-	function updateTheme(value) {
-		settings.update(s => ({ ...s, theme: value }));
-	}
-
-	function toggleUserLoggedIn() {
-		settings.update(s => ({ ...s, userLoggedIn: !s.userLoggedIn }));
+	function toggleUserSubscription() {
+		settings.update(s => ({ ...s, userSubscription: !s.userSubscription }));
 	}
 
 	function toggleAllowGuest() {
@@ -19,6 +19,10 @@
 
 	function toggleShowLibraryForGuests() {
 		settings.update(s => ({ ...s, showLibraryForGuests: !s.showLibraryForGuests }));
+	}
+
+	function updateTheme(value) {
+		settings.update(s => ({ ...s, theme: value }));
 	}
 
 	function toggleThemeSwitcher() {
@@ -58,6 +62,19 @@
 				<option value="corporate">Corporate</option>
 				<option value="institutional">Institutional</option>
 			</select>
+		</div>
+
+		<div class="form-check mb-3">
+			<input
+				class="form-check-input"
+				type="checkbox"
+				id="allowGuest"
+				checked={$settings.userSubscription}
+				on:change={toggleUserSubscription}
+			>
+			<label class="form-check-label" for="allowGuest">
+				User has subscription
+			</label>
 		</div>
 
 		<div class="form-check mb-3">

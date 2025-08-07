@@ -1,0 +1,63 @@
+@import "../bootstrap-override";
+
+.book{
+  position: relative;
+  display: block;
+  padding-bottom: 142.2%;
+
+  border: 1px solid $middle;
+
+  img {
+    position: absolute;
+    object-fit: cover;
+    object-position: center;
+    width: 100%;
+    height: 100%;
+  }
+
+  .book-tag {
+    position: absolute;
+    top: 15px;
+    left: -3px;
+    padding: 3px 7px;
+    color: $white;
+    background-color: $orange;
+    z-index: 5;
+  }
+
+  &.series {
+    border: none;
+
+    img {
+      top: 0;
+      left: 0;
+      width: calc(100% - 10px);
+      height: calc(100% - 10px);
+      border: 1px solid $middle;
+      z-index: 2;
+    }
+
+    &:before,
+    &:after {
+      content:'';
+      position: absolute;
+      width: calc(100% - 10px);
+      height: calc(100% - 10px);
+      background-color: $white;
+      border: 1px solid $middle;
+    }
+
+    &:before {
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 1;
+    }
+
+    &:after {
+      right: 0;
+      bottom: 0;
+      z-index: 0;
+    }
+  }
+}
