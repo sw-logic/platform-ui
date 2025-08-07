@@ -3,6 +3,7 @@ import { defineConfig } from 'vite';
 
 export default defineConfig(({ mode }) => ({
 	plugins: [sveltekit()],
+	base: process.env.NODE_ENV === 'production' ? '/platform-ui/' : '',
 	css: {
 		preprocessorOptions: {
 			scss: {
