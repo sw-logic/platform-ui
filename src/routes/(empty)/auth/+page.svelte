@@ -3,11 +3,26 @@
 	import { settings } from '$lib';
 	import { goto } from '$app/navigation';
 
+	let email = '';
+	let password = '';
+	let errorMessage = '';
+
+	const VALID_CREDENTIALS = {
+		email: 'platform@wolterskluwer.com',
+		password: '8RoE4C_7'
+	};
+
 	function logIn(event) {
 		event.preventDefault();
-		settings.update(s => ({ ...s, userLoggedIn: true }));
-		console.log('User is logged in, redirecting to home page...');
-		goto('/', { replaceState: true });
+		errorMessage = '';
+
+		if (email === VALID_CREDENTIALS.email && password === VALID_CREDENTIALS.password) {
+			settings.login();
+			console.log('User is logged in, redirecting to home page...');
+			goto('/', { replaceState: true });
+		} else {
+			errorMessage = 'Invalid username or password';
+		}
 	}
 </script>
 
@@ -22,17 +37,18 @@
 			<form action="" class="login">
 				<h1 class="m-0 lh-1"><Logo /></h1>
 				<small>Comprehensive Online Reference Exchange</small>
+				{#if errorMessage}
+					<div class="alert alert-danger" role="alert">
+						{errorMessage}
+					</div>
+				{/if}
 				<div class="my-3">
 					<label for="email" class="form-label">Email address</label>
-					<input type="email" class="form-control" id="email" placeholder="E-mail" required>
+					<input type="email" class="form-control" id="email" placeholder="E-mail" bind:value={email} required>
 				</div>
 				<div class="mb-3">
 					<label for="password" class="form-label">Password</label>
-					<input type="password" class="form-control" id="password" placeholder="Password" required>
-				</div>
-				<div class="mb-3 form-check">
-					<input type="checkbox" class="form-check-input" id="rememberMe">
-					<label class="form-check-label" for="rememberMe">Remember me</label>
+					<input type="password" class="form-control" id="password" placeholder="Password" bind:value={password} required>
 				</div>
 				<button type="submit" class="btn btn-primary" on:click={logIn}>Login</button>
 			</form>

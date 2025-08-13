@@ -10,8 +10,8 @@
 
 	let {children} = $props();
 
-	$effect( ()=> {
-			if (!$settings.userLoggedIn && !$settings.allowGuest) {
+	$effect(() => {
+		if (!$settings.userLoggedIn && !$settings.allowGuest) {
 			document.querySelector('.modal-backdrop')?.remove();
 			document.body.style.overflow = '';
 			goto('/login', { replaceState: true });
