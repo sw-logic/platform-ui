@@ -1,0 +1,26 @@
+.hover-lift-up {
+  transition: transform 0.5s ease-in-out;
+  transform: translateY(0);
+
+  picture:not(.series) img {
+    transition: box-shadow 0.5s ease-in-out;
+    box-shadow: 0 0 0 #64646464;
+  }
+
+  picture.series:after {
+    transition: box-shadow 0.5s ease-in-out;
+    box-shadow: 0 0 0 #64646464;
+  }
+
+  &:hover {
+    transform: translateY(-10px);
+
+    picture:not(.series) img {
+      box-shadow: 0 10px 20px #64646464;
+    }
+
+    picture.series:after {
+      box-shadow: -5px 10px 20px #64646464;
+    }
+  }
+}
