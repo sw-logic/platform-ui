@@ -8,18 +8,22 @@
 	import ReferenceModal from '$lib/components/Modals/ReferenceModal.svelte';
 	import InfoModal from '$lib/components/Modals/InfoModal.svelte';
 
-	$: if (!$settings.userLoggedIn && !$settings.allowGuest) {
-		document.querySelector('.modal-backdrop')?.remove();
-		document.body.style.overflow = '';
-		goto('/login', { replaceState: true });
-	}
+	let {children} = $props();
+
+	$effect( ()=> {
+			if (!$settings.userLoggedIn && !$settings.allowGuest) {
+			document.querySelector('.modal-backdrop')?.remove();
+			document.body.style.overflow = '';
+			goto('/login', { replaceState: true });
+		}
+	})
 </script>
 
 
 <!-- This is the beginning of the page -->
 <Header />
 <main>
-	<slot />
+	{@render children()}
 </main>
 <Footer />
 <!-- This is the end of the page -->
