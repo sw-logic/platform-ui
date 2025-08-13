@@ -2,6 +2,7 @@
 	import Logo from '$lib/components/Layout/Logo.svelte';
 	import { settings } from '$lib';
 	import { goto } from '$app/navigation';
+	import { base } from '$app/paths';
 
 	let email = '';
 	let password = '';
@@ -19,7 +20,7 @@
 		if (email === VALID_CREDENTIALS.email && password === VALID_CREDENTIALS.password) {
 			settings.login();
 			console.log('User is logged in, redirecting to home page...');
-			goto('/', { replaceState: true });
+			goto(`${base}/`, { replaceState: true });
 		} else {
 			errorMessage = 'Invalid username or password';
 		}
@@ -29,7 +30,7 @@
 <div class="flex-grow-1 d-flex flex-row">
 	<div class="flex-grow-1 w-50 position-relative">
 		<picture class="bg-image">
-			<img src="/images/header/login.webp" alt="">
+			<img src="{base}/images/header/login.webp" alt="">
 		</picture>
 	</div>
 	<div class="flex-grow-1 w-50 d-flex flex-column">

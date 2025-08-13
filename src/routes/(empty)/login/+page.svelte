@@ -2,19 +2,20 @@
 	import Logo from '$lib/components/Layout/Logo.svelte';
 	import { settings } from '$lib';
 	import { goto } from '$app/navigation';
+	import { base } from '$app/paths';
 
 	function logIn(event) {
 		event.preventDefault();
 		settings.update(s => ({ ...s, userLoggedIn: true }));
 		console.log('User is logged in, redirecting to home page...');
-		goto('/', { replaceState: true });
+		goto(`${base}/`, { replaceState: true });
 	}
 </script>
 
 <div class="flex-grow-1 d-flex flex-row">
 	<div class="flex-grow-1 w-50 position-relative">
 		<picture class="bg-image">
-			<img src="/images/header/login.webp" alt="">
+			<img src="{base}/images/header/login.webp" alt="">
 		</picture>
 	</div>
 	<div class="flex-grow-1 w-50 d-flex flex-column">

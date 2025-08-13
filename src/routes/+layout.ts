@@ -1,5 +1,6 @@
 import { browser } from '$app/environment';
 import { redirect } from '@sveltejs/kit';
+import { base } from '$app/paths';
 
 export const prerender = true;
 export const ssr = false;
@@ -12,13 +13,13 @@ export async function load({ url }) {
 		const allowGuest = true; // Default value
 
 		// Auth protection (development protection)
-		if (!userAuth && url.pathname !== '/auth/') {
-			throw redirect(302, '/auth/');
+		if (!userAuth && url.pathname !== `${base}/auth/`) {
+			throw redirect(302, `${base}/auth/`);
 		}
 
 		// Login protection (app's own authentication)
-		if (userAuth && !userLoggedIn && !allowGuest && url.pathname !== '/login/') {
-			throw redirect(302, '/login/');
+		if (userAuth && !userLoggedIn && !allowGuest && url.pathname !== `${base}/login/`) {
+			throw redirect(302, `${base}/login/`);
 		}
 	}
 }

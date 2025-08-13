@@ -11,7 +11,7 @@
 
 <a href="{base}/book-details">
 	<picture class="book {type} {props.class}">
-		<img src="/images/book/{cover}" alt="Name of the book">
+		<img src="{base}/images/book/{cover}" alt="Name of the book">
 		{#if tag}
 			<span class="book-tag">{tag}</span>
 		{/if}

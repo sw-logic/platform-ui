@@ -4,6 +4,7 @@
 	import '../../styles/app.scss';
 	import { settings } from '$lib';
 	import { goto } from '$app/navigation';
+	import { base } from '$app/paths';
 	import SettingsOffcanvas from '$lib/components/Modals/SettingsOffcanvas.svelte';
 	import ReferenceModal from '$lib/components/Modals/ReferenceModal.svelte';
 	import InfoModal from '$lib/components/Modals/InfoModal.svelte';
@@ -14,7 +15,7 @@
 		if (!$settings.userLoggedIn && !$settings.allowGuest) {
 			document.querySelector('.modal-backdrop')?.remove();
 			document.body.style.overflow = '';
-			goto('/login', { replaceState: true });
+			goto(`${base}/login`, { replaceState: true });
 		}
 	})
 </script>
