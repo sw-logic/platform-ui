@@ -1,4 +1,4 @@
-@import '../bootstrap-override';
+@import '../variables';
 
 @each $name, $color in $theme-colors {
   .bg-hover-#{$name}:hover {
