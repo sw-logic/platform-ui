@@ -1,8 +1,6 @@
 <script lang="ts">
 	import Book from '$lib/components/Book/Book.svelte';
 	import Icon from '$lib/components/Icon.svelte';
-	import InfoModal from '$lib/components/Modals/InfoModal.svelte';
-	import ReferenceModal from '$lib/components/Modals/ReferenceModal.svelte';
 	import { settings } from '$lib';
 	import { onMount } from 'svelte';
 

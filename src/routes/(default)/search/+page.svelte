@@ -1,6 +1,19 @@
-<script>
+<script lang="ts">
 import Book from '$lib/components/Book/Book.svelte';
 import ControlIcon from '$lib/components/ControlIcon.svelte';
+
+let bookGrid: HTMLDivElement;
+
+function setBookGrid() {
+	bookGrid.classList.add('book-grid');
+	bookGrid.classList.remove('book-list');
+}
+
+function setBookList() {
+	bookGrid.classList.remove('book-grid');
+	bookGrid.classList.add('book-list');
+}
+
 </script>
 
 <div class="container py-5">
@@ -24,8 +37,8 @@ import ControlIcon from '$lib/components/ControlIcon.svelte';
 						<option value="3">Date</option>
 					</select>
 					<div class="d-flex flex-row">
-						<ControlIcon icon="filled-grid" class="ms-3" />
-						<ControlIcon icon="filled-list-bullet-square" />
+						<ControlIcon icon="filled-grid" class="ms-3" onclick={setBookGrid} />
+						<ControlIcon icon="filled-list-bullet-square" onclick={setBookList} />
 					</div>
 				</div>
 			</div>
@@ -41,7 +54,7 @@ import ControlIcon from '$lib/components/ControlIcon.svelte';
 					</div>
 					<p><strong>15386</strong> results in <strong>438</strong> publications</p>
 
-					<div class="grid grid-cols-5">
+					<div bind:this={bookGrid} class="book-grid grid-cols-1 grid-cols-sm-3 grid-cols-lg-4 grid-cols-xl-5">
 						<Book cover="book-1.webp" />
 						<Book cover="book-2.webp" />
 						<Book cover="book-3.webp" />
@@ -53,6 +66,8 @@ import ControlIcon from '$lib/components/ControlIcon.svelte';
 						<Book cover="book-4.webp" />
 						<Book cover="book-5.webp" />
 						<Book cover="book-1.webp" />
+						<Book cover="book-2.webp" />
+						<Book cover="book-3.webp" />
 					</div>
 				</div>
 				<div class="tab-pane fade" id="imageList" role="tabpanel" aria-labelledby="profile-tab">

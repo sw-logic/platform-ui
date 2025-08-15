@@ -5,6 +5,7 @@
 	"type": "module",
 	"scripts": {
 		"dev": "vite dev",
+		"sass:watch": "sass --watch src/styles/app.scss:static/css/app.css",
 		"build": "vite build",
 		"preview": "vite preview",
 		"prepare": "svelte-kit sync || echo ''",

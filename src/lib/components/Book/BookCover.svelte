@@ -9,8 +9,8 @@
 </script>
 
 
-<a href="{base}/book-details">
-	<picture class="book {type} {props.class}">
+<a class="book-cover-link" href="{base}/book-details">
+	<picture class="book-cover-picture {type} {props.class}">
 		<img src="{base}/images/book/{cover}" alt="Name of the book">
 		{#if tag}
 			<span class="book-tag">{tag}</span>

@@ -1,63 +1,103 @@
 @import "../bootstrap-override";
 
-.book{
-  position: relative;
-  display: block;
-  padding-bottom: 142.2%;
+.book {
+  .book-cover {
+    .book-cover-picture {
+      position: relative;
+      display: block;
+      padding-bottom: 142.2%;
 
-  border: 1px solid $middle;
+      border: 1px solid $middle;
 
-  img {
-    position: absolute;
-    object-fit: cover;
-    object-position: center;
-    width: 100%;
-    height: 100%;
+      img {
+        position: absolute;
+        object-fit: cover;
+        object-position: center;
+        width: 100%;
+        height: 100%;
+      }
+
+      .book-tag {
+        position: absolute;
+        top: 15px;
+        left: -3px;
+        padding: 3px 7px;
+        color: $white;
+        background-color: $orange;
+        z-index: 5;
+      }
+
+      &.series {
+        border: none;
+
+        img {
+          top: 0;
+          left: 0;
+          width: calc(100% - 10px);
+          height: calc(100% - 10px);
+          border: 1px solid $middle;
+          z-index: 2;
+        }
+
+        &:before,
+        &:after {
+          content:'';
+          position: absolute;
+          width: calc(100% - 10px);
+          height: calc(100% - 10px);
+          background-color: $white;
+          border: 1px solid $middle;
+        }
+
+        &:before {
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          z-index: 1;
+        }
+
+        &:after {
+          right: 0;
+          bottom: 0;
+          z-index: 0;
+        }
+      }
+    }
   }
 
-  .book-tag {
-    position: absolute;
-    top: 15px;
-    left: -3px;
-    padding: 3px 7px;
-    color: $white;
-    background-color: $orange;
-    z-index: 5;
+  .book-details {
+    display: none;
   }
+}
 
-  &.series {
-    border: none;
+.book-grid {
+  display: grid;
+  grid-template-rows: repeat(var(--bs-rows, 1), 1fr);
+  grid-template-columns: repeat(1, 1fr);
+  gap: var(--bs-gap, 32px);
+}
 
-    img {
-      top: 0;
-      left: 0;
-      width: calc(100% - 10px);
-      height: calc(100% - 10px);
-      border: 1px solid $middle;
-      z-index: 2;
+.book-list {
+  display: block !important;
+
+  .book {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    margin-bottom: 2rem;
+    transform: unset !important;
+
+    .book-cover {
+      min-width: 180px;
+      width: 20%;
     }
 
-    &:before,
-    &:after {
-      content:'';
-      position: absolute;
-      width: calc(100% - 10px);
-      height: calc(100% - 10px);
-      background-color: $white;
-      border: 1px solid $middle;
-    }
+    .book-info {
+      flex: 1 1 0%;
 
-    &:before {
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      z-index: 1;
-    }
-
-    &:after {
-      right: 0;
-      bottom: 0;
-      z-index: 0;
+      .book-details {
+        display: block;
+      }
     }
   }
 }

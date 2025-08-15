@@ -1,13 +1,13 @@
 <script>
+	import '../../styles/app.scss';
 	import Header from '$lib/components/Layout/Header.svelte';
 	import Footer from '$lib/components/Layout/Footer.svelte';
-	import '../../styles/app.scss';
-	import { settings } from '$lib';
-	import { goto } from '$app/navigation';
-	import { base } from '$app/paths';
 	import SettingsOffcanvas from '$lib/components/Modals/SettingsOffcanvas.svelte';
 	import ReferenceModal from '$lib/components/Modals/ReferenceModal.svelte';
 	import InfoModal from '$lib/components/Modals/InfoModal.svelte';
+	import { settings } from '$lib';
+	import { goto } from '$app/navigation';
+	import { base } from '$app/paths';
 
 	let {children} = $props();
 
