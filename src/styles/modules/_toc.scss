@@ -5,14 +5,52 @@
 
   li {
     list-style: none;
+    padding-left: 1.15em;
 
-    > span {
+    &.content-list {
+      position: relative;
+      padding-left: 0;
 
+      &.expanded {
+        > .tree-toggle {
+          transform: rotate(90deg);
+        }
+      }
+
+      .tree-toggle {
+        padding: 0;
+        background: none;
+        border: none;
+        color: $dark;
+        transition: transform 0.2s ease-in-out, color 0.2s ease-in-out;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+
+        &:focus {
+          outline: none;
+          color: $primary;
+        }
+
+        span {
+          cursor: pointer;
+          padding: 0;
+          margin: 0;
+          font-size: 0.875rem;
+          color: $secondary;
+          transition: transform 0.2s ease-in-out;
+
+          &:hover {
+            color: $primary;
+          }
+        }
+      }
     }
 
     a {
         color: $dark;
         text-decoration: none;
+        margin-left: .5em;
 
         &:hover {
             color: $primary;
@@ -20,8 +58,8 @@
         }
     }
 
-    >ul {
-      padding-left: 1.65rem;
+    > ul {
+      padding-left: 1.5rem;
     }
   }
 }

@@ -1,8 +1,11 @@
-<script>
+<script lang="ts">
 	import BookCover from '$lib/components/Book/BookCover.svelte';
 	import { settings } from '$lib';
 	import Icon from '$lib/components/Icon.svelte';
 	import TOC from '$lib/components/Book/TOC.svelte';
+	import TrialStartModal from '$lib/components/Modals/TrialStartModal.svelte';
+
+	let trialStartModal: HTMLDivElement;
 </script>
 
 <div class="container py-5">
@@ -15,9 +18,9 @@
 		<div class="col-sm-4 max-width-sm text-sm-end">
 			{#if $settings.userLoggedIn && $settings.userSubscription}
 				<button class="btn btn-primary">Read the book</button>
-			{:else}
-				<button class="btn btn-warning">Start trial period</button>
-				<p class="small text-sm-end m-0 mt-3">Lorem ipsum <strong>trial priod</strong>, consectetur adipisicing elit. Alias blanditiis commodi cupiditate, deserunt dolores,
+			{:else if !$settings.userSubscription && !$settings.userStartedTrial}
+				<button class="btn btn-warning" onclick={trialStartModal.show}>Start trial period</button>
+				<p class="small text-sm-end m-0 mt-2">Lorem ipsum <strong>trial priod</strong>, consectetur adipisicing elit. Alias blanditiis commodi cupiditate, deserunt dolores,
 					fuga inventore.</p>
 			{/if}
 		</div>
@@ -61,3 +64,5 @@
 		</div>
 	</div>
 </div>
+
+<TrialStartModal bind:this={trialStartModal} />

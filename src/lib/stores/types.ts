@@ -3,8 +3,10 @@ export type Theme = 'light' | 'dark';
 
 export interface SettingsState {
 	userAuth: boolean;
-	userLoggedIn: boolean;
+	userRegistered: boolean;
 	userType: UserType;
+	userLoggedIn: boolean;
+	userStartedTrial: boolean;
 	userSubscription: boolean;
 	allowGuest: boolean;
 	showLibraryForGuests: boolean;

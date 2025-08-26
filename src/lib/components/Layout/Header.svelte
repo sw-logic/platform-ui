@@ -1,16 +1,55 @@
-<script>
+<script lang="ts">
 	import ThemeToggle from '../ThemeToggle.svelte';
 	import NavLink from '$lib/components/NavLink.svelte';
 	import LoginModal from '$lib/components/Modals/LoginModal.svelte';
+	import TrialEndModal from '$lib/components/Modals/TrialEndModal.svelte';
 	import { settings } from '$lib';
 	import ControlIcon from '$lib/components/ControlIcon.svelte';
 	import Logo from '$lib/components/Layout/Logo.svelte';
 	import Icon from '$lib/components/Icon.svelte';
 	import { base } from '$app/paths';
+	import { TrialCountdown } from '$lib/scripts/trialCountdown';
+	import { onMount, onDestroy } from 'svelte';
+
+	let trialEndModal: HTMLDivElement;
+	let countdown: TrialCountdown | null = null;
 
 	function logOut() {
 		settings.update(s => ({ ...s, userLoggedIn: false }));
 	}
+
+	function initCountdown() {
+		if (countdown) {
+			console.log("Destroy countdown");
+			countdown.destroy()
+		}
+		console.log("Defining countdown");
+		countdown = new TrialCountdown('.trial-counter', () => {
+			if (trialEndModal) {
+				trialEndModal.show();
+				settings.update(s => ({ ...s, userStartedTrial: false}));
+			}
+		});
+		countdown.start();
+	}
+
+	$effect(() => {
+		if ($settings.userStartedTrial && countdown) {
+			setTimeout(() => {
+				initCountdown();
+			}, 300);
+		}
+	});
+
+	onMount(() => {
+		initCountdown()
+	});
+
+	onDestroy(() => {
+		if (countdown) {
+			countdown.destroy();
+		}
+	});
 </script>
 
 <header class="shadow-none sticky-top bg-white">
@@ -84,9 +123,12 @@
 
 			{#if !$settings.userLoggedIn}
 				<p class="text-center text-muted m-0">Please login or register a new account to use our comprehensive toolset.</p>
+			{:else if $settings.userStartedTrial}
+				<div class="trial-box">Time left of trial period:<span class="trial-counter">00:00</span></div>
 			{/if}
 		</div>
 	</nav>
 </header>
 
 <LoginModal />
+<TrialEndModal bind:this={trialEndModal} />

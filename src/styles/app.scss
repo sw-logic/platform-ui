@@ -6,6 +6,7 @@
 @use 'modules/book';
 @use 'modules/button';
 @use 'modules/colors';
+@use 'modules/defaults';
 @use 'modules/grid';
 @use 'modules/image';
 @use 'modules/layout';
@@ -13,4 +14,5 @@
 @use 'modules/nav';
 @use 'modules/sizes';
 @use 'modules/toc';
+@use 'modules/trial';
 

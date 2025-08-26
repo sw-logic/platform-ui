@@ -4,8 +4,10 @@ import type { SettingsState } from './types.js';
 
 const defaultSettings: SettingsState = {
 	userAuth: false,
-	userLoggedIn: false,
+	userRegistered: false,
 	userType: 'private',
+	userLoggedIn: false,
+	userStartedTrial: false,
 	userSubscription: false,
 	allowGuest: true,
 	showLibraryForGuests: true,
@@ -15,14 +17,14 @@ const defaultSettings: SettingsState = {
 
 function getInitialSettings(): SettingsState {
 	const settings = { ...defaultSettings };
-	
+
 	if (browser) {
 		const userAuth = localStorage.getItem('platform-userAuth');
 		if (userAuth === 'true') {
 			settings.userAuth = true;
 		}
 	}
-	
+
 	return settings;
 }
 
