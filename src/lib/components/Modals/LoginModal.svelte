@@ -51,13 +51,15 @@
 					<button class="btn btn-outline-primary w-50"><Icon type="fa-brands" icon="facebook" /> Login with Facebook</button>
 				</div>
 
-				<div class="divider">
-					<div class="bg-white px-3">Are you a student?</div>
-				</div>
+				{#if $settings.registerWithEduId}
+					<div class="divider">
+						<div class="bg-white px-3">Are you a student?</div>
+					</div>
 
-				<div class="d-flex justify-content-center gap-3">
-					<button class="btn btn-outline-primary align-self-center w-50">Login with EduID</button>
-				</div>
+					<div class="d-flex justify-content-center gap-3">
+						<button class="btn btn-outline-primary align-self-center w-50">Login with EduID</button>
+					</div>
+				{/if}
 			</div>
 		</div>
 	</div>

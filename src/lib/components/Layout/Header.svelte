@@ -10,6 +10,7 @@
 	import { base } from '$app/paths';
 	import { TrialCountdown } from '$lib/scripts/trialCountdown';
 	import { onMount, onDestroy } from 'svelte';
+	import MobileMenu from '$lib/components/Modals/MobileMenu.svelte';
 
 	let trialEndModal: HTMLDivElement;
 	let countdown: TrialCountdown | null = null;
@@ -57,6 +58,7 @@
 		<div class="container">
 			<Logo />
 
+			<!-- Search bar -->
 			<div class="w-50">
 				<div class="input-group">
 					<input type="text" class="form-control border-dark" placeholder="Search" aria-label="Search" aria-describedby="searchButton">
@@ -64,7 +66,8 @@
 				</div>
 			</div>
 
-			<div class="d-flex align-items-center">
+			<!-- User controls -->
+			<div class="d-none d-md-flex align-items-center">
 				{#if !$settings.userSubscription}
 					<a href="{base}/subscribe" class="btn btn-primary d-none d-sm-block">Subscribe</a>
 				{/if}
@@ -110,25 +113,34 @@
 
 				<ControlIcon icon="settings" title="Show settings" data-bs-toggle="offcanvas" data-bs-target="#settingsOffcanvas" class="ms-auto " />
 			</div>
+
+			<!-- Mobile menu button -->
+			<div class="d-flex d-md-none align-items-center ms-3">
+				<ControlIcon icon="menu" title="Show menu" data-bs-toggle="offcanvas" data-bs-target="#mobileMenuOffcanvas" />
+			</div>
 		</div>
 	</nav>
-	<nav class="bg-dark navbar py-0 navbar-expand-md" data-bs-theme="dark">
+
+	<nav id="main-navbar" class="bg-dark navbar py-0 navbar-expand-md" data-bs-theme="dark">
 		<div class="container d-flex align-items-center">
-			<ul class="navbar-nav gap-3 align-items-center">
-				<li class="nav-item"><NavLink href="{base}/library" title="Library" icon="filled-book-open" /></li>
-				<li class="nav-item"><NavLink href="{base}/favorites" bind:active={$settings.userLoggedIn} title="Favorites" icon="filled-heart" /></li>
-				<li class="nav-item"><NavLink href="{base}/folders" bind:active={$settings.userLoggedIn} title="Folders" icon="filled-folder" /></li>
-				<li class="nav-item"><NavLink href="{base}/downloads" bind:active={$settings.userLoggedIn} title="Downloads" icon="download-line" /></li>
+			<ul class="navbar-nav gap-3 flex-row align-items-center">
+				<li class="nav-item collapse-nav-text"><NavLink href="{base}/library" title="Library" icon="filled-book-open" /></li>
+				<li class="nav-item collapse-nav-text"><NavLink href="{base}/favorites" title="Favorites" icon="filled-heart" /></li>
+				<li class="nav-item collapse-nav-text"><NavLink href="{base}/folders" title="Folders" icon="filled-folder" /></li>
+				<li class="nav-item collapse-nav-text"><NavLink href="{base}/downloads" title="Downloads" icon="download-line" /></li>
 			</ul>
 
-			{#if !$settings.userLoggedIn}
-				<p class="text-center text-muted m-0">Please login or register a new account to use our comprehensive toolset.</p>
-			{:else if $settings.userStartedTrial}
-				<div class="trial-box">Time left of trial period:<span class="trial-counter">00:00</span></div>
-			{/if}
+			<div class="info-container d-md-flex">
+				{#if !$settings.userLoggedIn}
+					<p class="text-center text-muted m-0">Please login or register a new account to use our comprehensive toolset.</p>
+				{:else if $settings.userStartedTrial}
+					<div class="trial-box">Time left of trial period:<span class="trial-counter">00:00</span></div>
+				{/if}
+			</div>
 		</div>
 	</nav>
 </header>
 
 <LoginModal />
 <TrialEndModal bind:this={trialEndModal} />
+<MobileMenu />

@@ -12,10 +12,10 @@
 			</div>
 			<div class="modal-body">
 				<div class="row">
-					<div class="col-4">
-						<BookCover />
+					<div class="col-6 col-sm-4">
+						<BookCover class="mb-3" />
 					</div>
-					<div class="col-8">
+					<div class="col-sm-8">
 						<div class="row">
 							<div class="col flex-grow-1">
 								<h6 class="text-muted">Dr. John Doe</h6>
@@ -26,7 +26,7 @@
 								<button class="btn btn-primary">Read</button>
 							</div>
 						</div>
-						<div class="d-flex gap-2 mt-3">
+						<div class="d-flex gap-2 flex-wrap mt-3">
 							<span class="badge rounded-pill text-bg-light bg-hover-light pointer">Cultural History</span>
 							<span class="badge rounded-pill text-bg-light">Cultural History</span>
 							<span class="badge rounded-pill text-bg-light">Cultural History</span>
@@ -39,7 +39,7 @@
 							<div><strong>ISSN</strong>: 2786-4324</div>
 							<div><strong>Link</strong>: <a href="#">This is the info link</a></div>
 						</div>
-						<div class="d-flex gap-2 mt-3">
+						<div class="d-flex gap-2 flex-wrap mt-3">
 							<button class="btn btn-sm btn-outline-dark"><Icon icon="download-line" /> BibTeX</button>
 							<button class="btn btn-sm btn-outline-dark"><Icon icon="download-line" /> EndNote</button>
 							<button class="btn btn-sm btn-outline-dark"><Icon icon="download-line" /> Mendeley</button>

@@ -7,19 +7,19 @@
 {#if active}
 	<a class="nav-link d-flex align-items-center {props.class}" href={props.href || '#'} {...props}>
 		{#if props.icon}
-			<Icon icon={props.icon} class="me-2" />
+			<Icon icon={props.icon} class="nav-icon me-2" />
 		{/if}
 		{#if title}
-			{title}
+			<span class="nav-text">{title}</span>
 		{/if}
 	</a>
 {:else}
 	<span class="text-disabled px-2 d-flex align-items-center {props.class}">
 		{#if props.icon}
-			<Icon icon={props.icon} class="me-2" />
+			<Icon icon={props.icon} class="nav-icon me-2" />
 		{/if}
 		{#if title}
-			{title}
+			<span class="nav-text">{title}</span>
 		{/if}
 	</span>
 {/if}

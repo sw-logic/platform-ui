@@ -1,6 +1,10 @@
 <script lang="ts">
 	import { settings } from '$lib';
 
+	function toggleRegisterWithEduId() {
+		settings.update(s => ({ ...s, registerWithEduId: !s.registerWithEduId }));
+	}
+
 	function toggleUserRegistered() {
 		settings.update(s => ({ ...s, userRegistered: !s.userRegistered }));
 		settings.update(s => ({ ...s, userLoggedIn: false }));
@@ -47,6 +51,19 @@
 	<div class="offcanvas-body">
 
 		<!-- IF USER REGISTERED -->
+		<div class="form-check mb-3">
+			<input
+				class="form-check-input"
+				type="checkbox"
+				id="registerWithEduId"
+				checked={$settings.registerWithEduId}
+				on:change={toggleRegisterWithEduId}
+			>
+			<label class="form-check-label" for="registerWithEduId">
+				Allow EduID Registration
+			</label>
+		</div>
+
 		<div class="form-check mb-3">
 			<input
 				class="form-check-input"
