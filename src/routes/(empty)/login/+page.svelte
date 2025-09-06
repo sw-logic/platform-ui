@@ -21,21 +21,10 @@
 	<div class="flex-grow-1 w-50 d-flex flex-column">
 		<div class="flex-grow-1 d-flex align-items-center justify-content-center">
 			<form action="" class="login">
-				<h1 class="m-0 lh-1"><Logo /></h1>
-				<small>Comprehensive Online Reference Exchange</small>
-				<div class="my-3">
-					<label for="email" class="form-label">Email address</label>
-					<input type="email" class="form-control" id="email" placeholder="E-mail" required>
-				</div>
-				<div class="mb-3">
-					<label for="password" class="form-label">Password</label>
-					<input type="password" class="form-control" id="password" placeholder="Password" required>
-				</div>
-				<div class="mb-3 form-check">
-					<input type="checkbox" class="form-check-input" id="rememberMe">
-					<label class="form-check-label" for="rememberMe">Remember me</label>
-				</div>
-				<button type="submit" class="btn btn-primary" on:click={logIn}>Login</button>
+				<h1>Oops!</h1>
+				<p>You probably don't have acces to this page. Please get a subscription or start a trial period on our portal.</p>
+				<hr>
+				<button type="submit" class="btn btn-primary" on:click={logIn}>Go to our Portal</button>
 			</form>
 		</div>
 		<div class="p-5 text-center">This is the footer. All rights reserved.</div>

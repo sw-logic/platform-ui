@@ -68,6 +68,32 @@
 			<input
 				class="form-check-input"
 				type="checkbox"
+				id="allowGuest"
+				checked={$settings.allowGuest}
+				on:change={toggleAllowGuest}
+			>
+			<label class="form-check-label" for="allowGuest">
+				Allow Guest Access
+			</label>
+		</div>
+
+		<div class="form-check mb-3">
+			<input
+				class="form-check-input"
+				type="checkbox"
+				id="showLibraryForGuests"
+				checked={$settings.showLibraryForGuests}
+				on:change={toggleShowLibraryForGuests}
+			>
+			<label class="form-check-label" for="showLibraryForGuests">
+				Show Library for Guests
+			</label>
+		</div>
+
+		<div class="form-check mb-3">
+			<input
+				class="form-check-input"
+				type="checkbox"
 				id="userRegistered"
 				checked={$settings.userRegistered}
 				on:change={toggleUserRegistered}
@@ -109,8 +135,6 @@
 			</div>
 		{/if}
 
-		<hr />
-
 		<!-- SETTING FOR LOGGED IN USERS -->
 		{#if $settings.userLoggedIn}
 			<!-- USER STARTED TRIAL -->
@@ -137,32 +161,6 @@
 				>
 				<label class="form-check-label" for="userSubscription">
 					User has subscription
-				</label>
-			</div>
-		{:else}
-			<div class="form-check mb-3">
-				<input
-					class="form-check-input"
-					type="checkbox"
-					id="allowGuest"
-					checked={$settings.allowGuest}
-					on:change={toggleAllowGuest}
-				>
-				<label class="form-check-label" for="allowGuest">
-					Allow Guest Access
-				</label>
-			</div>
-
-			<div class="form-check mb-3">
-				<input
-					class="form-check-input"
-					type="checkbox"
-					id="showBooksForGuests"
-					checked={$settings.showLibraryForGuests}
-					on:change={toggleShowLibraryForGuests}
-				>
-				<label class="form-check-label" for="showLibraryForGuests">
-					Show Library for Guests
 				</label>
 			</div>
 		{/if}
