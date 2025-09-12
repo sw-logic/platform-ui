@@ -69,22 +69,20 @@
 			<!-- User controls -->
 			<div class="d-none d-md-flex align-items-center">
 				{#if !$settings.userSubscription}
-					<a href="{base}/subscribe" class="btn btn-primary d-none d-sm-block">Subscribe</a>
+					<a href="{base}/subscribe" class="btn btn-primary ms-3">Subscribe</a>
 				{/if}
 
-				{#if !$settings.userLoggedIn}
-					<nav class="navbar py-0 navbar-expand-md">
-						<div class="container">
+				{#if $settings.userManagement && !$settings.userLoggedIn}
+					<nav class="navbar py-0 ms-3 navbar-expand-md">
 							<ul class="navbar-nav gap-3">
 								<li class="nav-item"><NavLink title="Login" icon="filled-user" data-bs-toggle="modal" data-bs-target="#loginModal"/></li>
 								<li class="nav-item"><NavLink href="{base}/registration" title="Register" icon="filled-document-signed" /></li>
 							</ul>
-						</div>
 					</nav>
 
 
-				{:else}
-					<ul class="navbar-nav mx-3">
+				{:else if $settings.userManagement && $settings.userLoggedIn}
+					<ul class="navbar-nav ms-3">
 						<li class="nav-item dropdown">
 							<a class="nav-link dropdown-toggle p-0 d-flex align-items-center" href="{base}/#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
 								<span class="d-none d-sm-inline">John Doe</span>
@@ -105,13 +103,17 @@
 							</ul>
 						</li>
 					</ul>
+				{:else}
+					<a href="{base}/portal" class="btn btn-outline-primary ms-3"><Icon icon="arrow-left" /> Back to Portal</a>
 				{/if}
 
 				{#if $settings.themeSwitcher}
 					<ThemeToggle />
 				{/if}
 
-				<ControlIcon icon="settings" title="Show settings" data-bs-toggle="offcanvas" data-bs-target="#settingsOffcanvas" class="ms-auto " />
+				<div class="settings-button">
+					<ControlIcon icon="settings" title="Show settings" class="no-hover" data-bs-toggle="offcanvas" data-bs-target="#settingsOffcanvas" />
+				</div>
 			</div>
 
 			<!-- Mobile menu button -->

@@ -6,6 +6,7 @@
 
 	function logIn(event) {
 		event.preventDefault();
+		settings.update(s => ({ ...s, userRegistered: true }));
 		settings.update(s => ({ ...s, userLoggedIn: true }));
 		console.log('User is logged in, redirecting to home page...');
 		goto(`${base}/`, { replaceState: true });

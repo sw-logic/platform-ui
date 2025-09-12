@@ -4,6 +4,7 @@ import type { SettingsState } from './types.js';
 
 const defaultSettings: SettingsState = {
 	userAuth: false,
+	userManagement: false,
 	registerWithEduId: true,
 	userRegistered: false,
 	userType: 'private',

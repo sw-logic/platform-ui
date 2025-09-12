@@ -1,5 +1,7 @@
 <script lang="ts">
 	import { Modal } from 'bootstrap';
+	import { base } from '$app/paths';
+	import { onDestroy } from 'svelte';
 
 	let modalElement: HTMLDivElement;
 
@@ -12,6 +14,11 @@
 		const modal = Modal.getOrCreateInstance(modalElement);
 		modal.hide();
 	}
+
+	onDestroy(() => {
+		const modal = Modal.getOrCreateInstance(modalElement);
+		modal.dispose();
+	});
 </script>
 
 <div bind:this={modalElement} class="modal fade" id="trialEndModal" tabindex="-1" aria-labelledby="trialEndModalLabel" aria-hidden="true">
@@ -27,8 +34,8 @@
 				<p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 			</div>
 			<div class="modal-footer">
-				<button type="button" class="btn btn-outline-dark" data-bs-dismiss="modal">Close</button>
-				<button type="button" class="btn btn-primary">Subscribe Now</button>
+				<a href="{base}/portal" type="button" class="btn btn-outline-dark" data-bs-dismiss="modal">Close</a>
+				<a href="{base}/portal" type="button" class="btn btn-primary">Subscribe Now</a>
 			</div>
 		</div>
 	</div>

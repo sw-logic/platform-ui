@@ -2,6 +2,7 @@
 	import { Modal } from 'bootstrap';
 	import { settings } from '$lib';
 	import { base } from '$app/paths';
+	import { onDestroy } from 'svelte';
 
 	let modalElement: HTMLDivElement;
 
@@ -19,6 +20,11 @@
 		settings.update(s => ({ ...s, userStartedTrial: true }));
 		hide();
 	}
+
+	onDestroy(() => {
+		const modal = Modal.getOrCreateInstance(modalElement);
+		modal.dispose();
+	});
 </script>
 
 <div bind:this={modalElement} class="modal fade" id="startTrialModal" tabindex="-1" aria-labelledby="startTrialModalLabel" aria-hidden="true">

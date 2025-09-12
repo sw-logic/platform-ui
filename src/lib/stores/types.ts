@@ -3,6 +3,7 @@ export type Theme = 'light' | 'dark';
 
 export interface SettingsState {
 	userAuth: boolean;
+	userManagement: boolean;
 	registerWithEduId: boolean;
 	userRegistered: boolean;
 	userType: UserType;

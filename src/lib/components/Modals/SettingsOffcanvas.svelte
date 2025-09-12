@@ -1,6 +1,10 @@
 <script lang="ts">
 	import { settings } from '$lib';
 
+	function toggleUserManagement() {
+		settings.update(s => ({ ...s, userManagement: !s.userManagement }));
+	}
+
 	function toggleRegisterWithEduId() {
 		settings.update(s => ({ ...s, registerWithEduId: !s.registerWithEduId }));
 	}
@@ -51,6 +55,18 @@
 	<div class="offcanvas-body">
 
 		<!-- IF USER REGISTERED -->
+		<div class="form-check mb-3">
+			<input
+				class="form-check-input"
+				type="checkbox"
+				id="userManagement"
+				checked={$settings.userManagement}
+				on:change={toggleUserManagement}
+			>
+			<label class="form-check-label" for="userManagement">
+				Allow User Management
+			</label>
+		</div>
 		<div class="form-check mb-3">
 			<input
 				class="form-check-input"

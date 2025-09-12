@@ -1,6 +1,18 @@
-<script>
+<script lang="ts">
 	import ControlIcon from '$lib/components/ControlIcon.svelte';
 	import Book from '$lib/components/Book/Book.svelte';
+
+	let bookGrid: HTMLDivElement;
+
+	function setBookGrid() {
+		bookGrid.classList.add('book-grid');
+		bookGrid.classList.remove('book-list');
+	}
+
+	function setBookList() {
+		bookGrid.classList.remove('book-grid');
+		bookGrid.classList.add('book-list');
+	}
 </script>
 
 <div class="container py-5">
@@ -18,8 +30,8 @@
 				<option value="2">Popularity</option>
 				<option value="3">Date</option>
 			</select>
-			<ControlIcon icon="filled-grid" class="ms-3" />
-			<ControlIcon icon="filled-list-bullet-square" />
+			<ControlIcon icon="filled-grid" class="ms-3" onclick={setBookGrid} />
+			<ControlIcon icon="filled-list-bullet-square" onclick={setBookList} />
 		</div>
 	</div>
 
@@ -28,7 +40,7 @@
 		<i class="wk-icon-chevron-right"></i>
 	</div>
 	<div class="collapse show" id="collapseSeries">
-		<div class="grid grid-cols-1 grid-cols-sm-3 grid-cols-md-4 grid-cols-lg-5 grid-cols-xl-6">
+		<div bind:this={bookGrid} class="grid grid-cols-1 grid-cols-sm-3 grid-cols-md-4 grid-cols-lg-5 grid-cols-xl-6">
 			<Book type="series" tag="new" cover="book-1.webp" />
 			<Book type="series" cover="book-2.webp" />
 			<Book type="series" cover="book-3.webp" />
