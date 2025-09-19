@@ -8,6 +8,25 @@
   .book-details {
     display: none;
   }
+
+  &.not-accessible:not(.trial-available) {
+    img {
+      opacity: .5;
+      filter: grayscale(100%);
+      transition: .5s all;
+    }
+
+    h4 {
+      color: $gray-600 !important;
+    }
+
+    &:hover {
+      img {
+        opacity: 1;
+        filter: grayscale(0%);
+      }
+    }
+  }
 }
 
 .book-cover-picture {

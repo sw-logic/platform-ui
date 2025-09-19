@@ -91,8 +91,8 @@
 		<Book cover="book-5.webp" access={false} trial={true} />
 		<Book cover="book-1.webp" access={false} trial={false} />
 		<Book cover="book-2.webp" access={false} trial={false} />
-		<Book cover="book-3.webp" />
-		<Book cover="book-4.webp" />
+		<Book cover="book-3.webp" access={false} trial={false} />
+		<Book cover="book-4.webp" access={false} trial={false} />
 		<Book cover="book-5.webp" />
 		<Book cover="book-1.webp" />
 	</div>
