@@ -12,7 +12,6 @@
 	export let access = true;
 	export let trial = false;
 
-	function h
 </script>
 
 <div class="book hover-lift-up {access ? 'accessible' : 'not-accessible'} {trial ? 'trial-available' : ''}">
