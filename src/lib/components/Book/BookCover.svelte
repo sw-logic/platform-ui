@@ -5,6 +5,8 @@
 	let type = props.type || '';
 	let tag = props.tag || '';
 	let link = props.href || '';
+	let access = props.access ?? true;
+	let trial = props.trial || false;
 
 	import { base } from '$app/paths';
 </script>
@@ -16,6 +18,9 @@
 			{#if tag}
 				<span class="book-tag">{tag}</span>
 			{/if}
+			{#if !access}
+				<span class="book-access {trial ? 'trial-available' : ''}">{trial ? "Trial available" : "Not available"}</span>
+			{/if}
 		</picture>
 	</a>
 {:else}
@@ -23,6 +28,9 @@
 		<img src="{base}/images/book/{cover}" alt="Name of the book">
 		{#if tag}
 			<span class="book-tag">{tag}</span>
+		{/if}
+		{#if !access}
+			<span class="book-access {trial ? 'trial-available' : ''}">{trial ? "Trial available" : "Not available"}</span>
 		{/if}
 	</picture>
 {/if}

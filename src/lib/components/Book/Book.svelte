@@ -9,11 +9,15 @@
 	export let subtitle = 'Subtitle of the book';
 	export let type = '';
 	export let tag = '';
+	export let access = true;
+	export let trial = false;
+
+	function h
 </script>
 
-<div class="book hover-lift-up">
+<div class="book hover-lift-up {access ? 'accessible' : 'not-accessible'} {trial ? 'trial-available' : ''}">
 	<div class="book-cover">
-		<BookCover {cover} {type} {tag} href="{base}/book-details" />
+		<BookCover {cover} {type} {tag} {access} {trial} href="{base}/book-details" />
 		<div class="book-controls d-flex flex-row mt-1 mb-2">
 			<ControlIcon icon="heart" title="Add to favorites" />
 			<ControlIcon icon="folder" title="Add to folder" />
