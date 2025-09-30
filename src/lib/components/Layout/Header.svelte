@@ -99,7 +99,7 @@
 								{/if}
 
 								<li><hr class="dropdown-divider"></li>
-								<li><a class="dropdown-item" href="{base}/#" on:click={logOut}>Log out</a></li>
+								<li><a class="dropdown-item" href="{base}/#" onclick={logOut}>Log out</a></li>
 							</ul>
 						</li>
 					</ul>

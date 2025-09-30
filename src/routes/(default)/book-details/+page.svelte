@@ -4,8 +4,9 @@
 	import Icon from '$lib/components/Icon.svelte';
 	import TOC from '$lib/components/Book/TOC.svelte';
 	import TrialStartModal from '$lib/components/Modals/TrialStartModal.svelte';
+	import type { SvelteComponent } from 'svelte';
 
-	let trialStartModal: HTMLDivElement;
+	let trialStartModal: SvelteComponent;
 </script>
 
 <div class="container py-5">

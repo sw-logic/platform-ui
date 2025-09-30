@@ -15,7 +15,7 @@
 	<div class="carousel-inner">
 		<div class="carousel-item active">
 			<picture class="bg-image">
-				<img alt="Name of the image" src="images/header/home-dark.webp">
+				<img alt="Welcome banner" src="images/header/home-dark.webp">
 			</picture>
 			<div class="container text-light">
 				<div class="row">

@@ -16,7 +16,8 @@
 	<li>
 		<a href="{base}/document/view">Imprint</a>
 	</li>
-	<li><a href="{base}/document/view">1. Introduction</a>
+	<li>
+		<a href="{base}/document/view">1. Introduction</a>
 	</li>
 	<li class="content-list expanded">
 		<div class="content-list-title">
@@ -45,9 +46,11 @@
 					<a href="{base}/document/view">2.2. The intersubjectivity of attention management</a>
 				</div>
 				<ul>
-					<li><a href="{base}/document/view">2.2.1. Discourses as joint attentional scenes</a>
+					<li>
+						<a href="{base}/document/view">2.2.1. Discourses as joint attentional scenes</a>
 					</li>
-					<li><a href="{base}/document/view">2.2.2. Utterances as attention-directing events</a>
+					<li>
+						<a href="{base}/document/view">2.2.2. Utterances as attention-directing events</a>
 					</li>
 				</ul>
 			</li>
@@ -88,11 +91,14 @@
 							<a class="m-hover-box-sm" href="{base}/document/view">3.1.1. Spatial and temporal marking</a>
 						</div>
 						<ul>
-							<li><a href="{base}/document/view">3.1.1.1. The operation of spatial deixis</a>
+							<li>
+								<a href="{base}/document/view">3.1.1.1. The operation of spatial deixis</a>
 							</li>
-							<li><a href="{base}/document/view">3.1.1.2. The operation of temporal deixis</a>
+							<li>
+								<a href="{base}/document/view">3.1.1.2. The operation of temporal deixis</a>
 							</li>
-							<li><a href="{base}/document/view">3.1.1.3. Deictic relation based on spatial and temporal contiguity</a>
+							<li>
+								<a href="{base}/document/view">3.1.1.3. Deictic relation based on spatial and temporal contiguity</a>
 							</li>
 						</ul>
 					</li>
