@@ -5,57 +5,73 @@
 
   li {
     list-style: none;
-    padding-left: 1.15em;
 
     &.content-list {
       position: relative;
-      padding-left: 0;
+
+      > ul {
+        display: none;
+      }
 
       &.expanded {
-        > .tree-toggle {
+        > .content-list-title > .tree-toggle {
           transform: rotate(90deg);
+        }
+
+        > ul {
+          display: block;
         }
       }
 
-      .tree-toggle {
-        padding: 0;
-        background: none;
-        border: none;
-        color: $dark;
-        transition: transform 0.2s ease-in-out, color 0.2s ease-in-out;
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
+      .content-list-title {
+        display: flex;
+        align-items: baseline;
 
-        &:focus {
-          outline: none;
-          color: $primary;
-        }
-
-        span {
-          cursor: pointer;
+        .tree-toggle {
           padding: 0;
-          margin: 0;
-          font-size: 0.875rem;
-          color: $secondary;
-          transition: transform 0.2s ease-in-out;
+          margin-right: .5rem;
+          background: none;
+          border: none;
+          color: $dark;
+          transition: transform 0.2s ease-in-out, color 0.2s ease-in-out;
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
 
-          &:hover {
+          &:focus {
+            outline: none;
             color: $primary;
+          }
+
+          span {
+            cursor: pointer;
+            padding: 0;
+            margin: 0;
+            font-size: 0.875rem;
+            color: $secondary;
+            transition: transform 0.2s ease-in-out;
+
+            &:hover {
+              color: $primary;
+            }
           }
         }
       }
     }
 
     a {
+        display: block;
         color: $dark;
         text-decoration: none;
-        margin-left: .5em;
 
         &:hover {
             color: $primary;
             text-decoration: underline;
         }
+    }
+
+    > a {
+      margin-left: 1.4rem;
     }
 
     > ul {

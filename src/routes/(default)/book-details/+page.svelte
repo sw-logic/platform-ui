@@ -15,7 +15,7 @@
 			<h1 class=" mb-1">This is the very long title of the book</h1>
 			<div class="small text-muted">Subtitle of the book</div>
 		</div>
-		<div class="col-sm-4 max-width-sm text-sm-end">
+		<div class="col-sm-4 max-width-sm text-sm-end mt-3 mt-sm-0">
 			{#if $settings.userLoggedIn && $settings.userSubscription}
 				<button class="btn btn-primary">Read the book</button>
 			{:else if !$settings.userSubscription && !$settings.userStartedTrial}
@@ -26,7 +26,7 @@
 		</div>
 	</div>
 	<hr>
-	<div class="row">
+	<div class="row gap-md-4">
 		<div class="col-sm-4 col-md-3 max-width-sm">
 			<BookCover />
 			<div class="book-details">
@@ -39,7 +39,7 @@
 				</div>
 			</div>
 		</div>
-		<div class="col-sm-7 offset-sm-1 col-md-8">
+		<div class="col mt-3 mt-sm-0">
 			<TOC />
 		</div>
 	</div>

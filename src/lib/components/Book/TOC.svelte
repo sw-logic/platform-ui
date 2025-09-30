@@ -19,14 +19,17 @@
 	<li><a href="{base}/document/view">1. Introduction</a>
 	</li>
 	<li class="content-list expanded">
-		<button type="button" class="tree-toggle" aria-label="Toggle tree section">
-			<span class="wk-icon-chevron-right"></span>
-		</button>
-		<a href="{base}/document/view">2. The perspectivity of linguistic activity: the pragmatics of construction</a>
+		<div class="content-list-title">
+			<button type="button" class="tree-toggle" aria-label="Toggle tree section">
+				<span class="wk-icon-chevron-right"></span>
+			</button><a href="{base}/document/view">2. The perspectivity of linguistic activity: the pragmatics of construction</a>
+		</div>
 		<ul>
 			<li class="content-list">
-				<button type="button" class="tree-toggle" aria-label="Toggle tree section"><span class="wk-icon-chevron-right"></span></button>
-				<a href="{base}/document/view">2.1. The adaptability of social cognition</a>
+				<div class="content-list-title">
+					<button type="button" class="tree-toggle" aria-label="Toggle tree section"><span class="wk-icon-chevron-right"></span></button>
+					<a href="{base}/document/view">2.1. The adaptability of social cognition</a>
+				</div>
 				<ul>
 					<li>
 						<a href="{base}/document/view">2.1.1. Alternative conceptualization as choice and negotiation</a>
@@ -37,8 +40,10 @@
 				</ul>
 			</li>
 			<li class="content-list">
-				<button type="button" class="tree-toggle" aria-label="Toggle tree section"><span class="wk-icon-chevron-right"></span></button>
-				<a href="{base}/document/view">2.2. The intersubjectivity of attention management</a>
+				<div class="content-list-title">
+					<button type="button" class="tree-toggle" aria-label="Toggle tree section"><span class="wk-icon-chevron-right"></span></button>
+					<a href="{base}/document/view">2.2. The intersubjectivity of attention management</a>
+				</div>
 				<ul>
 					<li><a href="{base}/document/view">2.2.1. Discourses as joint attentional scenes</a>
 					</li>
@@ -47,8 +52,10 @@
 				</ul>
 			</li>
 			<li class="content-list">
-				<button type="button" class="tree-toggle" aria-label="Toggle tree section"><span class="wk-icon-chevron-right"></span></button>
-				<a class="m-hover-box-sm" href="{base}/document/view">2.3. The context-dependence of construction</a>
+				<div class="content-list-title">
+					<button type="button" class="tree-toggle" aria-label="Toggle tree section"><span class="wk-icon-chevron-right"></span></button>
+					<a class="m-hover-box-sm" href="{base}/document/view">2.3. The context-dependence of construction</a>
+				</div>
 				<ul>
 					<li>
 						<a href="{base}/document/view">2.3.1. Context and contextualization</a>
@@ -64,16 +71,22 @@
 		</ul>
 	</li>
 	<li class="content-list">
-		<button type="button" class="tree-toggle" aria-label="Toggle tree section"><span class="wk-icon-chevron-right"></span></button>
-		<a href="{base}/document/view">3. The perspectivity of context: deictic and reflexive contextualization</a>
+		<div class="content-list-title">
+			<button type="button" class="tree-toggle" aria-label="Toggle tree section"><span class="wk-icon-chevron-right"></span></button>
+			<a href="{base}/document/view">3. The perspectivity of context: deictic and reflexive contextualization</a>
+		</div>
 		<ul>
 			<li class="content-list">
-				<button type="button" class="tree-toggle" aria-label="Toggle tree section"><span class="wk-icon-chevron-right"></span></button>
-				<a class="m-hover-box-sm" href="{base}/document/view">3.1. The deixis of contextualization</a>
+				<div class="content-list-title">
+					<button type="button" class="tree-toggle" aria-label="Toggle tree section"><span class="wk-icon-chevron-right"></span></button>
+					<a class="m-hover-box-sm" href="{base}/document/view">3.1. The deixis of contextualization</a>
+				</div>
 				<ul>
 					<li class="content-list">
-						<button type="button" class="tree-toggle" aria-label="Toggle tree section"><span class="wk-icon-chevron-right"></span></button>
-						<a class="m-hover-box-sm" href="{base}/document/view">3.1.1. Spatial and temporal marking</a>
+						<div class="content-list-title">
+							<button type="button" class="tree-toggle" aria-label="Toggle tree section"><span class="wk-icon-chevron-right"></span></button>
+							<a class="m-hover-box-sm" href="{base}/document/view">3.1.1. Spatial and temporal marking</a>
+						</div>
 						<ul>
 							<li><a href="{base}/document/view">3.1.1.1. The operation of spatial deixis</a>
 							</li>
@@ -84,8 +97,10 @@
 						</ul>
 					</li>
 					<li class="content-list">
-						<button type="button" class="tree-toggle" aria-label="Toggle tree section"><span class="wk-icon-chevron-right"></span></button>
-						<a class="m-hover-box-sm" href="{base}/document/view">3.1.2. The deixis of person marking and social attitude marking</a>
+						<div class="content-list-title">
+							<button type="button" class="tree-toggle" aria-label="Toggle tree section"><span class="wk-icon-chevron-right"></span></button>
+							<a class="m-hover-box-sm" href="{base}/document/view">3.1.2. The deixis of person marking and social attitude marking</a>
+						</div>
 						<ul>
 							<li><a href="{base}/document/view">3.1.2.1. The operation of person deixis</a>
 							</li>
@@ -98,8 +113,10 @@
 				</ul>
 			</li>
 			<li class="content-list">
-				<button type="button" class="tree-toggle" aria-label="Toggle tree section"><span class="wk-icon-chevron-right"></span></button>
-				<a class="m-hover-box-sm" href="{base}/document/view">3.2. Metapragmatic awareness of contextualization</a>
+				<div class="content-list-title">
+					<button type="button" class="tree-toggle" aria-label="Toggle tree section"><span class="wk-icon-chevron-right"></span></button>
+					<a class="m-hover-box-sm" href="{base}/document/view">3.2. Metapragmatic awareness of contextualization</a>
+				</div>
 				<ul>
 					<li><a href="{base}/document/view">3.2.1. Reflexivity and awareness</a>
 					</li>
@@ -108,8 +125,10 @@
 				</ul>
 			</li>
 			<li class="content-list">
-				<button type="button" class="tree-toggle" aria-label="Toggle tree section"><span class="wk-icon-chevron-right"></span></button>
-				<a class="m-hover-box-sm" href="{base}/document/view">3.3. Contextualizing constructions within and beyond the sentence</a>
+				<div class="content-list-title">
+					<button type="button" class="tree-toggle" aria-label="Toggle tree section"><span class="wk-icon-chevron-right"></span></button>
+					<a class="m-hover-box-sm" href="{base}/document/view">3.3. Contextualizing constructions within and beyond the sentence</a>
+				</div>
 				<ul>
 					<li><a href="{base}/document/view">3.3.1. Deictic contextualizers</a>
 					</li>
@@ -122,16 +141,22 @@
 		</ul>
 	</li>
 	<li class="content-list">
-		<button type="button" class="tree-toggle" aria-label="Toggle tree section"><span class="wk-icon-chevron-right"></span></button>
-		<a href="{base}/document/view">4. The perspectivity of discourse: attention management in narrative and lyric texts</a>
+		<div class="content-list-title">
+			<button type="button" class="tree-toggle" aria-label="Toggle tree section"><span class="wk-icon-chevron-right"></span></button>
+			<a href="{base}/document/view">4. The perspectivity of discourse: attention management in narrative and lyric texts</a>
+		</div>
 		<ul>
 			<li class="content-list">
-				<button type="button" class="tree-toggle" aria-label="Toggle tree section"><span class="wk-icon-chevron-right"></span></button>
-				<a class="m-hover-box-sm" href="{base}/document/view">4.1. Referential interpretation of stories</a>
+				<div class="content-list-title">
+					<button type="button" class="tree-toggle" aria-label="Toggle tree section"><span class="wk-icon-chevron-right"></span></button>
+					<a class="m-hover-box-sm" href="{base}/document/view">4.1. Referential interpretation of stories</a>
+				</div>
 				<ul>
 					<li class="content-list">
-						<button type="button" class="tree-toggle" aria-label="Toggle tree section"><span class="wk-icon-chevron-right"></span></button>
-						<a class="m-hover-box-sm" href="{base}/document/view">4.1.1. And that will be good</a>
+						<div class="content-list-title">
+							<button type="button" class="tree-toggle" aria-label="Toggle tree section"><span class="wk-icon-chevron-right"></span></button>
+							<a class="m-hover-box-sm" href="{base}/document/view">4.1.1. And that will be good</a>
+						</div>
 						<ul>
 							<li><a href="{base}/document/view">4.1.1.1. The unique narrative pattern of the interplay between explicitness and implicitness</a>
 							</li>
@@ -142,8 +167,10 @@
 						</ul>
 					</li>
 					<li class="content-list">
-						<button type="button" class="tree-toggle" aria-label="Toggle tree section"><span class="wk-icon-chevron-right"></span></button>
-						<a class="m-hover-box-sm" href="{base}/document/view">4.1.2. School at the Border</a>
+						<div class="content-list-title">
+							<button type="button" class="tree-toggle" aria-label="Toggle tree section"><span class="wk-icon-chevron-right"></span></button>
+							<a class="m-hover-box-sm" href="{base}/document/view">4.1.2. School at the Border</a>
+						</div>
 						<ul>
 							<li><a href="{base}/document/view">4.1.2.1. Reconfiguration of discursive schemes of narrative fiction</a>
 							</li>
@@ -156,12 +183,16 @@
 				</ul>
 			</li>
 			<li class="content-list">
-				<button type="button" class="tree-toggle" aria-label="Toggle tree section"><span class="wk-icon-chevron-right"></span></button>
-				<a class="m-hover-box-sm" href="{base}/document/view">4.2. Genre and viewpoint in narratives</a>
+				<div class="content-list-title">
+					<button type="button" class="tree-toggle" aria-label="Toggle tree section"><span class="wk-icon-chevron-right"></span></button>
+					<a class="m-hover-box-sm" href="{base}/document/view">4.2. Genre and viewpoint in narratives</a>
+				</div>
 				<ul>
 					<li class="content-list">
-						<button type="button" class="tree-toggle" aria-label="Toggle tree section"><span class="wk-icon-chevron-right"></span></button>
-						<a class="m-hover-box-sm" href="{base}/document/view">4.2.1. Esti</a>
+						<div class="content-list-title">
+							<button type="button" class="tree-toggle" aria-label="Toggle tree section"><span class="wk-icon-chevron-right"></span></button>
+							<a class="m-hover-box-sm" href="{base}/document/view">4.2.1. Esti</a>
+						</div>
 						<ul>
 							<li><a href="{base}/document/view">4.2.1.1. Genre as discursive scheme</a>
 							</li>
@@ -172,8 +203,10 @@
 						</ul>
 					</li>
 					<li class="content-list">
-						<button type="button" class="tree-toggle" aria-label="Toggle tree section"><span class="wk-icon-chevron-right"></span></button>
-						<a class="m-hover-box-sm" href="{base}/document/view">4.2.2. The Story of My Burn</a>
+						<div class="content-list-title">
+							<button type="button" class="tree-toggle" aria-label="Toggle tree section"><span class="wk-icon-chevron-right"></span></button>
+							<a class="m-hover-box-sm" href="{base}/document/view">4.2.2. The Story of My Burn</a>
+						</div>
 						<ul>
 							<li><a href="{base}/document/view">4.2.2.1. The pragmatics of computer-mediated narratives</a>
 							</li>
@@ -186,12 +219,16 @@
 				</ul>
 			</li>
 			<li class="content-list">
-				<button type="button" class="tree-toggle" aria-label="Toggle tree section"><span class="wk-icon-chevron-right"></span></button>
-				<a class="m-hover-box-sm" href="{base}/document/view">4.3. Viewpoint in song lyrics</a>
+				<div class="content-list-title">
+					<button type="button" class="tree-toggle" aria-label="Toggle tree section"><span class="wk-icon-chevron-right"></span></button>
+					<a class="m-hover-box-sm" href="{base}/document/view">4.3. Viewpoint in song lyrics</a>
+				</div>
 				<ul>
 					<li class="content-list">
-						<button type="button" class="tree-toggle" aria-label="Toggle tree section"><span class="wk-icon-chevron-right"></span></button>
-						<a class="m-hover-box-sm" href="{base}/document/view">4.3.1. The lyricism of apostrophe</a>
+						<div class="content-list-title">
+							<button type="button" class="tree-toggle" aria-label="Toggle tree section"><span class="wk-icon-chevron-right"></span></button>
+							<a class="m-hover-box-sm" href="{base}/document/view">4.3.1. The lyricism of apostrophe</a>
+						</div>
 						<ul>
 							<li><a href="{base}/document/view">4.3.1.1. Song lyrics as apostrophic fictions</a>
 							</li>
@@ -202,8 +239,10 @@
 						</ul>
 					</li>
 					<li class="content-list">
-						<button type="button" class="tree-toggle" aria-label="Toggle tree section"><span class="wk-icon-chevron-right"></span></button>
-						<a class="m-hover-box-sm" href="{base}/document/view">4.3.2. The lyricism of person marking</a>
+						<div class="content-list-title">
+							<button type="button" class="tree-toggle" aria-label="Toggle tree section"><span class="wk-icon-chevron-right"></span></button>
+							<a class="m-hover-box-sm" href="{base}/document/view">4.3.2. The lyricism of person marking</a>
+						</div>
 						<ul>
 							<li><a href="{base}/document/view">4.3.2.1. The contextualizing and perspectivizing role of person marking in song lyrics</a>
 							</li>
@@ -220,12 +259,16 @@
 		</ul>
 	</li>
 	<li class="content-list">
-		<button type="button" class="tree-toggle" aria-label="Toggle tree section"><span class="wk-icon-chevron-right"></span></button>
-		<a href="{base}/document/view">5. The perspectivity of style: attribution of style in everyday and literary discourses</a>
+		<div class="content-list-title">
+			<button type="button" class="tree-toggle" aria-label="Toggle tree section"><span class="wk-icon-chevron-right"></span></button>
+			<a href="{base}/document/view">5. The perspectivity of style: attribution of style in everyday and literary discourses</a>
+		</div>
 		<ul>
 			<li class="content-list">
-				<button type="button" class="tree-toggle" aria-label="Toggle tree section"><span class="wk-icon-chevron-right"></span></button>
-				<a class="m-hover-box-sm" href="{base}/document/view">5.1. The sociocultural situatedness of style attribution – theoretical insights</a>
+				<div class="content-list-title">
+					<button type="button" class="tree-toggle" aria-label="Toggle tree section"><span class="wk-icon-chevron-right"></span></button>
+					<a class="m-hover-box-sm" href="{base}/document/view">5.1. The sociocultural situatedness of style attribution – theoretical insights</a>
+				</div>
 				<ul>
 					<li><a href="{base}/document/view">5.1.1. Style attribution as a deictic operation</a>
 					</li>
@@ -234,8 +277,10 @@
 				</ul>
 			</li>
 			<li class="content-list">
-				<button type="button" class="tree-toggle" aria-label="Toggle tree section"><span class="wk-icon-chevron-right"></span></button>
-				<a class="m-hover-box-sm" href="{base}/document/view">5.2. Sociocultural factors of style attribution – possibilities of empirical investigation</a>
+				<div class="content-list-title">
+					<button type="button" class="tree-toggle" aria-label="Toggle tree section"><span class="wk-icon-chevron-right"></span></button>
+					<a class="m-hover-box-sm" href="{base}/document/view">5.2. Sociocultural factors of style attribution – possibilities of empirical investigation</a>
+				</div>
 				<ul>
 					<li><a href="{base}/document/view">5.2.1. Designations reflecting on style attribution</a>
 					</li>
@@ -248,8 +293,10 @@
 				</ul>
 			</li>
 			<li class="content-list">
-				<button type="button" class="tree-toggle" aria-label="Toggle tree section"><span class="wk-icon-chevron-right"></span></button>
-				<a class="m-hover-box-sm" href="{base}/document/view">5.3. The homogeneity and heterogeneity of style in the short stories of Antal Szerb</a>
+				<div class="content-list-title">
+					<button type="button" class="tree-toggle" aria-label="Toggle tree section"><span class="wk-icon-chevron-right"></span></button>
+					<a class="m-hover-box-sm" href="{base}/document/view">5.3. The homogeneity and heterogeneity of style in the short stories of Antal Szerb</a>
+				</div>
 				<ul>
 					<li><a href="{base}/document/view">5.3.1. Style – homogenization, polarization and relativization in formulation</a>
 					</li>
@@ -262,8 +309,10 @@
 		</ul>
 	</li>
 	<li class="content-list">
-		<button type="button" class="tree-toggle" aria-label="Toggle tree section"><span class="wk-icon-chevron-right"></span></button>
-		<a href="{base}/document/view">6. Summary</a>
+		<div class="content-list-title">
+			<button type="button" class="tree-toggle" aria-label="Toggle tree section"><span class="wk-icon-chevron-right"></span></button>
+			<a href="{base}/document/view">6. Summary</a>
+		</div>
 		<ul>
 			<li><a href="{base}/document/view">6.1. The model of context-dependent starting points</a>
 			</li>

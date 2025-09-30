@@ -5,8 +5,8 @@
 	let type = props.type || '';
 	let tag = props.tag || '';
 	let link = props.href || '';
-	let access = props.access ?? true;
-	let trial = props.trial || false;
+	let access = true //props.access ?? true;
+	let trial = false //props.trial || false;
 
 	import { base } from '$app/paths';
 </script>

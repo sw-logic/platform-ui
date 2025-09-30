@@ -31,11 +31,6 @@ export class TreeElement {
 				button.setAttribute('aria-controls', this.generateId());
 				childUl.setAttribute('id', button.getAttribute('aria-controls')!);
 				childUl.setAttribute('role', 'group');
-
-				// Set initial visibility based on expanded state
-				if (!isExpanded) {
-					(childUl as HTMLElement).style.display = 'none';
-				}
 			}
 		});
 	}
@@ -78,19 +73,17 @@ export class TreeElement {
 		if (isExpanded) {
 			// Collapse
 			contentList.classList.remove('expanded');
-			childUl.style.display = 'none';
 			button.setAttribute('aria-expanded', 'false');
 		} else {
 			// Expand
 			contentList.classList.add('expanded');
-			childUl.style.display = 'block';
 			button.setAttribute('aria-expanded', 'true');
 		}
 	}
 
 	public expandAll(): void {
 		const contentLists = this.element.querySelectorAll('.content-list');
-		
+
 		contentLists.forEach((list) => {
 			const htmlList = list as HTMLElement;
 			const button = htmlList.querySelector(':scope > .tree-toggle') as HTMLButtonElement;
@@ -98,7 +91,6 @@ export class TreeElement {
 
 			if (childUl && button && !htmlList.classList.contains('expanded')) {
 				htmlList.classList.add('expanded');
-				childUl.style.display = 'block';
 				button.setAttribute('aria-expanded', 'true');
 			}
 		});
@@ -106,7 +98,7 @@ export class TreeElement {
 
 	public collapseAll(): void {
 		const contentLists = this.element.querySelectorAll('.content-list');
-		
+
 		contentLists.forEach((list) => {
 			const htmlList = list as HTMLElement;
 			const button = htmlList.querySelector(':scope > .tree-toggle') as HTMLButtonElement;
@@ -114,7 +106,6 @@ export class TreeElement {
 
 			if (childUl && button && htmlList.classList.contains('expanded')) {
 				htmlList.classList.remove('expanded');
-				childUl.style.display = 'none';
 				button.setAttribute('aria-expanded', 'false');
 			}
 		});

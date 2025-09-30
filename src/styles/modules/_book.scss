@@ -10,11 +10,11 @@
   }
 
   &.not-accessible:not(.trial-available) {
-    img {
+    /* img {
       opacity: .5;
       filter: grayscale(100%);
       transition: .5s all;
-    }
+    } */
 
     h4 {
       color: $gray-600 !important;

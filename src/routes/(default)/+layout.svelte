@@ -1,5 +1,4 @@
 <script>
-	import '../../styles/app.scss';
 	import Header from '$lib/components/Layout/Header.svelte';
 	import Footer from '$lib/components/Layout/Footer.svelte';
 	import SettingsOffcanvas from '$lib/components/Modals/SettingsOffcanvas.svelte';
