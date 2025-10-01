@@ -51,7 +51,7 @@ jobs:
 
             SOURCE_FILE="../platform-ui/$file"
             # Map src/styles/ to presentation-layer/src/styles/
-            TARGET_FILE="presentation-layer/${file#src/}"
+            TARGET_FILE="presentation-layer/$file"
 
             if [ -f "$SOURCE_FILE" ]; then
               # File exists in source - copy it
