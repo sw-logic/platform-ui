@@ -38,6 +38,46 @@ body {
 
     display: flex;
     flex-direction: column;
+
+    .document-view {
+      flex-grow: 1;
+      display: flex;
+      flex-direction: row;
+
+      .document-content {
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+
+        .document-header {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          height: 2rem;
+          background-color: $light;
+          padding: 0 1rem;
+        }
+
+        .document-body {
+          flex-grow: 1;
+          display: flex;
+          flex-direction: row;
+        }
+
+        .document-footer {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          height: 3rem;
+          background-color: $light;
+          padding: 0 1rem;
+        }
+      }
+
+      .document-toolbar {
+        width: 300px;
+      }
+    }
   }
 
   footer {}

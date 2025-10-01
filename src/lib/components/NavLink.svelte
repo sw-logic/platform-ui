@@ -5,7 +5,7 @@
 </script>
 
 {#if active}
-	<a class="nav-link d-flex align-items-center {props.class}" href={props.href || '#'} {...props}>
+	<a class="nav-link flex-row-center {props.class}" href={props.href || '#'} {...props}>
 		{#if props.icon}
 			<Icon icon={props.icon} class="nav-icon me-2" />
 		{/if}
@@ -14,7 +14,7 @@
 		{/if}
 	</a>
 {:else}
-	<span class="text-disabled px-2 d-flex align-items-center {props.class}">
+	<span class="text-disabled px-2 flex-row-center {props.class}">
 		{#if props.icon}
 			<Icon icon={props.icon} class="nav-icon me-2" />
 		{/if}

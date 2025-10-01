@@ -12588,6 +12588,40 @@ body main {
   display: flex;
   flex-direction: column;
 }
+body main .document-view {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: row;
+}
+body main .document-view .document-content {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+body main .document-view .document-content .document-header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 2rem;
+  background-color: #e7e7e7;
+  padding: 0 1rem;
+}
+body main .document-view .document-content .document-body {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: row;
+}
+body main .document-view .document-content .document-footer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 3rem;
+  background-color: #e7e7e7;
+  padding: 0 1rem;
+}
+body main .document-view .document-toolbar {
+  width: 300px;
+}
 .carousel .carousel-inner {
   height: 450px;
 }

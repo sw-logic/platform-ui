@@ -5,6 +5,12 @@
 	import TOC from '$lib/components/Book/TOC.svelte';
 	import TrialStartModal from '$lib/components/Modals/TrialStartModal.svelte';
 	import type { SvelteComponent } from 'svelte';
+	import { goto } from '$app/navigation';
+	import { base } from '$app/paths';
+
+	function readBook() {
+		goto(`${base}/document/xml`);
+	}
 
 	let trialStartModal: SvelteComponent;
 </script>
@@ -18,7 +24,7 @@
 		</div>
 		<div class="col-sm-4 max-width-sm text-sm-end mt-3 mt-sm-0">
 			{#if $settings.userLoggedIn && $settings.userSubscription}
-				<button class="btn btn-primary">Read the book</button>
+				<button class="btn btn-primary" onclick={readBook}>Read the book</button>
 			{:else if !$settings.userSubscription && !$settings.userStartedTrial}
 				<button class="btn btn-warning" onclick={trialStartModal.show}>Start trial period</button>
 				<p class="small text-sm-end m-0 mt-2">Lorem ipsum <strong>trial priod</strong>, consectetur adipisicing elit. Alias blanditiis commodi cupiditate, deserunt dolores,

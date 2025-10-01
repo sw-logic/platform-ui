@@ -4,13 +4,13 @@ import type { SettingsState } from './types.js';
 
 const defaultSettings: SettingsState = {
 	userAuth: false,
-	userManagement: false,
+	userManagement: true,
 	registerWithEduId: true,
-	userRegistered: false,
+	userRegistered: true,
 	userType: 'private',
-	userLoggedIn: false,
+	userLoggedIn: true,
 	userStartedTrial: false,
-	userSubscription: false,
+	userSubscription: true,
 	allowGuest: true,
 	showLibraryForGuests: true,
 	theme: 'light',
