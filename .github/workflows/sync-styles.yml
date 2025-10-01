@@ -1,0 +1,96 @@
+name: Sync Styles to mersz-platform
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'src/styles/**'
+
+jobs:
+  sync-styles:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout platform-ui
+        uses: actions/checkout@v4
+        with:
+          path: platform-ui
+          fetch-depth: 2  # Need previous commit for diff
+
+      - name: Checkout mersz-platform
+        uses: actions/checkout@v4
+        with:
+          repository: sw-logic/mersz-platform
+          token: ${{ secrets.MERSZ_PLATFORM_TOKEN }}
+          path: mersz-platform
+          fetch-depth: 0
+
+      - name: Sync changed files only
+        run: |
+          cd platform-ui
+
+          # Get list of changed files in src/styles from this push
+          CHANGED_FILES=$(git diff --name-only HEAD~1 HEAD -- src/styles/)
+
+          if [ -z "$CHANGED_FILES" ]; then
+            echo "ℹ️ No styles files changed in this push"
+            exit 0
+          fi
+
+          echo "📝 Changed files:"
+          echo "$CHANGED_FILES"
+
+          cd ../mersz-platform
+
+          # Process each changed file
+          while IFS= read -r file; do
+            if [ -z "$file" ]; then
+              continue
+            fi
+
+            SOURCE_FILE="../platform-ui/$file"
+            # Map src/styles/ to presentation-layer/src/styles/
+            TARGET_FILE="presentation-layer/${file#src/}"
+
+            if [ -f "$SOURCE_FILE" ]; then
+              # File exists in source - copy it
+              echo "✅ Copying: $file → $TARGET_FILE"
+              mkdir -p "$(dirname "$TARGET_FILE")"
+              cp "$SOURCE_FILE" "$TARGET_FILE"
+              git add "$TARGET_FILE"
+            else
+              # File was deleted in source - delete it in target
+              echo "🗑️ Deleting: $TARGET_FILE"
+              if [ -f "$TARGET_FILE" ]; then
+                git rm "$TARGET_FILE"
+              fi
+            fi
+          done <<< "$CHANGED_FILES"
+
+      - name: Commit and push changes
+        working-directory: mersz-platform
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
+          # Check if there are any changes
+          if [[ -n $(git status --porcelain) ]]; then
+            # Get the commit message from platform-ui
+            ORIGINAL_MSG=$(cd ../platform-ui && git log -1 --pretty=%B)
+
+            # Create commit message file
+            cat > /tmp/commit-msg.txt <<COMMITMSG
+          Sync styles from platform-ui
+
+          ${ORIGINAL_MSG}
+
+          Synced from: ${{ github.repository }}@${{ github.sha }}
+          COMMITMSG
+
+            git commit -F /tmp/commit-msg.txt
+            git push
+            echo "✅ Styles synced successfully"
+          else
+            echo "ℹ️ No changes to commit"
+          fi
