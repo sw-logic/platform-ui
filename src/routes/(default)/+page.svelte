@@ -41,11 +41,11 @@
 
 <div class="container py-5">
 	<section class="mb-6">
-		<div class="d-flex align-items-center">
+		<div class="flex-row-center mb-3">
 			<h2>Novelities</h2>
 			<button class="btn btn-outline-primary ms-auto">All items <Icon icon="arrow-right" /></button>
 		</div>
-		<div class="grid grid-cols-6 mt-4">
+		<div class="books book-grid">
 			<Book cover="book-1.webp" />
 			<Book cover="book-2.webp" />
 			<Book cover="book-3.webp" />
@@ -63,11 +63,11 @@
 
 		<!-- User's history -->
 		<section class="mb-6">
-			<div class="d-flex align-items-center">
+			<div class="flex-row-center mb-3">
 				<h2>History</h2>
 				<button class="btn btn-outline-primary ms-auto">All items <Icon icon="arrow-right" /></button>
 			</div>
-			<div class="grid grid-cols-6 mt-4">
+			<div class="books book-grid">
 				<Book cover="book-1.webp" />
 				<Book cover="book-2.webp" />
 				<Book cover="book-3.webp" />
@@ -82,11 +82,11 @@
 
 		<!-- User's favorites -->
 		<section class="mb-6">
-			<div class="d-flex align-items-center">
+			<div class="flex-row-center mb-3">
 				<h2>Favorites</h2>
 				<button class="btn btn-outline-primary ms-auto">All items <Icon icon="arrow-right" /></button>
 			</div>
-			<div class="grid grid-cols-6 mt-4">
+			<div class="books book-grid grid-6">
 				<Book cover="book-1.webp" />
 				<Book cover="book-2.webp" />
 				<Book cover="book-3.webp" />

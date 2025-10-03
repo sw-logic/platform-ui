@@ -18,7 +18,7 @@
 				<i class="wk-icon-chevron-right"></i>
 			</div>
 			<div class="collapse show" id="collapseSeries">
-				<div class="book-grid">
+				<div class="books book-grid">
 					<Book type="series" tag="new" cover="book-1.webp" />
 					<Book type="series" cover="book-2.webp" />
 					<Book type="series" cover="book-3.webp" />
@@ -40,7 +40,7 @@
 				<i class="wk-icon-chevron-right"></i>
 			</div>
 			<div class="collapse show" id="collapseCollections">
-				<div class="book-grid">
+				<div class="books book-grid">
 					<Book type="series" cover="book-1.webp" />
 					<Book type="series" cover="book-2.webp" />
 					<Book type="series" cover="book-3.webp" />
@@ -53,7 +53,7 @@
 			<hr class="my-4">
 
 			<h2 class="mb-4">Books</h2>
-			<div class="book-grid">
+			<div class="books book-grid">
 				<Book cover="book-1.webp" tag="New"/>
 				<Book cover="book-2.webp" />
 				<Book cover="book-3.webp" />

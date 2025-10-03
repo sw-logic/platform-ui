@@ -5,6 +5,22 @@ body {
   flex-direction: column;
   min-height: 100vh;
 
+  .site-indent {
+    max-width: map-get($container-max-widths, xl);
+    margin-left: clamp(0px, calc((100vw - map-get($container-max-widths, xl)) / 2), 100vw) !important;
+  }
+
+  .content {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    padding: .5rem;
+  }
+
+  [class*=wk-icon-] {
+    margin: 0 !important;
+  }
+
   header {
     position: relative;
     z-index: 1025 !important;
@@ -22,7 +38,7 @@ body {
 
     .settings-button {
       position: fixed;
-      top: 15%;
+      top: 50%;
       right: 0;
 
       color: white;
@@ -38,52 +54,17 @@ body {
 
     display: flex;
     flex-direction: column;
-
-    .document-view {
-      flex-grow: 1;
-      display: flex;
-      flex-direction: row;
-
-      .document-content {
-        flex-grow: 1;
-        display: flex;
-        flex-direction: column;
-
-        .document-header {
-          display: flex;
-          flex-direction: row;
-          align-items: center;
-          height: 2rem;
-          background-color: $light;
-          padding: 0 1rem;
-        }
-
-        .document-body {
-          flex-grow: 1;
-          display: flex;
-          flex-direction: row;
-        }
-
-        .document-footer {
-          display: flex;
-          flex-direction: row;
-          align-items: center;
-          height: 3rem;
-          background-color: $light;
-          padding: 0 1rem;
-        }
-      }
-
-      .document-toolbar {
-        width: 300px;
-      }
-    }
   }
 
-  footer {}
+  footer {
+    z-index: 1;
+    .nav-link {
+      padding: 0 !important;
+    }
+  }
 }
 
-// Carousel styles
+
 .carousel {
   .carousel-inner {
     height: 450px;

@@ -36,15 +36,16 @@
 		<div class="book-details">
 			<p class="book-excerpt">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad adipisci aspernatur assumenda dignissimos, eligendi fugiat in modi molestias necessitatibus nemo neque non omnis perspiciatis quaerat quos sed voluptate voluptatem. Eius.</p>
 		</div>
-		{#if !access}
-			<div class="mt-2">
+		<div class="info-tags mt-2">
+			<span class="info-tag text-white bg-middle">PDF</span>
+			{#if !access}
 				{#if trial}
-					<span class="badge rounded-pill bg-warning">Trial available</span>
+					<span class="info-tag bg-warning text-white">Trial available</span>
 				{:else}
-					<span class="badge rounded-pill bg-light text-middle">Not accessible</span>
+					<span class="info-tag bg-light text-middle">Not accessible</span>
 				{/if}
-			</div>
-		{/if}
+			{/if}
+		</div>
 	</div>
 </div>
 

@@ -20,7 +20,7 @@ function setBookList() {
 }
 </script>
 
-<div class="col col-sm-auto flex-row-center gap-3 mt-3 mt-sm-0">
+<div class="filter-bar mt-3 mt-sm-0">
 	<select class="form-select" aria-label="Select sort">
 		<option value="1" selected>Title</option>
 		<option value="2">Popularity</option>

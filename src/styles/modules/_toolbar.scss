@@ -1,0 +1,70 @@
+@import "../variables";
+
+$toolbar-width: 350px;
+
+.toolbar {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  width: $toolbar-width;
+  min-width: $toolbar-width;
+  max-width: $toolbar-width;
+  overflow: hidden;
+  gap: 1px;
+
+  h4,h5,h6 {
+    margin: 0;
+  }
+
+  .toolbar-item {
+    .toolbar-item-header {
+      display: flex;
+      flex-flow: row nowrap;
+      align-items: center;
+      justify-content: space-between;
+      height: 2rem;
+      padding: 0 .5rem;
+
+      background-color: $light;
+      transition: all 0.3s ease-in-out;
+
+      cursor: pointer;
+
+      &:hover {
+        background-color: $primary-light;
+      }
+
+      .toolbar-item-header-icon {
+        transform: rotate(0deg);
+        transition: all .3s ease-in-out;
+      }
+    }
+
+    .toolbar-item-body {
+      display: none;
+      padding: .5rem;
+    }
+
+    &.active {
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+
+      .toolbar-item-header {
+        background-color: $primary-light;
+        pointer-events: none;
+
+        .toolbar-item-header-icon {
+          transform: rotate(90deg);
+        }
+      }
+
+      .toolbar-item-body {
+        display: flex;
+        flex-direction: column;
+        flex: 1 0 0;
+        overflow-y: auto;
+      }
+    }
+  }
+}

@@ -42,18 +42,21 @@ $colors: (
         "gray-dark":  $gray-800
 );
 
-$primary:       $blue;
-$secondary:     $green;
-$tertiary:      $red;
-$success:       $green;
-$info:          $blue;
-$warning:       $orange;
-$danger:        $red;
-$lighter:       $gray-100;
-$light:         $gray-200;
-$middle:        $gray-500;
-$dark:          $gray-800;
-$darker:        $gray-900;
+$primary:         $blue;
+$primary-light:   fade-out($primary, 0.75);
+$secondary:       $green;
+$secondary-light: fade-out($secondary, 0.75);
+$tertiary:        $red;
+$tertiary-light:  fade-out($tertiary, 0.75);
+$success:         $green;
+$info:            $blue;
+$warning:         $orange;
+$danger:          $red;
+$lighter:         $gray-100;
+$light:           $gray-200;
+$middle:          $gray-500;
+$dark:            $gray-800;
+$darker:          $gray-900;
 // scss-docs-end theme-color-variables
 
 // scss-docs-start theme-colors-map

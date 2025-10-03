@@ -39,15 +39,15 @@ function setBookList() {
 			<!-- Tab panes -->
 			<div class="tab-content" id="searchPageTabContent">
 				<div class="tab-pane fade show active" id="publicationList" role="tabpanel" aria-labelledby="home-tab">
-					<div class="d-flex flex-wrap gap-2 mb-3">
+					<div class="similar-phrases mb-3">
 						<span class="text-nowrap">Similar phrases:</span>
 						<span class="badge rounded-pill text-bg-light bg-hover-light pointer">Cultural History</span>
 						<span class="badge rounded-pill text-bg-light">Cultural History</span>
 						<span class="badge rounded-pill text-bg-light">Cultural History</span>
 					</div>
-					<p><strong>15386</strong> results in <strong>438</strong> publications</p>
+					<div class="result-info mb-3"><strong>15386</strong> results in <strong>438</strong> publications</div>
 
-					<div bind:this={bookGrid} class="book-grid grid-cols-1 grid-cols-sm-3 grid-cols-lg-4 grid-cols-xl-5">
+					<div bind:this={bookGrid} class="books book-grid">
 						<Book cover="book-1.webp" />
 						<Book cover="book-2.webp" />
 						<Book cover="book-3.webp" />

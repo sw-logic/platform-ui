@@ -8,13 +8,11 @@
 		<div class="row align-items-center">
 			<div class="col-12 col-md-6 d-flex gap-3 justify-content-center justify-content-md-start">
 				<nav class="navbar navbar-expand-sm py-0">
-					<div class="container">
-						<ul class="navbar-nav gap-3">
-							<li class="nav-item small"><NavLink href="{base}/docs/disclaimer" title="Disclaimer" /></li>
-							<li class="nav-item small"><NavLink href="{base}/docs/privacy-policy" title="Privacy Policy" /></li>
-							<li class="nav-item small"><NavLink href="{base}/docs/terms-and-conditions" title="Terms & conditions" /></li>
-						</ul>
-					</div>
+					<ul class="navbar-nav gap-3">
+						<li class="nav-item small"><NavLink href="{base}/docs/disclaimer" title="Disclaimer" /></li>
+						<li class="nav-item small"><NavLink href="{base}/docs/privacy-policy" title="Privacy Policy" /></li>
+						<li class="nav-item small"><NavLink href="{base}/docs/terms-and-conditions" title="Terms & conditions" /></li>
+					</ul>
 				</nav>
 			</div>
 			<div class="col-12 col-md-6">

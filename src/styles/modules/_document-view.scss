@@ -1,0 +1,45 @@
+@import "../variables";
+
+.document-view {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: row;
+
+  .document-content {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+
+    .document-header {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      height: 2rem;
+      background-color: $light;
+      padding: 0 1rem;
+    }
+
+    .document-body {
+      flex: 1 0 0;
+      overflow-y: auto;
+
+      .document {
+        padding: 1rem 100px 1rem 1rem;
+        padding-right: clamp(50px, 10%, 150px);
+
+        p {
+          text-align: justify;
+        }
+      }
+    }
+
+    .document-footer {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      height: 3rem;
+      background-color: $light;
+      padding: 0 1rem;
+    }
+  }
+}

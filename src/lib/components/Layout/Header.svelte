@@ -60,7 +60,7 @@
 
 			<!-- Search bar -->
 			<div class="w-50">
-				<div class="input-group">
+				<div class="input-group input-group-sm">
 					<input type="text" class="form-control border-dark" placeholder="Search" aria-label="Search" aria-describedby="searchButton">
 					<a href="{base}/search" class="btn btn-outline-dark" type="button" id="searchButton"><Icon type="fa-solid" icon="magnifying-glass" /></a>
 				</div>
@@ -117,7 +117,7 @@
 			</div>
 
 			<!-- Mobile menu button -->
-			<div class="d-flex d-md-none align-items-center ms-3">
+			<div class="flex-row-center d-md-none ms-3">
 				<ControlIcon icon="menu" title="Show menu" data-bs-toggle="offcanvas" data-bs-target="#mobileMenuOffcanvas" />
 			</div>
 		</div>
