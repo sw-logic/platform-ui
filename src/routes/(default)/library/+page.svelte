@@ -20,16 +20,16 @@
 			<div class="collapse show" id="collapseSeries">
 				<div class="books book-grid">
 					<Book type="series" tag="new" cover="book-1.webp" />
-					<Book type="series" cover="book-2.webp" />
-					<Book type="series" cover="book-3.webp" />
-					<Book type="series" cover="book-4.webp" />
-					<Book type="series" cover="book-5.webp" />
-					<Book type="series" cover="book-1.webp" />
-					<Book type="series" cover="book-2.webp" />
-					<Book type="series" cover="book-3.webp" />
-					<Book type="series" cover="book-4.webp" />
-					<Book type="series" cover="book-5.webp" />
-					<Book type="series" cover="book-1.webp" />
+					<Book type="series" cover="book-2.webp" access={false} trial={true} />
+					<Book type="series" cover="book-3.webp" access={false} trial={false} />
+					<Book type="series" cover="book-4.webp" access={false} trial={true} />
+					<Book type="series" cover="book-5.webp" access={false} trial={true} />
+					<Book type="series" cover="book-1.webp" access={false} trial={false} />
+					<Book type="series" cover="book-2.webp" access={false} trial={false} />
+					<Book type="series" cover="book-3.webp" access={false} trial={false} />
+					<Book type="series" cover="book-4.webp" access={false} trial={true} />
+					<Book type="series" cover="book-5.webp" access={false} trial={false} />
+					<Book type="series" cover="book-1.webp" access={false} trial={true} />
 				</div>
 			</div>
 
