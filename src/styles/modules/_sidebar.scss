@@ -1,6 +1,8 @@
 @import "../variables";
 
 $sidebar-width: 350px;
+$sidebar-width-sm: 250px;
+$sidebar-width-lg: 500px;
 
 .sidebar {
   flex-grow: 1;
@@ -10,6 +12,16 @@ $sidebar-width: 350px;
   width: $sidebar-width;
   min-width: $sidebar-width;
   max-width: 100%;
+
+  &.sidebar-sm {
+    width: $sidebar-width-sm;
+    min-width: $sidebar-width-sm;
+  }
+
+  &.sidebar-lg {
+      width: $sidebar-width-lg;
+      min-width: $sidebar-width-lg;
+  }
 
   @each $breakpoint, $value in $grid-breakpoints {
     @if $breakpoint != xs {

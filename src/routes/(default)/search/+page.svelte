@@ -1,27 +1,19 @@
 <script lang="ts">
-import Book from '$lib/components/Book/Book.svelte';
-import ControlIcon from '$lib/components/ControlIcon.svelte';
-import FilterPanelSearch from '$lib/components/Filters/FilterPanelSearch.svelte';
-import FilterOffcanvas from '$lib/components/Filters/FilterOffcanvas.svelte';
-import FilterBar from '$lib/components/Filters/FilterBar.svelte';
+	import Book from '$lib/components/Book/Book.svelte';
+	import FilterPanelSearch from '$lib/components/Filters/FilterPanelSearch.svelte';
+	import FilterBar from '$lib/components/Filters/FilterBar.svelte';
+	import { onMount } from 'svelte';
+	import { Sidebar } from '$lib/scripts/sidebar';
+	import ControlIcon from '$lib/components/ControlIcon.svelte';
 
-let bookGrid: HTMLDivElement;
-
-function setBookGrid() {
-	bookGrid.classList.add('book-grid');
-	bookGrid.classList.remove('book-list');
-}
-
-function setBookList() {
-	bookGrid.classList.remove('book-grid');
-	bookGrid.classList.add('book-list');
-}
-
+	onMount(() => {
+		Sidebar.init();
+	});
 </script>
 
 <div class="container py-5">
 	<div class="d-flex flex-row gap-5">
-		<div class="col-12 col-md-9">
+		<div class="col-12 col-md">
 			<div class="row align-items-center mb-3">
 				<div class="col-12 col-sm-6 me-auto">
 					<ul class="nav nav-underline">
@@ -47,7 +39,7 @@ function setBookList() {
 					</div>
 					<div class="result-info mb-3"><strong>15386</strong> results in <strong>438</strong> publications</div>
 
-					<div bind:this={bookGrid} class="books book-grid">
+					<div class="books book-grid">
 						<Book cover="book-1.webp" />
 						<Book cover="book-2.webp" />
 						<Book cover="book-3.webp" />
@@ -67,18 +59,16 @@ function setBookList() {
 					Profile tab content
 				</div>
 			</div>
-
-
 		</div>
-		<div class="col d-none d-md-block">
-			<div class="sticky-top" style="top: 144px;">
+		<div class="col-auto">
+			<div class="sidebar sidebar-sm sidebar-collapse-md" id="filter-sidebar">
+				<div class="sidebar-header d-md-none">
+					<h4>Filters</h4>
+					<ControlIcon icon="close" data-sidebar-close="#filter-sidebar" aria-label="Close sidebar" />
+				</div>
 				<FilterPanelSearch />
 			</div>
 		</div>
 	</div>
 
 </div>
-
-<FilterOffcanvas>
-	<FilterPanelSearch />
-</FilterOffcanvas>

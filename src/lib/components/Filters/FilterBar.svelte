@@ -1,6 +1,7 @@
 <script>
 import ControlIcon from '$lib/components/ControlIcon.svelte';
 
+export let sidebar = '#filter-sidebar';
 let gridView = true;
 
 function setBookGrid() {
@@ -31,6 +32,6 @@ function setBookList() {
 		<ControlIcon icon="filled-list-bullet-square" active={!gridView} onclick={setBookList} />
 	</div>
 	<div class="d-md-none">
-		<ControlIcon icon="filled-funnel" type="button" data-bs-toggle="offcanvas" data-bs-target="#filterOffcanvas" aria-controls="filterOffcanvas"/>
+		<ControlIcon icon="filled-funnel" type="button" data-sidebar-target={sidebar} aria-controls="filterOffcanvas"/>
 	</div>
 </div>

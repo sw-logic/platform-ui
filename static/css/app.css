@@ -12784,6 +12784,17 @@ body footer .nav-link {
   }
 }
 
+.para-row {
+  display: flex;
+  flex-direction: row-reverse;
+  gap: 1rem;
+}
+.para-row .para-tools {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
 .similar-phrases {
   display: flex;
   flex-direction: row;
@@ -12799,6 +12810,14 @@ body footer .nav-link {
   width: 350px;
   min-width: 350px;
   max-width: 100%;
+}
+.sidebar.sidebar-sm {
+  width: 250px;
+  min-width: 250px;
+}
+.sidebar.sidebar-lg {
+  width: 500px;
+  min-width: 500px;
 }
 @media (max-width: 599px) {
   .sidebar.sidebar-collapse-sm {

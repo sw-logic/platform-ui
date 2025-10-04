@@ -2,7 +2,7 @@
 	<div class="list-filter mb-3">
 		<div class="list-filter-header">
 			<label for="filterSearchInAll">
-				<h6 class="m-0">Filter</h6>
+				<h6 class="m-0">Visible items</h6>
 			</label>
 		</div>
 		<div class="list-filter-items">

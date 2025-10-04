@@ -1,13 +1,19 @@
 <script lang="ts">
 	import Book from '$lib/components/Book/Book.svelte';
 	import FilterBar from '$lib/components/Filters/FilterBar.svelte';
-	import FilterOffcanvas from '$lib/components/Filters/FilterOffcanvas.svelte';
 	import FilterPanelLibrary from '$lib/components/Filters/FilterPanelLibrary.svelte';
+	import { onMount } from 'svelte';
+	import { Sidebar } from '$lib/scripts/sidebar';
+	import ControlIcon from '$lib/components/ControlIcon.svelte';
+
+	onMount(() => {
+		Sidebar.init();
+	});
 </script>
 
 <div class="container py-5">
 	<div class="d-flex flex-row gap-5">
-		<div class="col-12 col-md-9">
+		<div class="col-12 col-md">
 			<div class="flex-row-center flex-wrap mb-3">
 				<h1 class="col-12 col-sm-6 me-auto">Library</h1>
 				<FilterBar />
@@ -67,14 +73,14 @@
 				<Book cover="book-1.webp" />
 			</div>
 		</div>
-		<div class="col d-none d-md-block">
-			<div class="sticky-top" style="top: 144px;">
+		<div class="col-autos">
+			<div class="sidebar sidebar-sm sidebar-collapse-md" id="filter-sidebar">
+				<div class="sidebar-header d-md-none">
+					<h4>Filters</h4>
+					<ControlIcon icon="close" data-sidebar-close="#filter-sidebar" aria-label="Close sidebar" />
+				</div>
 				<FilterPanelLibrary />
 			</div>
 		</div>
 	</div>
 </div>
-
-<FilterOffcanvas>
-	<FilterPanelLibrary />
-</FilterOffcanvas>
