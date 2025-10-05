@@ -9,10 +9,13 @@
 		active?: boolean;
 		class?: string;
 		children?: Snippet;
+		hover?: boolean;
 		[key: string]: unknown;
 	}
 
-	let {icon, title, onclick, active, ...props}: ControlIconProps = $props();
+	let {icon, title, onclick, active, hover, ...props}: ControlIconProps = $props();
 </script>
 
-<button {title} {onclick} {...props} class="btn btn-control {props.class}" class:active><Icon icon={icon} /></button>
+<button {title} {onclick} {...props} class="btn btn-control {hover ?? 'icon-hover'} {props.class}" class:active>
+	<Icon icon={icon} {hover} />
+</button>

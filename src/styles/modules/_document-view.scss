@@ -24,12 +24,11 @@
       overflow-y: auto;
 
       .document {
+        display: flex;
+        flex-direction: column;
+        gap: .5rem;
         padding: 1rem 100px 1rem 1rem;
         padding-right: clamp(50px, 10%, 150px);
-
-        p {
-          text-align: justify;
-        }
       }
     }
 
