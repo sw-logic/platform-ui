@@ -2,9 +2,13 @@
 	import Book from '$lib/components/Book/Book.svelte';
 	import FilterBar from '$lib/components/Filters/FilterBar.svelte';
 	import FilterPanelLibrary from '$lib/components/Filters/FilterPanelLibrary.svelte';
+	import { getBooks } from '$lib/scripts/getBooks';
 	import { onMount } from 'svelte';
 	import { Sidebar } from '$lib/scripts/sidebar';
 	import ControlIcon from '$lib/components/ControlIcon.svelte';
+
+	const seriesBooks = getBooks(10, { type: 'series' });
+	const defaultBooks = getBooks(10, { type: '' });
 
 	onMount(() => {
 		Sidebar.init();
@@ -25,17 +29,18 @@
 			</div>
 			<div class="collapse show" id="collapseSeries">
 				<div class="books book-grid">
-					<Book type="series" tag="new" cover="book-1.webp" />
-					<Book type="series" cover="book-2.webp" access={false} trial={true} />
-					<Book type="series" cover="book-3.webp" access={false} trial={false} />
-					<Book type="series" cover="book-4.webp" access={false} trial={true} />
-					<Book type="series" cover="book-5.webp" access={false} trial={true} />
-					<Book type="series" cover="book-1.webp" access={false} trial={false} />
-					<Book type="series" cover="book-2.webp" access={false} trial={false} />
-					<Book type="series" cover="book-3.webp" access={false} trial={false} />
-					<Book type="series" cover="book-4.webp" access={false} trial={true} />
-					<Book type="series" cover="book-5.webp" access={false} trial={false} />
-					<Book type="series" cover="book-1.webp" access={false} trial={true} />
+					{#each seriesBooks as book, index (index)}
+						<Book
+							type={book.type}
+							cover={book.cover}
+							author={book.author}
+							title={book.title}
+							subtitle={book.subtitle}
+							access={book.access}
+							trial={book.trial}
+							tag={book.tag}
+						/>
+					{/each}
 				</div>
 			</div>
 
@@ -47,12 +52,18 @@
 			</div>
 			<div class="collapse show" id="collapseCollections">
 				<div class="books book-grid">
-					<Book type="series" cover="book-1.webp" />
-					<Book type="series" cover="book-2.webp" />
-					<Book type="series" cover="book-3.webp" />
-					<Book type="series" cover="book-4.webp" />
-					<Book type="series" cover="book-5.webp" />
-					<Book type="series" cover="book-1.webp" />
+					{#each seriesBooks as book, index (index)}
+						<Book
+							type={book.type}
+							cover={book.cover}
+							author={book.author}
+							title={book.title}
+							subtitle={book.subtitle}
+							access={book.access}
+							trial={book.trial}
+							tag={book.tag}
+						/>
+					{/each}
 				</div>
 			</div>
 
@@ -60,17 +71,18 @@
 
 			<h2 class="mb-4">Books</h2>
 			<div class="books book-grid">
-				<Book cover="book-1.webp" tag="New"/>
-				<Book cover="book-2.webp" />
-				<Book cover="book-3.webp" />
-				<Book cover="book-4.webp" access={false} trial={true} />
-				<Book cover="book-5.webp" access={false} trial={true} />
-				<Book cover="book-1.webp" access={false} trial={false} />
-				<Book cover="book-2.webp" access={false} trial={false} />
-				<Book cover="book-3.webp" access={false} trial={false} />
-				<Book cover="book-4.webp" access={false} trial={false} />
-				<Book cover="book-5.webp" />
-				<Book cover="book-1.webp" />
+				{#each defaultBooks as book, index (index)}
+					<Book
+						type={book.type}
+						cover={book.cover}
+						author={book.author}
+						title={book.title}
+						subtitle={book.subtitle}
+						access={book.access}
+						trial={book.trial}
+						tag={book.tag}
+					/>
+				{/each}
 			</div>
 		</div>
 		<div class="col-autos">

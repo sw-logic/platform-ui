@@ -12551,22 +12551,22 @@ textarea.form-control-lg {
   }
 }
 @media (min-width: 600px) {
-  .book-grid.grid-6 {
+  .book-grid.book-grid-6 {
     grid-template-columns: repeat(3, 1fr);
   }
 }
 @media (min-width: 1024px) {
-  .book-grid.grid-6 {
+  .book-grid.book-grid-6 {
     grid-template-columns: repeat(4, 1fr);
   }
 }
 @media (min-width: 1366px) {
-  .book-grid.grid-6 {
+  .book-grid.book-grid-6 {
     grid-template-columns: repeat(5, 1fr);
   }
 }
 @media (min-width: 1600px) {
-  .book-grid.grid-6 {
+  .book-grid.book-grid-6 {
     grid-template-columns: repeat(6, 1fr);
   }
 }

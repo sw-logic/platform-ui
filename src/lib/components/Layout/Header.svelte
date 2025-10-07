@@ -55,7 +55,7 @@
 
 <header class="shadow-none sticky-top bg-white">
 	<nav class="navbar navbar-expand-md">
-		<div class="container">
+		<div class="container flex-nowrap">
 			<Logo />
 
 			<!-- Search bar -->
