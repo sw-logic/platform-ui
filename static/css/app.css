@@ -12084,7 +12084,7 @@ textarea.form-control-lg {
   left: -3px;
   padding: 3px 7px;
   color: #ffffff;
-  background-color: #EA8F00;
+  background-color: #007AC3;
   z-index: 5;
 }
 .book-cover-picture.series {
@@ -12838,15 +12838,17 @@ body footer .nav-link {
   flex-direction: column;
   width: 350px;
   min-width: 350px;
-  max-width: 100%;
+  max-width: 350px;
 }
 .sidebar.sidebar-sm {
   width: 250px;
   min-width: 250px;
+  max-width: 250px;
 }
 .sidebar.sidebar-lg {
   width: 500px;
   min-width: 500px;
+  max-width: 500px;
 }
 @media (max-width: 599px) {
   .sidebar.sidebar-collapse-sm {
@@ -12859,6 +12861,9 @@ body footer .nav-link {
     transition: transform 0.3s ease-in-out;
     overflow-y: auto;
     background-color: #ffffff;
+    width: 350px;
+    min-width: unset;
+    max-width: 100vw;
   }
   .sidebar.sidebar-collapse-sm.sidebar-open {
     transform: translateX(0);
@@ -12881,6 +12886,9 @@ body footer .nav-link {
     transition: transform 0.3s ease-in-out;
     overflow-y: auto;
     background-color: #ffffff;
+    width: 350px;
+    min-width: unset;
+    max-width: 100vw;
   }
   .sidebar.sidebar-collapse-md.sidebar-open {
     transform: translateX(0);
@@ -12903,6 +12911,9 @@ body footer .nav-link {
     transition: transform 0.3s ease-in-out;
     overflow-y: auto;
     background-color: #ffffff;
+    width: 350px;
+    min-width: unset;
+    max-width: 100vw;
   }
   .sidebar.sidebar-collapse-lg.sidebar-open {
     transform: translateX(0);
@@ -12925,6 +12936,9 @@ body footer .nav-link {
     transition: transform 0.3s ease-in-out;
     overflow-y: auto;
     background-color: #ffffff;
+    width: 350px;
+    min-width: unset;
+    max-width: 100vw;
   }
   .sidebar.sidebar-collapse-xl.sidebar-open {
     transform: translateX(0);

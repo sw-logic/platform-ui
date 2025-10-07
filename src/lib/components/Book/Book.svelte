@@ -37,7 +37,6 @@
 			<p class="book-excerpt">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad adipisci aspernatur assumenda dignissimos, eligendi fugiat in modi molestias necessitatibus nemo neque non omnis perspiciatis quaerat quos sed voluptate voluptatem. Eius.</p>
 		</div>
 		<div class="info-tags mt-2">
-			<span class="info-tag text-white bg-middle">PDF</span>
 			{#if !access}
 				{#if trial}
 					<span class="info-tag bg-warning text-white">Trial available</span>
