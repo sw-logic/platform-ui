@@ -8,7 +8,6 @@
 	});
 </script>
 
-<h3>Table of contents</h3>
 <ul class="table-of-contents" data-element="tree" role="tree" aria-label="Table of contents navigation">
 	<li>
 		<a href="{base}/document/view">Viewpoint in linguistic cognition</a>

@@ -42,7 +42,7 @@ $toolbar-width: 350px;
 
     .toolbar-item-body {
       display: none;
-      padding: .5rem;
+      font-size: $font-size-small;
     }
 
     &.active {
@@ -63,7 +63,29 @@ $toolbar-width: 350px;
         display: flex;
         flex-direction: column;
         flex: 1 0 0;
-        overflow-y: auto;
+      }
+    }
+  }
+
+  .list-items {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+
+    .list-item {
+      display: flex;
+      flex-flow: row nowrap;
+      align-items: center;
+      gap: .5rem;
+
+      .list-item-content {
+        flex-grow: 1;
+        cursor: pointer;
+
+        &:hover {
+          color: $primary;
+          text-decoration: underline;
+        }
       }
     }
   }

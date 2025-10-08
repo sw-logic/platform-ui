@@ -47,6 +47,7 @@
 			</div>
 		</div>
 		<div class="col mt-3 mt-sm-0">
+			<h3>Table of contents</h3>
 			<TOC />
 		</div>
 	</div>
