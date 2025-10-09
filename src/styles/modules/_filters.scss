@@ -8,6 +8,12 @@
   align-items: center;
   gap: 1rem;
 
+  .view-selectors {
+    display: flex;
+    flex-flow: row nowrap;
+    gap: 1px;
+  }
+
   @media (min-width: map-get($grid-breakpoints, sm)) {
     flex: 0 0 auto;
     width: auto;

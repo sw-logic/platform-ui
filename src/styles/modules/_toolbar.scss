@@ -67,22 +67,36 @@ $toolbar-width: 350px;
     }
   }
 
-  .list-items {
-    display: flex;
-    flex-direction: column;
-    gap: .5rem;
+  .list-group {
+    .list-title {
+      font-weight: bold;
+    }
 
-    .list-item {
+    .list-items {
       display: flex;
-      flex-flow: row nowrap;
-      align-items: center;
-      gap: .5rem;
+      flex-direction: column;
+      gap: .25rem;
 
-      .list-item-content {
-        flex-grow: 1;
-        cursor: pointer;
+      .list-item {
+        display: flex;
+        flex-flow: row nowrap;
+        align-items: center;
+        gap: .5rem;
 
-        &:hover {
+        .list-item-content {
+          flex-grow: 1;
+          cursor: pointer;
+
+          mark {
+            font-weight: bold;
+            color: $primary;
+            background-color: transparent;
+            padding: 0;
+            margin: 0;
+          }
+        }
+
+        &:hover .list-item-content {
           color: $primary;
           text-decoration: underline;
         }

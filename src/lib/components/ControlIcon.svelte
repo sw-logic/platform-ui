@@ -16,6 +16,6 @@
 	let {icon, title, onclick, active, hover, ...props}: ControlIconProps = $props();
 </script>
 
-<button {title} {onclick} {...props} class="btn btn-control {hover ?? 'icon-hover'} {props.class}" class:active>
+<button {title} {onclick} {...props} class="btn-control {hover ?? 'icon-hover'} {props.class}" class:active>
 	<Icon icon={icon} {hover} />
 </button>

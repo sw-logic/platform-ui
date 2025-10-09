@@ -5,10 +5,12 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .bullet {
+  flex: 0 0 auto;
   width: 10px;
   height: 10px;
+  padding: 0;
+  margin: 0;
   border-radius: 50%;
-  border-style: solid;
   box-sizing: content-box;
 
   background-color: $dark;
@@ -22,15 +24,15 @@ h1, h2, h3, h4, h5, h6 {
     width: 15px;
     height: 15px;
   }
-
-  &.bullet-outline {
-    border-width: 3px;
-  }
 }
 
 @each $name, $color in $colors {
   .bullet-#{$name} {
     background-color: #{$color} !important;
-    border-color: lighten($color, 20%) !important;
+  }
+
+  .bullet-outline-#{$name} {
+    background-color: #{$color} !important;
+    border: 3px solid lighten($color, 20%);
   }
 }

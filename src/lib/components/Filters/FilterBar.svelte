@@ -27,7 +27,7 @@ function setBookList() {
 		<option value="2">Popularity</option>
 		<option value="3">Date</option>
 	</select>
-	<div class="text-nowrap">
+	<div class="view-selectors">
 		<ControlIcon icon="filled-grid" active={gridView} onclick={setBookGrid} />
 		<ControlIcon icon="filled-list-bullet-square" active={!gridView} onclick={setBookList} />
 	</div>
