@@ -8,7 +8,7 @@ const BOOK_POOL = {
 		'book-5.webp'
 	],
 	authors: [
-		'John Smith',
+		'John Smith & William Martinez',
 		'Jane Doe',
 		'Michael Johnson',
 		'Emily Brown',

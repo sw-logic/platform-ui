@@ -27,6 +27,4 @@
 </main>
 <!-- This is the end of the page -->
 
-<InfoModal />
-<ReferenceModal />
 <SettingsOffcanvas />

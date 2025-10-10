@@ -69,7 +69,7 @@ $toolbar-width: 350px;
 
   .list-group {
     .list-title {
-      font-weight: bold;
+      font-weight: 500;
     }
 
     .list-items {
@@ -88,7 +88,7 @@ $toolbar-width: 350px;
           cursor: pointer;
 
           mark {
-            font-weight: bold;
+            font-weight: 500;
             color: $primary;
             background-color: transparent;
             padding: 0;

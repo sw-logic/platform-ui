@@ -1,12 +1,18 @@
 <script>
-import ParaTools from '$lib/components/Documents/ParaTools.svelte';
+	import ParaTools from '$lib/components/Documents/ParaTools.svelte';
+	import ParaReferences from '$lib/components/Documents/ParaReferences.svelte';
+	import ParaNote from '$lib/components/Documents/ParaNote.svelte';
 
-let {children} = $props();
+	let { children, ...props } = $props();
 </script>
 
-<div class="para-row">
-	<ParaTools />
+<div class="para-row" {...props}>
+	<ParaTools id={props.id} />
 	<div class="para-content">
-		{@render children()}
+		<ParaNote id="para-note-{props.id}" />
+		<ParaReferences id="para-references-{props.id}" />
+		<div class="para-indent selectable">
+			{@render children()}
+		</div>
 	</div>
 </div>

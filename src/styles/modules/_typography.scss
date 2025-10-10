@@ -4,35 +4,52 @@ h1, h2, h3, h4, h5, h6 {
   text-wrap: balance;
 }
 
+strong, b {
+  font-weight: 500;
+}
+
 .bullet {
   flex: 0 0 auto;
   width: 10px;
   height: 10px;
+  display: inline-block;
+  transition: transform 0.3s ease;
+  border: none;
   padding: 0;
-  margin: 0;
-  border-radius: 50%;
-  box-sizing: content-box;
+  margin: 5px;
 
-  background-color: $dark;
+  &:hover {
+    transform: scale(1.15);
+  }
 
-  &.bullet-sm {
+  &.active, &:focus.active {
+    outline: 3px solid;
+    outline-offset: 0px;
+  }
+
+  // Color variations
+  @each $name, $color in $colors {
+    &-#{$name} {
+      background-color: #{$color} !important;
+      &.active {
+        outline-color: rgba(red($color), green($color), blue($color), 0.5) !important;
+      }
+    }
+  }
+
+  // Size variations
+  &-sm {
     width: 5px;
     height: 5px;
   }
 
-  &.bullet-lg {
+  &-md {
+    width: 10px;
+    height: 10px;
+  }
+
+  &-lg {
     width: 15px;
     height: 15px;
-  }
-}
-
-@each $name, $color in $colors {
-  .bullet-#{$name} {
-    background-color: #{$color} !important;
-  }
-
-  .bullet-outline-#{$name} {
-    background-color: #{$color} !important;
-    border: 3px solid lighten($color, 20%);
   }
 }

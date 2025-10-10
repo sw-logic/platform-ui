@@ -1,5 +1,11 @@
 @import '../variables';
 
+.para-bookmark {
+  width: calc(100% - 30px - 1.5rem);
+  border-bottom: 1px dashed $primary;
+  margin: 1em 0;
+}
+
 .para-row {
   display: flex;
   flex-direction: row-reverse;
@@ -25,17 +31,90 @@
   }
 
   .para-content {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+
     padding-right: 1rem;
     border-right: 1px solid transparent;
     transition: all .3s ease-in-out;
 
-    p {
-      text-align: justify;
-      margin: 0;
+    .para-note {
+      display: none;
+      flex-direction: column;
+      gap: .5rem;
+
+      &.show {
+        display: flex;
+      }
+
+      .para-note-content {
+        display: flex;
+        flex-flow: row nowrap;
+        background-color: $lighter;
+
+        .para-note-content-label {
+          padding: .5rem;
+          color: $white;
+          background-color: $primary;
+        }
+
+        .para-note-content-text {
+          flex-grow: 1;
+          padding: 1rem;
+        }
+      }
+
+      .para-note-input {
+        padding: 1rem;
+        background-color: $lighter;
+      }
+
+      .para-note-input {
+        .para-character-counter {
+          position: absolute;
+          bottom: 5px;
+          right: 10px;
+          font-size: $font-size-small;
+          color: $middle;
+        }
+      }
+    }
+
+    .para-references {
+      padding: 1rem;
+      background-color: $lighter;
+
+      table {
+        width: 100%;
+        font-size: $font-size-small;
+
+        tr {
+          &:not(:last-child) {
+            border-bottom: 1px solid $gray-300;
+          }
+
+          td {
+            padding: .5rem 1rem .5rem 0;
+            vertical-align: top;
+
+            &:last-child {
+              padding-right: 0;
+            }
+          }
+        }
+      }
+    }
+
+    .para-indent {
+      p {
+        text-align: justify;
+        margin: 0;
+      }
     }
   }
 
-  &:hover {
+  &[data-anchor]:hover {
     .para-tools {
       .para-buttons {
         display: flex;

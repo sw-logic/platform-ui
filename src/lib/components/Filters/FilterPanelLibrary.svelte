@@ -1,5 +1,6 @@
-
-	<div class="list-filter mb-3">
+<script>
+</script>
+<div class="list-filter mb-3">
 		<div class="list-filter-header">
 			<label for="filterSearchInAll">
 				<h6 class="m-0">Visible items</h6>
@@ -16,6 +17,28 @@
 			</label>
 		</div>
 	</div>
+<div class="list-filter mb-3">
+	<div class="list-filter-header">
+		<label for="filterPackagesAll">
+			<input type="checkbox" class="form-check-input" id="filterPackagesAll" />
+			<h6 class="m-0">Packages</h6>
+		</label>
+	</div>
+	<div class="list-filter-items">
+		<label for="filterPackage1">
+			<input type="checkbox" class="form-check-input" id="filterPackage1" />
+			Package One (12)
+		</label>
+		<label for="filterPackage2">
+			<input type="checkbox" class="form-check-input" id="filterPackage2" />
+			Package Two (36)
+		</label>
+		<label for="filterPackage2">
+			<input type="checkbox" class="form-check-input" id="filterPackage2" />
+			Package Three (24)
+		</label>
+	</div>
+</div>
 	<div class="list-filter mb-3">
 		<div class="list-filter-header">
 			<label for="filterCategoryAll">
