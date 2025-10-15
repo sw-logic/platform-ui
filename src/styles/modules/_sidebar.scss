@@ -13,6 +13,7 @@ $sidebar-offcanvas-width: 350px;
   width: $sidebar-width;
   min-width: $sidebar-width;
   max-width: $sidebar-width;
+  overflow-y: auto;
 
   &.sidebar-sm {
     width: $sidebar-width-sm;
@@ -26,11 +27,17 @@ $sidebar-offcanvas-width: 350px;
     max-width: $sidebar-width-lg;
   }
 
+  &.sticky-top {
+    position: sticky !important;
+    top: $sticky-top;
+    max-height: calc(100vh - $sticky-top - 1rem);
+  }
+
   @each $breakpoint, $value in $grid-breakpoints {
     @if $breakpoint != xs {
       &.sidebar-collapse-#{$breakpoint} {
         @media (max-width: #{$value - 1px}) {
-          position: fixed;
+          position: fixed !important;
           top: 0;
           right: 0;
           bottom: 0;
@@ -42,7 +49,9 @@ $sidebar-offcanvas-width: 350px;
 
           width: $sidebar-offcanvas-width;
           min-width: unset;
-          max-width: 100vw;
+          max-width: 75vw;
+          max-height: 100vh;
+
 
           &.sidebar-open {
             transform: translateX(0);

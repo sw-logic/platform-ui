@@ -30,6 +30,13 @@ $toolbar-width: 350px;
 
       cursor: pointer;
 
+      h4,h5,h6 {
+        display: flex;
+        flex-flow: row nowrap;
+        align-items: center;
+        gap: .5rem;
+      }
+
       &:hover {
         background-color: $primary-light;
       }

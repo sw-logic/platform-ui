@@ -40,8 +40,8 @@
 </div>
 
 <div class="container py-5">
-	<section class="mb-6">
-		<div class="flex-row-center mb-3">
+	<section class="mb-5">
+		<div class="flex-row-center mb-5">
 			<h2>Novelities</h2>
 			<button class="btn btn-outline-primary ms-auto">All items <Icon icon="arrow-right" /></button>
 		</div>
@@ -61,9 +61,11 @@
 	<!-- This sections are only visible if the user is logged in -->
 	{#if $settings.userLoggedIn}
 
+		<hr>
+
 		<!-- User's history -->
-		<section class="mb-6">
-			<div class="flex-row-center mb-3">
+		<section class="my-5">
+			<div class="flex-row-center mb-5">
 				<h2>History</h2>
 				<button class="btn btn-outline-primary ms-auto">All items <Icon icon="arrow-right" /></button>
 			</div>
@@ -80,9 +82,11 @@
 			</div>
 		</section>
 
+		<hr>
+
 		<!-- User's favorites -->
-		<section class="mb-6">
-			<div class="flex-row-center mb-3">
+		<section class="my-5">
+			<div class="flex-row-center mb-5">
 				<h2>Favorites</h2>
 				<button class="btn btn-outline-primary ms-auto">All items <Icon icon="arrow-right" /></button>
 			</div>

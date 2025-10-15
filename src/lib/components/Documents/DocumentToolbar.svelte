@@ -14,12 +14,12 @@
 </script>
 
 <div class="toolbar document-toolbar">
-	<DocumentToolbarItem title="Table of contents">
+	<DocumentToolbarItem icon="list-bullet-dot" title="Table of contents">
 		<div class="content scroll">
 			<TOC />
 		</div>
 	</DocumentToolbarItem>
-	<DocumentToolbarItem title="Search in document">
+	<DocumentToolbarItem icon="search" title="Search in document">
 		<form action="" class="px-2 py-3 border-bottom">
 			<div class="input-group input-group-sm">
 				<input type="text" class="form-control border-dark" placeholder="Search" aria-label="Search" aria-describedby="searchButton">
@@ -105,7 +105,7 @@
 			</div>
 		</div>
 	</DocumentToolbarItem>
-	<DocumentToolbarItem title="Bookmarks">
+	<DocumentToolbarItem icon="bookmark" title="Bookmarks">
 		<div class="content scroll gap-2">
 			<div class="list-group gap-1">
 				<div class="list-title">This is the chapter title</div>
@@ -178,7 +178,7 @@
 			</div>
 		</div>
 	</DocumentToolbarItem>
-	<DocumentToolbarItem title="Notes">
+	<DocumentToolbarItem icon="chat-box" title="Notes">
 		<div class="content scroll gap-2">
 			<div class="list-group gap-1">
 				<div class="list-title">This is the chapter title</div>
@@ -251,10 +251,10 @@
 			</div>
 		</div>
 	</DocumentToolbarItem>
-	<DocumentToolbarItem title="Highlights" class="active">
+	<DocumentToolbarItem icon="highlight" title="Highlights" class="active">
 		<DocumentToolbarHighlights />
 	</DocumentToolbarItem>
-	<DocumentToolbarItem title="Settings">
+	<DocumentToolbarItem icon="settings" title="Settings">
 		Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam, aliquid asperiores cumque dolorem earum fuga
 		laboriosam modi natus nihil possimus quasi sed temporibus unde? Illo illum laborum sunt tempora voluptates!
 	</DocumentToolbarItem>

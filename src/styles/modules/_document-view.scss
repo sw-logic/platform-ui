@@ -17,6 +17,48 @@
       height: 2rem;
       background-color: $light;
       padding: 0 1rem;
+
+      .header-toolbar {
+        flex-grow: 1;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 1rem;
+
+        .nav-link.text-disabled {
+          color: $black !important;
+          font-weight: $font-weight-bold !important;
+        }
+
+        .header-toolbar-nav {
+          flex-grow: 1;
+          display: flex;
+          flex-direction: row;
+          gap: 1rem;
+          align-items: center;
+          max-width: calc(100% - 30px - .5rem - clamp(25px, 5%, 50px));
+
+          .breadcrumbs {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: .25rem;
+
+            .separator {
+              font-size: 10px;
+            }
+          }
+
+          .header-toolbar-tools {
+            display: flex;
+            flex-flow: row nowrap;
+            align-items: stretch;
+            margin-left: auto;
+          }
+        }
+
+        .header-toolbar-end {}
+      }
     }
 
     .document-body {
@@ -39,6 +81,54 @@
       height: 3rem;
       background-color: $light;
       padding: 0 1rem;
+
+      .footer-toolbar {
+        flex-grow: 1;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 1rem;
+
+        .footer-toolbar-nav {
+          flex-grow: 1;
+          display: flex;
+          flex-direction: row;
+          gap: .5rem;
+          align-items: center;
+          max-width: calc(100% - 30px - 1.5rem - clamp(25px, 5%, 50px));
+
+          .nav-slider {
+            flex-grow: 1;
+            position: relative;
+            height: 1rem;
+
+            .nav-slider-timeline {
+              position: absolute;
+              top: 50%;
+              left: 0;
+              width: 100%;
+              height: 1px;
+              background-color: $middle;
+            }
+
+            .nav-slider-button {
+              position: absolute;
+              top: calc(50% - 8px);
+              left: calc(50% - 8px);
+              width: 16px;
+              height: 16px;
+              background-color: $middle;
+              cursor: pointer;
+
+              &:hover {
+                background-color: $primary;
+              }
+            }
+          }
+        }
+
+        .footer-toolbar-end {}
+      }
     }
   }
 }

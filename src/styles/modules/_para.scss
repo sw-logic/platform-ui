@@ -1,9 +1,30 @@
 @import '../variables';
 
 .para-bookmark {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: calc(100% - 30px - 1.5rem);
-  border-bottom: 1px dashed $primary;
-  margin: 1em 0;
+  text-align: center;
+  margin: .5rem 0 .25rem;
+
+  &::before {
+    content: '';
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 0px;
+    border-bottom: 1px dashed $primary;
+  }
+
+  [class*="wk-icon-"] {
+    z-index: 1;
+    box-sizing: content-box;
+    padding: 0 .5rem;
+    color: $primary;
+    background-color: white;
+  }
 }
 
 .para-row {
@@ -81,7 +102,7 @@
       }
     }
 
-    .para-references {
+    .para-refs {
       padding: 1rem;
       background-color: $lighter;
 

@@ -92,7 +92,7 @@ $font-weight-light:     300;
 $font-weight-normal:    400;
 $font-weight-medium:    500;
 $font-weight-semibold:  500;
-$font-weight-bold:      600;
+$font-weight-bold:      500;
 $font-weight-bolder:    600;
 
 $h1-font-size: $font-size-base * 2;
@@ -125,3 +125,7 @@ $badge-padding-y:   .5em;
 $badge-padding-x:   .75em;
 
 $form-switch-border-radius: 1rem;
+
+// Custom variables
+
+$sticky-top: 144px;

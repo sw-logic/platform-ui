@@ -15,6 +15,9 @@
 	let trialEndModal: HTMLDivElement;
 	let countdown: TrialCountdown | null = null;
 
+	let searchInput: HTMLInputElement;
+	let searchResults: HTMLDivElement;
+
 	function logOut() {
 		settings.update(s => ({ ...s, userLoggedIn: false }));
 	}
@@ -33,6 +36,15 @@
 		});
 		countdown.start();
 	}
+
+	function showSearchResults() {
+		if (searchInput.value !== '') {
+			searchResults.classList.add("show");
+		} else {
+			searchResults.classList.remove("show");
+		}
+	}
+
 
 	$effect(() => {
 		if ($settings.userStartedTrial && countdown) {
@@ -59,10 +71,60 @@
 			<Logo />
 
 			<!-- Search bar -->
-			<div class="w-50">
+			<div class="search-bar w-50" id="searchBar">
 				<div class="input-group input-group-sm">
-					<input type="text" class="form-control border-dark" placeholder="Search" aria-label="Search" aria-describedby="searchButton">
-					<a href="{base}/search" class="btn btn-outline-dark" type="button" id="searchButton"><Icon type="fa-solid" icon="magnifying-glass" /></a>
+					<input bind:this={searchInput} oninput={showSearchResults} type="text" class="form-control border-dark" placeholder="Search" id="searchBarInput" aria-label="Search" aria-describedby="searchButton">
+					<a href="{base}/search" class="btn btn-outline-dark" type="button" id="searchButton"><Icon icon="filled-search" /></a>
+				</div>
+				<div bind:this={searchResults} class="search-results shadow" id="searchResults">
+					<div class="search-results-header">Search phrases</div>
+					<ul class="search-items">
+						<li class="search-item text-truncate"><em>Seach</em> result line 1</li>
+						<li class="search-item text-truncate">Seach result line 2</li>
+						<li class="search-item text-truncate">This is a very long search result line 3</li>
+						<li class="search-item text-truncate">Seach result line 4</li>
+						<li class="search-item text-truncate">Seach result line 5</li>
+					</ul>
+					<div class="search-results-header">Table of content elements</div>
+					<ul class="search-items">
+						<li class="search-item text-truncate">Seach result line 1</li>
+						<li class="search-item text-truncate">Seach result line 2</li>
+						<li class="search-item text-truncate">Seach result line 3</li>
+						<li class="search-item text-truncate">Seach result line 4</li>
+						<li class="search-item text-truncate">Seach result line 5</li>
+					</ul>
+					<div class="search-results-header">Books</div>
+					<div class="content scroll">
+						<ul class="search-items ps-2 gap-3">
+							<li class="search-item d-flex gap-3 align-items-center">
+								<picture class="book-cover">
+									<img src="{base}/images/book/book-1.webp" alt="Book cover">
+								</picture>
+								<div class="book-info">
+									<div class="book-author text-truncate">Author name</div>
+									<div class="book-title text-truncate">This is the ridiculously long book title</div>
+								</div>
+							</li>
+							<li class="search-item d-flex gap-3 align-items-center">
+								<picture class="book-cover">
+									<img src="{base}/images/book/book-1.webp" alt="Book cover">
+								</picture>
+								<div class="book-info">
+									<div class="book-author text-truncate">Author name</div>
+									<div class="book-title text-truncate">This is the ridiculously long book title</div>
+								</div>
+							</li>
+							<li class="search-item d-flex gap-3 align-items-center">
+								<picture class="book-cover">
+									<img src="{base}/images/book/book-1.webp" alt="Book cover">
+								</picture>
+								<div class="book-info">
+									<div class="book-author text-truncate">Author name</div>
+									<div class="book-title text-truncate">This is the ridiculously long book title</div>
+								</div>
+							</li>
+						</ul>
+					</div>
 				</div>
 			</div>
 

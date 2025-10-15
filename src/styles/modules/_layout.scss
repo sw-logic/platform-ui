@@ -29,12 +29,7 @@ body {
   header {
     position: relative;
     z-index: 1025 !important;
-
-    a {
-      display: flex !important;
-      align-items: center;
-      gap: .25rem;
-    }
+    min-height: 40px;
 
     .nav-link {
       padding-left: 0 !important;

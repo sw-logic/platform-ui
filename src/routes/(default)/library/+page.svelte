@@ -86,7 +86,7 @@
 			</div>
 		</div>
 		<div class="col-autos">
-			<div class="sidebar sidebar-sm sidebar-collapse-md" id="filter-sidebar">
+			<div class="sidebar sidebar-sm sidebar-collapse-md sticky-top" id="filter-sidebar">
 				<div class="sidebar-header d-md-none">
 					<h4>Filters</h4>
 					<ControlIcon icon="close" data-sidebar-close="#filter-sidebar" aria-label="Close sidebar" />

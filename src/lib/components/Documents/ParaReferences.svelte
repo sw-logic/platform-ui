@@ -5,7 +5,7 @@
 	let props = $props();
 </script>
 
-<div class="para-references collapse" {...props}>
+<div class="para-refs collapse" {...props}>
 	<h5>References</h5>
 	<div class="mb-1">Please select a reference format:</div>
 	<table>

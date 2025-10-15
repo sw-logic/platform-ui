@@ -1,10 +1,24 @@
+@import '../variables';
+
+a.nav-link {
+  display: flex !important;
+  flex-flow: row nowrap !important;
+  align-items: center !important;
+  gap: .25rem;
+
+  &:hover {
+    color: $primary
+  }
+
+}
+
 .btn-control {
   display: flex;
   align-items: center;
   justify-content: center;
-  border: none !important;
-  box-shadow: none !important;
-  background-color: transparent !important;
+  border: none;
+  box-shadow: none;
+  background-color: transparent;
   padding: 0;
   margin: 0;
   width: 2em;
@@ -13,11 +27,11 @@
   color: inherit;
 
   &:hover {
-    background-color: var(--bs-gray-200) !important;
+    background-color: $light;
   }
 
   &.active {
-    background-color: var(--bs-gray-200) !important;
+    background-color: $light;
   }
 }
 

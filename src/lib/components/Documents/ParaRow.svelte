@@ -10,7 +10,7 @@
 	<ParaTools id={props.id} />
 	<div class="para-content">
 		<ParaNote id="para-note-{props.id}" />
-		<ParaReferences id="para-references-{props.id}" />
+		<ParaReferences id="para-refs-{props.id}" />
 		<div class="para-indent selectable">
 			{@render children()}
 		</div>

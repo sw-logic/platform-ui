@@ -34,7 +34,14 @@
 			<div class="small text-muted">{subtitle}</div>
 		</div>
 		<div class="book-details">
-			<p class="book-excerpt">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad adipisci aspernatur assumenda dignissimos, eligendi fugiat in modi molestias necessitatibus nemo neque non omnis perspiciatis quaerat quos sed voluptate voluptatem. Eius.</p>
+			<div class="book-excerpt mt-2">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad adipisci aspernatur assumenda dignissimos, eligendi fugiat in modi molestias necessitatibus nemo neque non omnis perspiciatis quaerat quos sed voluptate voluptatem. Eius.</div>
+			<div class="book-meta mt-2">
+				<div><strong>Publisher</strong>: Akadémiai Kiadó</div>
+				<div><strong>Online publication</strong>: 2025</div>
+				<div><strong>ISBN</strong>: 978 963 664 115 3</div>
+				<div><strong>DOI</strong>: 10.1556/9789636640118</div>
+				<div><strong>ISSN</strong>: 2786-4324</div>
+			</div>
 		</div>
 		<div class="info-tags mt-2">
 			{#if !access}

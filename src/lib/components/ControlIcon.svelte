@@ -4,18 +4,19 @@
 
 	interface ControlIconProps {
 		icon: string;
+		iconType?: string;
 		title?: string;
 		onclick?: () => void;
 		active?: boolean;
 		class?: string;
 		children?: Snippet;
-		hover?: boolean;
 		[key: string]: unknown;
 	}
 
-	let {icon, title, onclick, active, hover, ...props}: ControlIconProps = $props();
+	let {icon, iconType, title, onclick, active, ...props}: ControlIconProps = $props();
+	iconType = iconType || 'wk';
 </script>
 
-<button {title} {onclick} {...props} class="btn-control {hover ?? 'icon-hover'} {props.class}" class:active>
-	<Icon icon={icon} {hover} />
+<button {title} {onclick} {...props} class="btn-control {props.class}" class:active>
+	<Icon icon={icon} {iconType} />
 </button>

@@ -1,12 +1,42 @@
 @import '../variables';
+@import '../../../node_modules/bootstrap/scss/functions';
+
+@function best-contrast($background, $color1, $color2) {
+  $contrast1: contrast-ratio($background, $color1);
+  $contrast2: contrast-ratio($background, $color2);
+
+  @if $contrast1 > $contrast2 {
+    @return $color1;
+  } @else {
+    @return $color2;
+  }
+}
 
 @each $name, $color in $theme-colors {
-  .bg-hover-#{$name}:hover {
+  .hover-bg-#{$name}:hover {
     background-color: shift-color($color, 10%) !important;
   }
 
-  .text-hover-#{$name}:hover {
+  .hover-text-#{$name}:hover {
     color: shift-color($color, 20%) !important;
+  }
+
+  .hover-text-bg-#{$name}:hover {
+    color: best-contrast($color, $black, $white) !important;
+    background-color: $color !important;
+  }
+
+  .active-text-#{$name}.active {
+    color: $color !important;
+  }
+
+  .active-bg-#{$name}.active {
+    background-color: $color !important;
+  }
+
+  .active-text-bg-#{$name}.active {
+    color: best-contrast($color, $black, $white) !important;
+    background-color: $color !important;
   }
 }
 

@@ -1,5 +1,6 @@
 <script lang="ts">
 	import ParaRow from '$lib/components/Documents/ParaRow.svelte';
+	import Icon from '$lib/components/Icon.svelte';
 </script>
 
 <div class="document site-indent">
@@ -14,7 +15,9 @@
 			expedita itaque iure libero maxime minima odit possimus quidem quod velit veritatis voluptatem! Voluptates!
 		</p>
 	</ParaRow>
-	<div class="para-bookmark" id="bookmark-p2"></div>
+	<div class="para-bookmark" id="bookmark-p2">
+		<Icon icon="bookmark" />
+	</div>
 	<ParaRow data-anchor="p2" id="p2">
 		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam aut, delectus dolor dolorum eos ex exercitationem
 			expedita itaque iure libero maxime minima odit possimus quidem quod velit veritatis voluptatem!
