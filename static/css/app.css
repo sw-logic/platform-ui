@@ -12119,6 +12119,8 @@ textarea.form-control-lg {
 }
 .item-info .item-author {
   font-size: 0.875rem;
+  font-weight: 500;
+  text-transform: uppercase;
 }
 .item-info .item-title {
   font-size: 1.25rem;

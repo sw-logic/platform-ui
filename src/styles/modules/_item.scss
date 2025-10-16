@@ -117,6 +117,8 @@
 
   .item-author {
     font-size: $font-size-sm;
+    font-weight: $font-weight-bold;
+    text-transform: uppercase;
   }
   .item-title {
     font-size: $font-size-lg;

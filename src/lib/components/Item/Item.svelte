@@ -42,7 +42,7 @@
 				</div>
 			{/if}
 			{#if search}
-				<div class="item-results mt-2"><strong>125 találat</strong> a kiadványban</div>
+				<div class="item-results mt-3"><strong>125 találat</strong> a kiadványban</div>
 				<ul class="list-items bullets mt-2">
 					<li class="list-item">
 						<a href="#" class="list-item-link" data-post="true">
