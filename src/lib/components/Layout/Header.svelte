@@ -97,28 +97,28 @@
 					<div class="content scroll">
 						<ul class="search-items ps-2 gap-3">
 							<li class="search-item d-flex gap-3 align-items-center">
-								<picture class="book-cover">
+								<picture class="item-cover">
 									<img src="{base}/images/book/book-1.webp" alt="Book cover">
 								</picture>
-								<div class="book-info">
+								<div class="item-info">
 									<div class="book-author text-truncate">Author name</div>
 									<div class="book-title text-truncate">This is the ridiculously long book title</div>
 								</div>
 							</li>
 							<li class="search-item d-flex gap-3 align-items-center">
-								<picture class="book-cover">
+								<picture class="item-cover">
 									<img src="{base}/images/book/book-1.webp" alt="Book cover">
 								</picture>
-								<div class="book-info">
+								<div class="item-info">
 									<div class="book-author text-truncate">Author name</div>
 									<div class="book-title text-truncate">This is the ridiculously long book title</div>
 								</div>
 							</li>
 							<li class="search-item d-flex gap-3 align-items-center">
-								<picture class="book-cover">
+								<picture class="item-cover">
 									<img src="{base}/images/book/book-1.webp" alt="Book cover">
 								</picture>
-								<div class="book-info">
+								<div class="item-info">
 									<div class="book-author text-truncate">Author name</div>
 									<div class="book-title text-truncate">This is the ridiculously long book title</div>
 								</div>

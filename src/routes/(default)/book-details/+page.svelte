@@ -1,8 +1,8 @@
 <script lang="ts">
-	import BookCover from '$lib/components/Book/BookCover.svelte';
+	import ItemCover from '$lib/components/Item/ItemCover.svelte';
 	import { settings } from '$lib';
 	import Icon from '$lib/components/Icon.svelte';
-	import TOC from '$lib/components/Book/TOC.svelte';
+	import TOC from '$lib/components/Item/TOC.svelte';
 	import TrialStartModal from '$lib/components/Modals/TrialStartModal.svelte';
 	import type { SvelteComponent } from 'svelte';
 	import { goto } from '$app/navigation';
@@ -35,7 +35,7 @@
 	<hr>
 	<div class="row gap-md-4">
 		<div class="col-sm-4 col-md-3 max-width-sm">
-			<BookCover />
+			<ItemCover />
 			<div class="book-details">
 				<div class="mt-3">
 					<div><strong>Publisher</strong>: Akadémiai Kiadó</div>
@@ -52,19 +52,19 @@
 		</div>
 	</div>
 	<hr>
-	<div class="book-info">
-		<div class="book-categories mb-3">
+	<div class="item-info">
+		<div class="item-categories mb-3">
 			<span class="badge rounded-pill text-bg-light bg-hover-light pointer">Cultural History</span>
 			<span class="badge rounded-pill text-bg-light">Cultural History</span>
 			<span class="badge rounded-pill text-bg-light">Cultural History</span>
 		</div>
-		<p class="book-excerpt">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias blanditiis commodi cupiditate, deserunt dolores,
+		<p class="item-excerpt">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias blanditiis commodi cupiditate, deserunt dolores,
 			fuga inventore laudantium natus nisi numquam perferendis recusandae repellat tenetur? Dolore iste rem sint solutabook
 			voluptate!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias blanditiis commodi cupiditate, deserunt dolores,
 			fuga inventore laudantium natus nisi numquam perferendis recusandae repellat tenetur? Dolore iste rem sint soluta
 			voluptate!</p>
 		<p class="small">Download reference:</p>
-		<div class="book-references">
+		<div class="item-references">
 			<button class="btn btn-sm btn-outline-dark"><Icon icon="download-line" /> BibTeX</button>
 			<button class="btn btn-sm btn-outline-dark"><Icon icon="download-line" /> EndNote</button>
 			<button class="btn btn-sm btn-outline-dark"><Icon icon="download-line" /> Mendeley</button>

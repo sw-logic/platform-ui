@@ -1,5 +1,5 @@
 <script lang="ts">
-	import Book from '$lib/components/Book/Book.svelte';
+	import Item from '$lib/components/Item/Item.svelte';
 	import FilterPanelSearch from '$lib/components/Filters/FilterPanelSearch.svelte';
 	import FilterBar from '$lib/components/Filters/FilterBar.svelte';
 	import { onMount } from 'svelte';
@@ -39,20 +39,20 @@
 					</div>
 					<div class="result-info mb-3"><strong>15386</strong> results in <strong>438</strong> publications</div>
 
-					<div class="books book-grid">
-						<Book cover="book-1.webp" />
-						<Book cover="book-2.webp" />
-						<Book cover="book-3.webp" />
-						<Book cover="book-4.webp" />
-						<Book cover="book-5.webp" />
-						<Book cover="book-1.webp" />
-						<Book cover="book-2.webp" />
-						<Book cover="book-3.webp" />
-						<Book cover="book-4.webp" />
-						<Book cover="book-5.webp" />
-						<Book cover="book-1.webp" />
-						<Book cover="book-2.webp" />
-						<Book cover="book-3.webp" />
+					<div class="items item-grid">
+						<Item cover="book-1.webp" search={true} />
+						<Item cover="book-2.webp" search={true} />
+						<Item cover="book-3.webp" search={true} />
+						<Item cover="book-4.webp" search={true} />
+						<Item cover="book-5.webp" search={true} />
+						<Item cover="book-1.webp" search={true} />
+						<Item cover="book-2.webp" search={true} />
+						<Item cover="book-3.webp" search={true} />
+						<Item cover="book-4.webp" search={true} />
+						<Item cover="book-5.webp" search={true} />
+						<Item cover="book-1.webp" search={true} />
+						<Item cover="book-2.webp" search={true} />
+						<Item cover="book-3.webp" search={true} />
 					</div>
 				</div>
 				<div class="tab-pane fade" id="imageList" role="tabpanel" aria-labelledby="profile-tab">

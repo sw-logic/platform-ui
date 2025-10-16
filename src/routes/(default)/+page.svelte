@@ -1,5 +1,5 @@
 <script lang="ts">
-	import Book from '$lib/components/Book/Book.svelte';
+	import Item from '$lib/components/Item/Item.svelte';
 	import Icon from '$lib/components/Icon.svelte';
 	import { settings } from '$lib';
 	import { onMount } from 'svelte';
@@ -45,13 +45,13 @@
 			<h2>Novelities</h2>
 			<button class="btn btn-outline-primary ms-auto">All items <Icon icon="arrow-right" /></button>
 		</div>
-		<div class="books book-grid book-grid-6">
-			<Book cover="book-1.webp" />
-			<Book cover="book-2.webp" />
-			<Book cover="book-3.webp" />
-			<Book cover="book-4.webp" />
-			<Book cover="book-5.webp" />
-			<Book cover="book-1.webp" />
+		<div class="items item-grid item-grid-6">
+			<Item cover="book-1.webp" />
+			<Item cover="book-2.webp" />
+			<Item cover="book-3.webp" />
+			<Item cover="book-4.webp" />
+			<Item cover="book-5.webp" />
+			<Item cover="book-1.webp" />
 		</div>
 		<div class="d-flex justify-content-center mt-5">
 			<button class="btn btn-outline-primary">More novelities...</button>
@@ -69,13 +69,13 @@
 				<h2>History</h2>
 				<button class="btn btn-outline-primary ms-auto">All items <Icon icon="arrow-right" /></button>
 			</div>
-			<div class="books book-grid book-grid-6">
-				<Book cover="book-1.webp" />
-				<Book cover="book-2.webp" />
-				<Book cover="book-3.webp" />
-				<Book cover="book-4.webp" />
-				<Book cover="book-5.webp" />
-				<Book cover="book-1.webp" />
+			<div class="items item-grid item-grid-6">
+				<Item cover="book-1.webp" />
+				<Item cover="book-2.webp" />
+				<Item cover="book-3.webp" />
+				<Item cover="book-4.webp" />
+				<Item cover="book-5.webp" />
+				<Item cover="book-1.webp" />
 			</div>
 			<div class="d-flex justify-content-center mt-5">
 				<button class="btn btn-outline-primary">More history items...</button>
@@ -90,13 +90,13 @@
 				<h2>Favorites</h2>
 				<button class="btn btn-outline-primary ms-auto">All items <Icon icon="arrow-right" /></button>
 			</div>
-			<div class="books book-grid book-grid-6">
-				<Book cover="book-1.webp" />
-				<Book cover="book-2.webp" />
-				<Book cover="book-3.webp" />
-				<Book cover="book-4.webp" />
-				<Book cover="book-5.webp" />
-				<Book cover="book-1.webp" />
+			<div class="items item-grid item-grid-6">
+				<Item cover="book-1.webp" />
+				<Item cover="book-2.webp" />
+				<Item cover="book-3.webp" />
+				<Item cover="book-4.webp" />
+				<Item cover="book-5.webp" />
+				<Item cover="book-1.webp" />
 			</div>
 			<div class="d-flex justify-content-center mt-5">
 				<button class="btn btn-outline-primary">More favorites...</button>

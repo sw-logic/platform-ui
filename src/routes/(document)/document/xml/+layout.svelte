@@ -1,6 +1,6 @@
 <script>
 	import { onMount } from 'svelte';
-	import { Sidebar } from '$lib/scripts/sidebar.ts';
+	import { Sidebar } from '$lib/scripts/sidebar';
 	import ControlIcon from '$lib/components/ControlIcon.svelte';
 	import DocumentToolbar from '$lib/components/Documents/DocumentToolbar.svelte';
 	import NavLink from '$lib/components/NavLink.svelte';

@@ -5,17 +5,17 @@ export let sidebar = '#filter-sidebar';
 let gridView = true;
 
 function setBookGrid() {
-	document.querySelectorAll('.book-list').forEach(el => {
-		el.classList.add('book-grid');
-		el.classList.remove('book-list');
+	document.querySelectorAll('.item-list').forEach(el => {
+		el.classList.add('item-grid');
+		el.classList.remove('item-list');
 		gridView = true;
 	});
 }
 
 function setBookList() {
-	document.querySelectorAll('.book-grid').forEach(el => {
-		el.classList.remove('book-grid');
-		el.classList.add('book-list');
+	document.querySelectorAll('.item-grid').forEach(el => {
+		el.classList.remove('item-grid');
+		el.classList.add('item-list');
 		gridView = false;
 	});
 }

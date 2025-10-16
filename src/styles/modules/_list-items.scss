@@ -1,0 +1,84 @@
+@import "../variables";
+
+.list-group {
+  .list-title {
+    font-weight: 500;
+  }
+}
+
+.list-items {
+  display: flex;
+  flex-direction: column;
+  gap: .25rem;
+
+  .list-item {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    gap: .5rem;
+
+    .list-item-content {
+      flex-grow: 1;
+      cursor: pointer;
+
+      mark {
+        font-weight: 500;
+        color: $primary;
+        background-color: transparent;
+        padding: 0;
+        margin: 0;
+      }
+    }
+
+    &:hover .list-item-content {
+      color: $primary;
+      text-decoration: underline;
+    }
+  }
+}
+
+.bullet {
+  flex: 0 0 auto;
+  width: 10px;
+  height: 10px;
+  display: inline-block;
+  transition: transform 0.3s ease;
+  border: none;
+  padding: 0;
+  margin: 5px;
+
+  &:hover {
+    transform: scale(1.15);
+  }
+
+  &.active, &:focus.active {
+    outline: 3px solid;
+    outline-offset: 0px;
+  }
+
+  // Color variations
+  @each $name, $color in $colors {
+    &-#{$name} {
+      background-color: #{$color} !important;
+      &.active {
+        outline-color: rgba(red($color), green($color), blue($color), 0.5) !important;
+      }
+    }
+  }
+
+  // Size variations
+  &-sm {
+    width: 5px;
+    height: 5px;
+  }
+
+  &-md {
+    width: 10px;
+    height: 10px;
+  }
+
+  &-lg {
+    width: 15px;
+    height: 15px;
+  }
+}

@@ -12,25 +12,25 @@
 </script>
 
 {#if link}
-	<a class="book-cover-link" href={link}>
-		<picture class="book-cover-picture {type} {props.class}">
+	<a class="item-cover-link" href={link}>
+		<picture class="item-cover-picture {type} {props.class}">
 			<img src="{base}/images/book/{cover}" alt="Name of the book">
 			{#if tag}
-				<span class="book-tag">{tag}</span>
+				<span class="item-tag">{tag}</span>
 			{/if}
 			{#if !access}
-				<span class="book-access {trial ? 'trial-available' : ''}">{trial ? "Trial available" : "Not available"}</span>
+				<span class="item-access {trial ? 'trial-available' : ''}">{trial ? "Trial available" : "Not available"}</span>
 			{/if}
 		</picture>
 	</a>
 {:else}
-	<picture class="book-cover-picture {type} {props.class}">
+	<picture class="item-cover-picture {type} {props.class}">
 		<img src="{base}/images/book/{cover}" alt="Name of the book">
 		{#if tag}
-			<span class="book-tag">{tag}</span>
+			<span class="item-tag">{tag}</span>
 		{/if}
 		{#if !access}
-			<span class="book-access {trial ? 'trial-available' : ''}">{trial ? "Trial available" : "Not available"}</span>
+			<span class="item-access {trial ? 'trial-available' : ''}">{trial ? "Trial available" : "Not available"}</span>
 		{/if}
 	</picture>
 {/if}

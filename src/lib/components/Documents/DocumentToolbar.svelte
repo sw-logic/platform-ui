@@ -3,7 +3,7 @@
 	import { Toolbar } from '$lib/scripts/toolbar';
 	import Icon from '$lib/components/Icon.svelte';
 	import DocumentToolbarItem from '$lib/components/Documents/DocumentToolbarItem.svelte';
-	import TOC from '$lib/components/Book/TOC.svelte';
+	import TOC from '$lib/components/Item/TOC.svelte';
 	import { base } from '$app/paths';
 	import ControlIcon from '$lib/components/ControlIcon.svelte';
 	import DocumentToolbarHighlights from '$lib/components/Documents/DocumentToolbarHighlights.svelte';

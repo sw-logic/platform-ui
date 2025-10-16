@@ -38,7 +38,7 @@
           font-weight: $font-weight-bold;
         }
 
-        .book-cover {
+        .item-cover {
           width: 50px;
           min-width: 50px;
 
@@ -47,7 +47,7 @@
           }
         }
 
-        .book-info {
+        .item-info {
           flex-grow: 1;
           overflow: hidden;
 

@@ -1,5 +1,5 @@
 <script lang="ts">
-	import Book from '$lib/components/Book/Book.svelte';
+	import Item from '$lib/components/Item/Item.svelte';
 	import FilterBar from '$lib/components/Filters/FilterBar.svelte';
 	import FilterPanelLibrary from '$lib/components/Filters/FilterPanelLibrary.svelte';
 	import { getBooks } from '$lib/scripts/getBooks';
@@ -28,9 +28,9 @@
 				<i class="wk-icon-chevron-right"></i>
 			</div>
 			<div class="collapse show" id="collapseSeries">
-				<div class="books book-grid">
+				<div class="items item-grid">
 					{#each seriesBooks as book, index (index)}
-						<Book
+						<Item
 							type={book.type}
 							cover={book.cover}
 							author={book.author}
@@ -51,9 +51,9 @@
 				<i class="wk-icon-chevron-right"></i>
 			</div>
 			<div class="collapse show" id="collapseCollections">
-				<div class="books book-grid">
+				<div class="items item-grid">
 					{#each seriesBooks as book, index (index)}
-						<Book
+						<Item
 							type={book.type}
 							cover={book.cover}
 							author={book.author}
@@ -70,9 +70,9 @@
 			<hr class="my-4">
 
 			<h2 class="mb-4">Books</h2>
-			<div class="books book-grid">
+			<div class="items item-grid">
 				{#each defaultBooks as book, index (index)}
-					<Book
+					<Item
 						type={book.type}
 						cover={book.cover}
 						author={book.author}

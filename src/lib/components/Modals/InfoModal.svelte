@@ -1,5 +1,5 @@
 <script>
-	import BookCover from '$lib/components/Book/BookCover.svelte';
+	import ItemCover from '$lib/components/Item/ItemCover.svelte';
 	import Icon from '$lib/components/Icon.svelte';
 </script>
 
@@ -13,7 +13,7 @@
 			<div class="modal-body">
 				<div class="row">
 					<div class="col-6 col-sm-4">
-						<BookCover class="mb-3" />
+						<ItemCover class="mb-3" />
 					</div>
 					<div class="col-sm-8">
 						<div class="row">
