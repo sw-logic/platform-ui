@@ -1,7 +1,9 @@
 <script>
 import ControlIcon from '$lib/components/ControlIcon.svelte';
+import { onMount } from 'svelte';
 
 export let sidebar = '#filter-sidebar';
+export let view = 'grid';
 let gridView = true;
 
 function setBookGrid() {
@@ -19,6 +21,14 @@ function setBookList() {
 		gridView = false;
 	});
 }
+
+onMount(()=> {
+	if (view === 'list') {
+		setBookList();
+	} else {
+		setBookGrid();
+	}
+});
 </script>
 
 <div class="filter-bar mt-3 mt-sm-0">

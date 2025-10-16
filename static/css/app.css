@@ -12031,15 +12031,8 @@ textarea.form-control-lg {
   box-shadow: -5px 10px 20px rgba(100, 100, 100, 0.3921568627);
 }
 
-.item .book-details {
+.item .item-details {
   display: none;
-}
-.item.not-accessible:not(.trial-available) {
-  /* img {
-    opacity: .5;
-    filter: grayscale(100%);
-    transition: .5s all;
-  } */
 }
 .item.not-accessible:not(.trial-available) h4 {
   color: #676767 !important;
@@ -12120,6 +12113,23 @@ textarea.form-control-lg {
   z-index: 0;
 }
 
+.item-info .item-link {
+  text-decoration: none;
+  color: inherit;
+}
+.item-info .item-author {
+  font-size: 0.875rem;
+}
+.item-info .item-title {
+  font-size: 1.25rem;
+  color: #007AC3;
+}
+.item-info .item-subtitle {
+  font-size: 0.875rem;
+}
+.item-info .item-results {
+  font-size: 0.875rem;
+}
 .item-info .item-tags {
   display: flex;
   flex-flow: row wrap;
@@ -12150,7 +12160,7 @@ textarea.form-control-lg {
 .item-list .item .item-info {
   flex: 1 1 0%;
 }
-.item-list .item .item-info .book-details {
+.item-list .item .item-info .item-details {
   display: block;
 }
 @media (max-width: 599px) {
@@ -13063,30 +13073,42 @@ body footer .nav-link {
 }
 
 .list-items {
+  position: relative;
   display: flex;
   flex-direction: column;
   gap: 0.25rem;
+  padding-left: 0;
 }
 .list-items .list-item {
   display: flex;
   flex-flow: row nowrap;
   align-items: center;
   gap: 0.5rem;
+  width: 100%;
 }
-.list-items .list-item .list-item-content {
-  flex-grow: 1;
+.list-items .list-item .list-item-link {
+  color: #373737;
+  width: 100%;
   cursor: pointer;
+  text-decoration: none;
 }
-.list-items .list-item .list-item-content mark {
+.list-items .list-item .list-item-link:hover {
+  color: #007AC3;
+  text-decoration: underline;
+}
+.list-items .list-item mark, .list-items .list-item em {
   font-weight: 500;
+  font-style: normal;
   color: #007AC3;
   background-color: transparent;
   padding: 0;
   margin: 0;
 }
-.list-items .list-item:hover .list-item-content {
-  color: #007AC3;
-  text-decoration: underline;
+.list-items.bullets {
+  padding-left: 2rem;
+}
+.list-items.bullets .list-item {
+  display: list-item;
 }
 
 .bullet {

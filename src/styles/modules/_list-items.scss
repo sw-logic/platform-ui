@@ -7,32 +7,46 @@
 }
 
 .list-items {
+  position: relative;
   display: flex;
   flex-direction: column;
   gap: .25rem;
+  padding-left: 0;
 
   .list-item {
     display: flex;
     flex-flow: row nowrap;
     align-items: center;
     gap: .5rem;
+    width: 100%;
 
-    .list-item-content {
-      flex-grow: 1;
+    .list-item-link {
+      color: $dark;
+      width: 100%;
       cursor: pointer;
+      text-decoration: none;
 
-      mark {
-        font-weight: 500;
+      &:hover {
         color: $primary;
-        background-color: transparent;
-        padding: 0;
-        margin: 0;
+        text-decoration: underline;
       }
     }
 
-    &:hover .list-item-content {
+    mark, em {
+      font-weight: 500;
+      font-style: normal;
       color: $primary;
-      text-decoration: underline;
+      background-color: transparent;
+      padding: 0;
+      margin: 0;
+    }
+  }
+
+  &.bullets {
+    padding-left: 2rem;
+
+    .list-item {
+      display: list-item;
     }
   }
 }

@@ -25,7 +25,7 @@
 						</li>
 					</ul>
 				</div>
-				<FilterBar />
+				<FilterBar view="list" />
 			</div>
 
 			<!-- Tab panes -->

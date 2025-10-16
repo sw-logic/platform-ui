@@ -96,7 +96,7 @@
           position: absolute;
           bottom: 5px;
           right: 10px;
-          font-size: $font-size-small;
+          font-size: $font-size-sm;
           color: $middle;
         }
       }
@@ -108,7 +108,7 @@
 
       table {
         width: 100%;
-        font-size: $font-size-small;
+        font-size: $font-size-sm;
 
         tr {
           &:not(:last-child) {

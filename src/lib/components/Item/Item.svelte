@@ -29,14 +29,12 @@
 		</div>
 	</div>
 	<div class="item-info">
-		<div class="item-titles">
-			<h6 class="text-muted mb-1">{author}</h6>
-			<a class="text-decoration-none" href="{base}/book-details">
-				<h4 class="mb-1">{title}</h4>
-			</a>
-			<div class="small text-muted">{subtitle}</div>
-		</div>
-		<div class="book-details">
+		<a href="{base}/book-details" class="item-link">
+			<div class="item-author">{author}</div>
+			<div class="item-title">{title}</div>
+			<div class="item-subtitle">{subtitle}</div>
+		</a>
+		<div class="item-details">
 			{#if exerpt}
 				<div class="item-excerpt mt-2">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad adipisci aspernatur
 					assumenda dignissimos, eligendi fugiat in modi molestias necessitatibus nemo neque non omnis perspiciatis
@@ -44,21 +42,20 @@
 				</div>
 			{/if}
 			{#if search}
-				<ul class="list-items">
+				<div class="item-results mt-2"><strong>125 találat</strong> a kiadványban</div>
+				<ul class="list-items bullets mt-2">
 					<li class="list-item">
-						<a href="#" class="list-item" data-post="true">
+						<a href="#" class="list-item-link" data-post="true">
 							2.1. Beszerzési <em>marketing</em>
 						</a>
 					</li>
 					<li class="list-item">
-						<a href="#" class="list-item" data-post="true">
+						<a href="#" class="list-item-link" data-post="true">
 							2. A <em>marketing</em> eszközrendszere a kereskedelemben
 						</a>
 					</li>
 					<li class="list-item">
-						<a href="#" class="list-item" data-post="true">
-							Kelemen Z. (2009): A kereskedelmi márkázás stratégiai lehetőségei. „Új <em>marketing</em> kihívások a XXI
-						</a>
+						<a href="#" class="list-item-link" data-post="true">Kelemen Z. (2009): A kereskedelmi márkázás stratégiai lehetőségei. „Új <em>marketing</em> kihívások a XXI</a>
 					</li>
 				</ul>
 			{:else}

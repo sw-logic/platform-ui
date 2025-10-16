@@ -7,17 +7,11 @@
     .item-cover-link {}
   }
 
-  .book-details {
+  .item-details {
     display: none;
   }
 
   &.not-accessible:not(.trial-available) {
-    /* img {
-      opacity: .5;
-      filter: grayscale(100%);
-      transition: .5s all;
-    } */
-
     h4 {
       color: $gray-600 !important;
     }
@@ -31,6 +25,7 @@
   }
 }
 
+// COVER PICTURE
 .item-cover-picture {
   position: relative;
   display: block;
@@ -115,10 +110,28 @@
 }
 
 .item-info {
-  .item-titles {}
+  .item-link {
+    text-decoration: none;
+    color: inherit;
+  }
+
+  .item-author {
+    font-size: $font-size-sm;
+  }
+  .item-title {
+    font-size: $font-size-lg;
+    color: $primary;
+  }
+  .item-subtitle {
+    font-size: $font-size-sm;
+  }
+
   .item-categories {}
   .item-references {}
   .item-excerpt {}
+  .item-results {
+    font-size: $font-size-sm;
+  }
   .item-tags {
     display: flex;
     flex-flow: row wrap;
@@ -134,6 +147,7 @@
   }
 }
 
+// ITEM LIST
 .item-list {
   display: block !important;
 
@@ -152,7 +166,7 @@
     .item-info {
       flex: 1 1 0%;
 
-      .book-details {
+      .item-details {
         display: block;
       }
     }

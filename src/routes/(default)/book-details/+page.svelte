@@ -36,7 +36,7 @@
 	<div class="row gap-md-4">
 		<div class="col-sm-4 col-md-3 max-width-sm">
 			<ItemCover />
-			<div class="book-details">
+			<div class="item-details">
 				<div class="mt-3">
 					<div><strong>Publisher</strong>: Akadémiai Kiadó</div>
 					<div><strong>Online publication</strong>: 2025</div>
