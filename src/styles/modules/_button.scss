@@ -1,19 +1,25 @@
 @import '../variables';
 
-$icon-favorite: "";
-$icon-favorite: "";
+$icon-favorite: "\e83c";
+$icon-favorite-hover: "\e17d";
 
-$icon-folder: "";
-$icon-folder-hover: "";
+$icon-folder: "\e83d";
+$icon-folder-hover: "\e3f5";
 
-$icon-refs: "";
-$icon-refs-hover: "";
+$icon-refs: "\ea05";
+$icon-refs-hover: "\e235";
 
-$icon-download: "";
-$icon-download-hover: "";
+$icon-download: "\eac6";
+$icon-download-hover: "\e927";
 
-$icon-info: "";
-$icon-info-hover: "";
+$icon-info: "\e80d";
+$icon-info-hover: "\e425";
+
+$icon-bookmark: "\ebae";
+$icon-bookmark-hover: "\e3de";
+
+$icon-note: "\eb1f";
+$icon-note-hover: "\e34f";
 
 a.nav-link {
   display: flex !important;
@@ -46,7 +52,32 @@ a.nav-link {
   }
 
   &.active {
+    color: $primary;
     background-color: $light;
+
+    &.btn-control-favorite > span::before {
+      content: $icon-favorite-hover;
+    }
+
+    &.btn-control-folder > span::before {
+      content: $icon-folder-hover;
+    }
+
+    &.btn-control-refs > span::before {
+      content: $icon-refs-hover;
+    }
+
+    &.btn-control-info > span::before {
+      content: $icon-info-hover;
+    }
+
+    &.btn-control-bookmark > span::before {
+      content: $icon-bookmark-hover;
+    }
+
+    &.btn-control-note > span::before {
+      content: $icon-note-hover;
+    }
   }
 }
 

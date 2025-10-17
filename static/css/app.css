@@ -12220,7 +12220,26 @@ a.nav-link:hover {
   background-color: #e7e7e7;
 }
 .btn-control.active {
+  color: #007AC3;
   background-color: #e7e7e7;
+}
+.btn-control.active.btn-control-favorite > span::before {
+  content: "\e17d";
+}
+.btn-control.active.btn-control-folder > span::before {
+  content: "\e3f5";
+}
+.btn-control.active.btn-control-refs > span::before {
+  content: "\e235";
+}
+.btn-control.active.btn-control-info > span::before {
+  content: "\e425";
+}
+.btn-control.active.btn-control-bookmark > span::before {
+  content: "\e3de";
+}
+.btn-control.active.btn-control-note > span::before {
+  content: "\e34f";
 }
 
 .no-hover {
