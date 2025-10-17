@@ -1,0 +1,33 @@
+@import "../variables";
+
+.info-container {
+  display: none;
+  flex-direction: row;
+  align-items: center;
+  align-self: stretch;
+}
+
+.refs {
+  padding: 1rem;
+  //background-color: $lighter;
+
+  table {
+    width: 100%;
+    font-size: $font-size-sm;
+
+    tr {
+      &:not(:last-child) {
+        border-bottom: 1px solid $gray-300;
+      }
+
+      td {
+        padding: .5rem 1rem .5rem 0;
+        vertical-align: top;
+
+        &:last-child {
+          padding-right: 0;
+        }
+      }
+    }
+  }
+}

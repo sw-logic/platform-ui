@@ -24,7 +24,7 @@
 			<ControlIcon icon="heart" name="favorite" title="Add to favorites" />
 			<ControlIcon icon="folder" name="folder" title="Add to folder" />
 			{#if type==="doc" || type==="series" }
-				<ControlIcon icon="quote" name="refs" title="Show reference" />
+				<ControlIcon icon="quote" name="refs" title="Show reference" data-bs-toggle="modal" data-bs-target="#referenceModal" />
 				<ControlIcon icon="download-line" name="download" title="Download to device" />
 			{/if}
 			<ControlIcon icon="info" name="info" title="Show information" data-bs-toggle="modal" data-bs-target="#infoModal" class="ms-auto" />

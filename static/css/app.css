@@ -12946,6 +12946,24 @@ a.nav-link:hover {
   align-self: stretch;
 }
 
+.refs {
+  padding: 1rem;
+}
+.refs table {
+  width: 100%;
+  font-size: 0.875rem;
+}
+.refs table tr:not(:last-child) {
+  border-bottom: 1px solid #c7c7c7;
+}
+.refs table tr td {
+  padding: 0.5rem 1rem 0.5rem 0;
+  vertical-align: top;
+}
+.refs table tr td:last-child {
+  padding-right: 0;
+}
+
 picture {
   display: block;
   width: 100%;
