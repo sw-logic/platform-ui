@@ -56,7 +56,23 @@
 					</div>
 				</div>
 				<div class="tab-pane fade" id="imageList" role="tabpanel" aria-labelledby="profile-tab">
-					Profile tab content
+					<div class="result-info mb-3"><strong>15386</strong> results in <strong>438</strong> publications</div>
+
+					<div class="items item-grid">
+						<Item type="image" cover="book-1.webp" search={true} />
+						<Item type="image" cover="book-2.webp" search={true} />
+						<Item type="image" cover="book-3.webp" search={true} />
+						<Item type="image" cover="book-4.webp" search={true} />
+						<Item type="image" cover="book-5.webp" search={true} />
+						<Item type="image" cover="book-1.webp" search={true} />
+						<Item type="image" cover="book-2.webp" search={true} />
+						<Item type="image" cover="book-3.webp" search={true} />
+						<Item type="image" cover="book-4.webp" search={true} />
+						<Item type="image" cover="book-5.webp" search={true} />
+						<Item type="image" cover="book-1.webp" search={true} />
+						<Item type="image" cover="book-2.webp" search={true} />
+						<Item type="image" cover="book-3.webp" search={true} />
+					</div>
 				</div>
 			</div>
 		</div>

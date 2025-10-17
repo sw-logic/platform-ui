@@ -10,13 +10,19 @@
 
 <ul class="table-of-contents" data-element="tree" role="tree" aria-label="Table of contents navigation">
 	<li>
-		<a href="{base}/document/view">Viewpoint in linguistic cognition</a>
+		<div class="content-list-title">
+			<a href="{base}/document/view">Viewpoint in linguistic cognition</a>
+		</div>
 	</li>
 	<li>
-		<a href="{base}/document/view">Imprint</a>
+		<div class="content-list-title">
+			<a href="{base}/document/view">Imprint</a>
+		</div>
 	</li>
 	<li>
-		<a href="{base}/document/view">1. Introduction</a>
+		<div class="content-list-title">
+			<a href="{base}/document/view">1. Introduction</a>
+		</div>
 	</li>
 	<li class="content-list expanded">
 		<div class="content-list-title">
@@ -32,10 +38,14 @@
 				</div>
 				<ul>
 					<li>
-						<a href="{base}/document/view">2.1.1. Alternative conceptualization as choice and negotiation</a>
+						<div class="content-list-title">
+							<a href="{base}/document/view">2.1.1. Alternative conceptualization as choice and negotiation</a>
+						</div>
 					</li>
 					<li>
-						<a href="{base}/document/view">2.1.2. Embodiment and discursivity – the biocultural process of adaptation</a>
+						<div class="content-list-title">
+							<a href="{base}/document/view">2.1.2. Embodiment and discursivity – the biocultural process of adaptation</a>
+						</div>
 					</li>
 				</ul>
 			</li>
@@ -46,10 +56,14 @@
 				</div>
 				<ul>
 					<li>
-						<a href="{base}/document/view">2.2.1. Discourses as joint attentional scenes</a>
+						<div class="content-list-title">
+							<a href="{base}/document/view">2.2.1. Discourses as joint attentional scenes</a>
+						</div>
 					</li>
 					<li>
-						<a href="{base}/document/view">2.2.2. Utterances as attention-directing events</a>
+						<div class="content-list-title">
+							<a href="{base}/document/view">2.2.2. Utterances as attention-directing events</a>
+						</div>
 					</li>
 				</ul>
 			</li>
@@ -60,15 +74,21 @@
 				</div>
 				<ul>
 					<li>
-						<a href="{base}/document/view">2.3.1. Context and contextualization</a>
+						<div class="content-list-title">
+							<a href="{base}/document/view">2.3.1. Context and contextualization</a>
+						</div>
 					</li>
 					<li>
-						<a href="{base}/document/view">2.3.2. Context-dependent starting points of construction</a>
+						<div class="content-list-title">
+							<a href="{base}/document/view">2.3.2. Context-dependent starting points of construction</a>
+						</div>
 					</li>
 				</ul>
 			</li>
 			<li>
-				<a href="{base}/document/view">2.4. Summary</a>
+				<div class="content-list-title">
+					<a href="{base}/document/view">2.4. Summary</a>
+				</div>
 			</li>
 		</ul>
 	</li>
@@ -91,13 +111,19 @@
 						</div>
 						<ul>
 							<li>
-								<a href="{base}/document/view">3.1.1.1. The operation of spatial deixis</a>
+								<div class="content-list-title">
+									<a href="{base}/document/view">3.1.1.1. The operation of spatial deixis</a>
+								</div>
 							</li>
 							<li>
-								<a href="{base}/document/view">3.1.1.2. The operation of temporal deixis</a>
+								<div class="content-list-title">
+									<a href="{base}/document/view">3.1.1.2. The operation of temporal deixis</a>
+								</div>
 							</li>
 							<li>
-								<a href="{base}/document/view">3.1.1.3. Deictic relation based on spatial and temporal contiguity</a>
+								<div class="content-list-title">
+									<a href="{base}/document/view">3.1.1.3. Deictic relation based on spatial and temporal contiguity</a>
+								</div>
 							</li>
 						</ul>
 					</li>
@@ -107,11 +133,20 @@
 							<a class="m-hover-box-sm" href="{base}/document/view">3.1.2. The deixis of person marking and social attitude marking</a>
 						</div>
 						<ul>
-							<li><a href="{base}/document/view">3.1.2.1. The operation of person deixis</a>
+							<li>
+								<div class="content-list-title">
+									<a href="{base}/document/view">3.1.2.1. The operation of person deixis</a>
+								</div>
 							</li>
-							<li><a href="{base}/document/view">3.1.2.2. Social attitude deixis</a>
+							<li>
+								<div class="content-list-title">
+									<a href="{base}/document/view">3.1.2.2. Social attitude deixis</a>
+								</div>
 							</li>
-							<li><a href="{base}/document/view">3.1.2.3. The deixis of social cognition and relationship building</a>
+							<li>
+								<div class="content-list-title">
+									<a href="{base}/document/view">3.1.2.3. The deixis of social cognition and relationship building</a>
+								</div>
 							</li>
 						</ul>
 					</li>
@@ -123,9 +158,15 @@
 					<a class="m-hover-box-sm" href="{base}/document/view">3.2. Metapragmatic awareness of contextualization</a>
 				</div>
 				<ul>
-					<li><a href="{base}/document/view">3.2.1. Reflexivity and awareness</a>
+					<li>
+						<div class="content-list-title">
+							<a href="{base}/document/view">3.2.1. Reflexivity and awareness</a>
+						</div>
 					</li>
-					<li><a href="{base}/document/view">3.2.2. Metapragmatic signals as contextualizers</a>
+					<li>
+						<div class="content-list-title">
+							<a href="{base}/document/view">3.2.2. Metapragmatic signals as contextualizers</a>
+						</div>
 					</li>
 				</ul>
 			</li>
@@ -135,13 +176,22 @@
 					<a class="m-hover-box-sm" href="{base}/document/view">3.3. Contextualizing constructions within and beyond the sentence</a>
 				</div>
 				<ul>
-					<li><a href="{base}/document/view">3.3.1. Deictic contextualizers</a>
+					<li>
+						<div class="content-list-title">
+							<a href="{base}/document/view">3.3.1. Deictic contextualizers</a>
+						</div>
 					</li>
-					<li><a href="{base}/document/view">3.3.2. Reflexive contextualizers</a>
+					<li>
+						<div class="content-list-title">
+							<a href="{base}/document/view">3.3.2. Reflexive contextualizers</a>
+						</div>
 					</li>
 				</ul>
 			</li>
-			<li><a href="{base}/document/view">3.4. Summary</a>
+			<li>
+				<div class="content-list-title">
+					<a href="{base}/document/view">3.4. Summary</a>
+				</div>
 			</li>
 		</ul>
 	</li>
@@ -163,11 +213,20 @@
 							<a class="m-hover-box-sm" href="{base}/document/view">4.1.1. And that will be good</a>
 						</div>
 						<ul>
-							<li><a href="{base}/document/view">4.1.1.1. The unique narrative pattern of the interplay between explicitness and implicitness</a>
+							<li>
+								<div class="content-list-title">
+									<a href="{base}/document/view">4.1.1.1. The unique narrative pattern of the interplay between explicitness and implicitness</a>
+								</div>
 							</li>
-							<li><a href="{base}/document/view">4.1.1.2. Perspectivization and irony</a>
+							<li>
+								<div class="content-list-title">
+									<a href="{base}/document/view">4.1.1.2. Perspectivization and irony</a>
+								</div>
 							</li>
-							<li><a href="{base}/document/view">4.1.1.3. Summary statements</a>
+							<li>
+								<div class="content-list-title">
+									<a href="{base}/document/view">4.1.1.3. Summary statements</a>
+								</div>
 							</li>
 						</ul>
 					</li>
@@ -177,11 +236,20 @@
 							<a class="m-hover-box-sm" href="{base}/document/view">4.1.2. School at the Border</a>
 						</div>
 						<ul>
-							<li><a href="{base}/document/view">4.1.2.1. Reconfiguration of discursive schemes of narrative fiction</a>
+							<li>
+								<div class="content-list-title">
+									<a href="{base}/document/view">4.1.2.1. Reconfiguration of discursive schemes of narrative fiction</a>
+								</div>
 							</li>
-							<li><a href="{base}/document/view">4.1.2.2. Mutually relativizing behavioral patterns in the social world of the story</a>
+							<li>
+								<div class="content-list-title">
+									<a href="{base}/document/view">4.1.2.2. Mutually relativizing behavioral patterns in the social world of the story</a>
+								</div>
 							</li>
-							<li><a href="{base}/document/view">4.1.2.3. Summary statements</a>
+							<li>
+								<div class="content-list-title">
+									<a href="{base}/document/view">4.1.2.3. Summary statements</a>
+								</div>
 							</li>
 						</ul>
 					</li>
@@ -199,11 +267,20 @@
 							<a class="m-hover-box-sm" href="{base}/document/view">4.2.1. Esti</a>
 						</div>
 						<ul>
-							<li><a href="{base}/document/view">4.2.1.1. Genre as discursive scheme</a>
+							<li>
+								<div class="content-list-title">
+									<a href="{base}/document/view">4.2.1.1. Genre as discursive scheme</a>
+								</div>
 							</li>
-							<li><a href="{base}/document/view">4.2.1.2. Reconfiguration of genre schemes</a>
+							<li>
+								<div class="content-list-title">
+									<a href="{base}/document/view">4.2.1.2. Reconfiguration of genre schemes</a>
+								</div>
 							</li>
-							<li><a href="{base}/document/view">4.2.1.3. Summary statements</a>
+							<li>
+								<div class="content-list-title">
+									<a href="{base}/document/view">4.2.1.3. Summary statements</a>
+								</div>
 							</li>
 						</ul>
 					</li>
@@ -213,11 +290,20 @@
 							<a class="m-hover-box-sm" href="{base}/document/view">4.2.2. The Story of My Burn</a>
 						</div>
 						<ul>
-							<li><a href="{base}/document/view">4.2.2.1. The pragmatics of computer-mediated narratives</a>
+							<li>
+								<div class="content-list-title">
+									<a href="{base}/document/view">4.2.2.1. The pragmatics of computer-mediated narratives</a>
+								</div>
 							</li>
-							<li><a href="{base}/document/view">4.2.2.2. Narrative schemes of burn stories</a>
+							<li>
+								<div class="content-list-title">
+									<a href="{base}/document/view">4.2.2.2. Narrative schemes of burn stories</a>
+								</div>
 							</li>
-							<li><a href="{base}/document/view">4.2.2.3. Summary statements</a>
+							<li>
+								<div class="content-list-title">
+									<a href="{base}/document/view">4.2.2.3. Summary statements</a>
+								</div>
 							</li>
 						</ul>
 					</li>
@@ -235,11 +321,20 @@
 							<a class="m-hover-box-sm" href="{base}/document/view">4.3.1. The lyricism of apostrophe</a>
 						</div>
 						<ul>
-							<li><a href="{base}/document/view">4.3.1.1. Song lyrics as apostrophic fictions</a>
+							<li>
+								<div class="content-list-title">
+									<a href="{base}/document/view">4.3.1.1. Song lyrics as apostrophic fictions</a>
+								</div>
 							</li>
-							<li><a href="{base}/document/view">4.3.1.2. Apostrophic discourses in song lyrics</a>
+							<li>
+								<div class="content-list-title">
+									<a href="{base}/document/view">4.3.1.2. Apostrophic discourses in song lyrics</a>
+								</div>
 							</li>
-							<li><a href="{base}/document/view">4.3.1.3. Summary statements</a>
+							<li>
+								<div class="content-list-title">
+									<a href="{base}/document/view">4.3.1.3. Summary statements</a>
+								</div>
 							</li>
 						</ul>
 					</li>
@@ -249,17 +344,29 @@
 							<a class="m-hover-box-sm" href="{base}/document/view">4.3.2. The lyricism of person marking</a>
 						</div>
 						<ul>
-							<li><a href="{base}/document/view">4.3.2.1. The contextualizing and perspectivizing role of person marking in song lyrics</a>
+							<li>
+								<div class="content-list-title">
+									<a href="{base}/document/view">4.3.2.1. The contextualizing and perspectivizing role of person marking in song lyrics</a>
+								</div>
 							</li>
-							<li><a href="{base}/document/view">4.3.2.2. Personality and subjectivization in song lyrics</a>
+							<li>
+								<div class="content-list-title">
+									<a href="{base}/document/view">4.3.2.2. Personality and subjectivization in song lyrics</a>
+								</div>
 							</li>
-							<li><a href="{base}/document/view">4.3.2.3. Summary statements</a>
+							<li>
+								<div class="content-list-title">
+									<a href="{base}/document/view">4.3.2.3. Summary statements</a>
+								</div>
 							</li>
 						</ul>
 					</li>
 				</ul>
 			</li>
-			<li><a href="{base}/document/view">4.4. Summary</a>
+			<li>
+				<div class="content-list-title">
+					<a href="{base}/document/view">4.4. Summary</a>
+				</div>
 			</li>
 		</ul>
 	</li>
@@ -275,9 +382,15 @@
 					<a class="m-hover-box-sm" href="{base}/document/view">5.1. The sociocultural situatedness of style attribution – theoretical insights</a>
 				</div>
 				<ul>
-					<li><a href="{base}/document/view">5.1.1. Style attribution as a deictic operation</a>
+					<li>
+						<div class="content-list-title">
+							<a href="{base}/document/view">5.1.1. Style attribution as a deictic operation</a>
+						</div>
 					</li>
-					<li><a href="{base}/document/view">5.1.2. Style attribution as activation of style patterns</a>
+					<li>
+						<div class="content-list-title">
+							<a href="{base}/document/view">5.1.2. Style attribution as activation of style patterns</a>
+						</div>
 					</li>
 				</ul>
 			</li>
@@ -287,13 +400,25 @@
 					<a class="m-hover-box-sm" href="{base}/document/view">5.2. Sociocultural factors of style attribution – possibilities of empirical investigation</a>
 				</div>
 				<ul>
-					<li><a href="{base}/document/view">5.2.1. Designations reflecting on style attribution</a>
+					<li>
+						<div class="content-list-title">
+							<a href="{base}/document/view">5.2.1. Designations reflecting on style attribution</a>
+						</div>
 					</li>
-					<li><a href="{base}/document/view">5.2.2. Stylistic markedness</a>
+					<li>
+						<div class="content-list-title">
+							<a href="{base}/document/view">5.2.2. Stylistic markedness</a>
+						</div>
 					</li>
-					<li><a href="{base}/document/view">5.2.3. Sociocultural factors</a>
+					<li>
+						<div class="content-list-title">
+							<a href="{base}/document/view">5.2.3. Sociocultural factors</a>
+						</div>
 					</li>
-					<li><a href="{base}/document/view">5.2.4. Conclusions</a>
+					<li>
+						<div class="content-list-title">
+							<a href="{base}/document/view">5.2.4. Conclusions</a>
+						</div>
 					</li>
 				</ul>
 			</li>
@@ -303,13 +428,22 @@
 					<a class="m-hover-box-sm" href="{base}/document/view">5.3. The homogeneity and heterogeneity of style in the short stories of Antal Szerb</a>
 				</div>
 				<ul>
-					<li><a href="{base}/document/view">5.3.1. Style – homogenization, polarization and relativization in formulation</a>
+					<li>
+						<div class="content-list-title">
+							<a href="{base}/document/view">5.3.1. Style – homogenization, polarization and relativization in formulation</a>
+						</div>
 					</li>
-					<li><a href="{base}/document/view">5.3.2. Irony – formulation, reflexivity and understanding ignorance</a>
+					<li>
+						<div class="content-list-title">
+							<a href="{base}/document/view">5.3.2. Irony – formulation, reflexivity and understanding ignorance</a>
+						</div>
 					</li>
 				</ul>
 			</li>
-			<li><a href="{base}/document/view">5.4. Summary</a>
+			<li>
+				<div class="content-list-title">
+					<a href="{base}/document/view">5.4. Summary</a>
+				</div>
 			</li>
 		</ul>
 	</li>
@@ -319,18 +453,36 @@
 			<a href="{base}/document/view">6. Summary</a>
 		</div>
 		<ul>
-			<li><a href="{base}/document/view">6.1. The model of context-dependent starting points</a>
+			<li>
+				<div class="content-list-title">
+					<a href="{base}/document/view">6.1. The model of context-dependent starting points</a>
+				</div>
 			</li>
-			<li><a href="{base}/document/view">6.2. The pragmatic approach to construction</a>
+			<li>
+				<div class="content-list-title">
+					<a href="{base}/document/view">6.2. The pragmatic approach to construction</a>
+				</div>
 			</li>
-			<li><a href="{base}/document/view">6.3. (Re)interpretation of contextualization</a>
+			<li>
+				<div class="content-list-title">
+					<a href="{base}/document/view">6.3. (Re)interpretation of contextualization</a>
+				</div>
 			</li>
-			<li><a href="{base}/document/view">6.4. The perspectivity of narrative and lyric discourses</a>
+			<li>
+				<div class="content-list-title">
+					<a href="{base}/document/view">6.4. The perspectivity of narrative and lyric discourses</a>
+				</div>
 			</li>
-			<li><a href="{base}/document/view">6.5. The pragmatic approach to style attribution</a>
+			<li>
+				<div class="content-list-title">
+					<a href="{base}/document/view">6.5. The pragmatic approach to style attribution</a>
+				</div>
 			</li>
 		</ul>
 	</li>
-	<li><a href="{base}/document/view">References</a>
+	<li>
+		<div class="content-list-title">
+			<a href="{base}/document/view">References</a>
+		</div>
 	</li>
 </ul>

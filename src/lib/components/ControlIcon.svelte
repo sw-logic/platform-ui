@@ -6,6 +6,7 @@
 		icon: string;
 		iconType?: string;
 		title?: string;
+		name?: string;
 		onclick?: () => void;
 		active?: boolean;
 		class?: string;
@@ -13,10 +14,10 @@
 		[key: string]: unknown;
 	}
 
-	let {icon, iconType, title, onclick, active, ...props}: ControlIconProps = $props();
+	let {icon, iconType, title, name, onclick, active, ...props}: ControlIconProps = $props();
 	iconType = iconType || 'wk';
 </script>
 
-<button {title} {onclick} {...props} class="btn-control {props.class}" class:active>
+<button {title} {onclick} {...props} class="btn-control btn-control-{name} {props.class}" class:active>
 	<Icon icon={icon} {iconType} />
 </button>

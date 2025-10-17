@@ -8,7 +8,7 @@
 	import ControlIcon from '$lib/components/ControlIcon.svelte';
 
 	const seriesBooks = getBooks(10, { type: 'series' });
-	const defaultBooks = getBooks(10, { type: '' });
+	const defaultBooks = getBooks(10, { type: 'doc' });
 
 	onMount(() => {
 		Sidebar.init();
