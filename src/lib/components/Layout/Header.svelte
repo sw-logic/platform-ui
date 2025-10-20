@@ -72,10 +72,15 @@
 
 			<!-- Search bar -->
 			<div class="search-bar w-50" id="searchBar">
-				<div class="input-group input-group-sm">
-					<input bind:this={searchInput} oninput={showSearchResults} type="text" class="form-control border-dark" placeholder="Search" id="searchBarInput" aria-label="Search" aria-describedby="searchButton">
-					<a href="{base}/search" class="btn btn-outline-dark" type="button" id="searchButton"><Icon icon="filled-search" /></a>
-				</div>
+				<form>
+					<div class="input-group input-group-sm">
+						<input bind:this={searchInput} oninput={showSearchResults} type="text" class="form-control border-dark"
+									 placeholder="Search" id="searchBarInput" aria-label="Search" aria-describedby="searchButton">
+						<a href="{base}/search" class="btn btn-outline-dark" type="button" id="searchButton">
+							<Icon icon="filled-search" />
+						</a>
+					</div>
+				</form>
 				<div bind:this={searchResults} class="search-results shadow" id="searchResults">
 					<div class="search-results-header">Search phrases</div>
 					<ul class="search-items">
