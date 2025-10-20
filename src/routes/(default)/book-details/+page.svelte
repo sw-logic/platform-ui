@@ -37,13 +37,7 @@
 		<div class="col-sm-4 col-md-3 max-width-sm">
 			<ItemCover />
 			<div class="item-details">
-				<div class="mt-3">
-					<div><strong>Publisher</strong>: Akadémiai Kiadó</div>
-					<div><strong>Online publication</strong>: 2025</div>
-					<div><strong>ISBN</strong>: 978 963 664 115 3</div>
-					<div><strong>DOI</strong>: 10.1556/9789636640118</div>
-					<div><strong>ISSN</strong>: 2786-4324</div>
-				</div>
+
 			</div>
 		</div>
 		<div class="col mt-3 mt-sm-0">
@@ -53,17 +47,26 @@
 	</div>
 	<hr>
 	<div class="item-info">
-		<div class="item-categories mb-3">
-			<span class="badge rounded-pill text-bg-light bg-hover-light pointer">Cultural History</span>
-			<span class="badge rounded-pill text-bg-light">Cultural History</span>
-			<span class="badge rounded-pill text-bg-light">Cultural History</span>
+		<div class="tags tags-rounded mt-3">
+			<a href="#" class="tag hover-bg-light">Cultural History</a>
+			<a href="#" class="tag hover-bg-light">Cultural History</a>
+			<a href="#" class="tag hover-bg-light">Cultural History</a>
 		</div>
-		<p class="item-excerpt">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias blanditiis commodi cupiditate, deserunt dolores,
+		<p class="item-excerpt mt-3">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias blanditiis commodi cupiditate, deserunt dolores,
 			fuga inventore laudantium natus nisi numquam perferendis recusandae repellat tenetur? Dolore iste rem sint solutabook
 			voluptate!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias blanditiis commodi cupiditate, deserunt dolores,
 			fuga inventore laudantium natus nisi numquam perferendis recusandae repellat tenetur? Dolore iste rem sint soluta
-			voluptate!</p>
-		<p class="small">Download reference:</p>
+			voluptate!
+		</p>
+		<div class="mt-3">
+			<div><strong>Publisher</strong>: Akadémiai Kiadó</div>
+			<div><strong>Date of online publication</strong>: 2025</div>
+			<div><strong>ISBN</strong>: 978 963 664 115 3</div>
+			<div><strong>DOI</strong>: 10.1556/9789636640118</div>
+			<div><strong>ISSN</strong>: 2786-4324</div>
+			<div><strong>Link</strong>: <a href="#">This is the info link</a></div>
+		</div>
+		<p class="mt-3 small">Download reference:</p>
 		<div class="item-references">
 			<button class="btn btn-sm btn-outline-dark"><Icon icon="download-line" /> BibTeX</button>
 			<button class="btn btn-sm btn-outline-dark"><Icon icon="download-line" /> EndNote</button>

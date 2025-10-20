@@ -1,4 +1,6 @@
 // Pool of predefined values for book generation
+import { K } from '../../../.svelte-kit/output/server/chunks';
+
 const BOOK_POOL = {
 	covers: [
 		'book-1.webp',
@@ -55,6 +57,9 @@ const BOOK_POOL = {
 		'',
 		''
 	],
+	categories: [
+		'Agriculture', 'Biology', 'Chemistry', 'Diplomacy', 'Energetics',
+	],
 	access: [true, false],
 	trial: [true, false]
 };
@@ -66,6 +71,7 @@ export interface Book {
 	subtitle: string;
 	type: string;
 	tag: string;
+	categories: string[];
 	access: boolean;
 	trial: boolean;
 }
@@ -78,6 +84,38 @@ export type BookOverrides = Partial<Book>;
 function getRandomItem<T>(array: T[]): T {
 	return array[Math.floor(Math.random() * array.length)];
 }
+
+/**
+ * Get up to a specified number of random items from a BOOK_POOL property
+ * @param prop - The property key from BOOK_POOL
+ * @param number - Maximum number of random items to return
+ * @returns Array of random items from the specified BOOK_POOL property (1 to number items)
+ */
+function getRandomItems<K extends keyof typeof BOOK_POOL>(
+	prop: K,
+	number: number
+): Array<(typeof BOOK_POOL)[K][number]> {
+	const sourceArray = BOOK_POOL[prop];
+	const result: Array<(typeof BOOK_POOL)[K][number]> = [];
+
+	// Determine the actual number of items to return (random between 1 and number)
+	const maxCount = Math.min(number, sourceArray.length);
+	const actualCount = Math.floor(Math.random() * maxCount) + 1;
+
+	// Create a copy of the source array to avoid modifying the original
+	const availableItems = [...sourceArray];
+
+	for (let i = 0; i < actualCount; i++) {
+		const randomIndex = Math.floor(Math.random() * availableItems.length);
+		result.push(availableItems[randomIndex] as (typeof BOOK_POOL)[K][number]);
+		// Remove selected item to avoid duplicates
+		availableItems.splice(randomIndex, 1);
+	}
+
+	return result;
+}
+
+
 
 /**
  * Get a random item from an array, excluding a specific value
@@ -101,7 +139,7 @@ function getRandomItemExcluding<T>(array: T[], exclude: T): T {
  * @param overrides - Optional object to override specific attributes for all books
  * @returns Array of book objects
  */
-export function getBooks(count: number, overrides: BookOverrides = {}): Book[] {
+export function getItems(count: number, overrides: BookOverrides = {}): Book[] {
 	const books: Book[] = [];
 	let previousCover: string | null = null;
 
@@ -124,6 +162,7 @@ export function getBooks(count: number, overrides: BookOverrides = {}): Book[] {
 			subtitle: overrides.subtitle ?? getRandomItem(BOOK_POOL.subtitles),
 			type: overrides.type ?? getRandomItem(BOOK_POOL.types),
 			tag: overrides.tag ?? getRandomItem(BOOK_POOL.tags),
+			categories: overrides.categories ?? getRandomItems('categories', 3),
 			access: overrides.access ?? getRandomItem(BOOK_POOL.access),
 			trial: overrides.trial ?? getRandomItem(BOOK_POOL.trial)
 		};

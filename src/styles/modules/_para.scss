@@ -61,13 +61,9 @@
     transition: all .3s ease-in-out;
 
     .para-note {
-      display: none;
+      display: flex;
       flex-direction: column;
       gap: .5rem;
-
-      &.show {
-        display: flex;
-      }
 
       .para-note-content {
         display: flex;
@@ -83,21 +79,31 @@
         .para-note-content-text {
           flex-grow: 1;
           padding: 1rem;
+          background-color: $primary-lighter;
         }
       }
 
       .para-note-input {
+        display: none;
         padding: 1rem;
         background-color: $lighter;
-      }
 
-      .para-note-input {
         .para-character-counter {
           position: absolute;
           bottom: 5px;
           right: 10px;
           font-size: $font-size-sm;
           color: $middle;
+        }
+
+        &.show {
+          display: block;
+        }
+      }
+
+      &:has(.para-note-input.show) {
+        .para-note-content {
+          display: none !important;
         }
       }
     }

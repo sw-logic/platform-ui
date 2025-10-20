@@ -1,6 +1,7 @@
 <script>
 	import { onMount } from 'svelte';
 	import { Sidebar } from '$lib/scripts/sidebar';
+	import { ClassToggle } from '$lib/scripts/classToggle';
 	import ControlIcon from '$lib/components/ControlIcon.svelte';
 	import DocumentToolbar from '$lib/components/Documents/DocumentToolbar.svelte';
 	import NavLink from '$lib/components/NavLink.svelte';
@@ -9,6 +10,7 @@
 
 	onMount(() => {
 		Sidebar.init();
+		ClassToggle.init();
 	});
 </script>
 
@@ -26,10 +28,17 @@
 						<span class="separator wk-icon-chevron-right"></span>
 						<NavLink title="Sub-Chapter Title" active={false} />
 					</nav>
-					<div class="header-toolbar-tools">
-						<ControlIcon icon="info" title="Back" class="hover-text-bg-primary" />
-						<ControlIcon icon="heart" title="Back" class="hover-text-bg-primary" />
-						<ControlIcon icon="folder" title="Back" class="hover-text-bg-primary" />
+					<div class="header-toolbar-tools" data-active-toggle=".active-toggle">
+						<ControlIcon icon="info" title="Info" class="hover-text-bg-primary" />
+						<ControlIcon icon="heart" title="Add to favorites" class="hover-text-bg-primary" />
+						<ControlIcon icon="folder" title="Add to folder" class="hover-text-bg-primary" />
+						<ControlIcon
+							icon="layout"
+							title="Toggle toolbar"
+							class="active-toggle ms-3 hover-text-bg-primary"
+							data-toggle="#documentToolbar"
+							data-toggle-class="d-none"
+						/>
 					</div>
 				</div>
 				<div class="header-toolbar-end"></div>
@@ -55,7 +64,7 @@
 			</div>
 		</div>
 	</div>
-	<div class="sidebar sidebar-collapse-md document-toolbar border-start shadow" id="document-toolbar">
+	<div class="sidebar sidebar-collapse-md document-toolbar border-start shadow" id="documentToolbar">
 		<div class="sidebar-header d-md-none">
 			<h4>Toolbar</h4>
 			<ControlIcon icon="close" data-sidebar-close="#document-toolbar" aria-label="Close sidebar" />

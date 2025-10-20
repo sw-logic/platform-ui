@@ -13,6 +13,12 @@
 }
 
 @each $name, $color in $theme-colors {
+  .outline-#{$name} {
+    color: $color !important;
+    background-color: transparent !important;
+    border: 1px solid $color !important;
+  }
+
   .hover-bg-#{$name}:hover {
     background-color: shift-color($color, 10%) !important;
   }

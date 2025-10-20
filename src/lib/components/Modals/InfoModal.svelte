@@ -26,10 +26,10 @@
 								<button class="btn btn-primary">Read</button>
 							</div>
 						</div>
-						<div class="d-flex gap-2 flex-wrap mt-3">
-							<span class="badge rounded-pill text-bg-light bg-hover-light pointer">Cultural History</span>
-							<span class="badge rounded-pill text-bg-light">Cultural History</span>
-							<span class="badge rounded-pill text-bg-light">Cultural History</span>
+						<div class="tags tag-rounded mt-3">
+							<span class="tag hover-bg-light">Cultural History</span>
+							<span class="tag hover-bg-light">Cultural History</span>
+							<span class="tag hover-bg-light">Cultural History</span>
 						</div>
 						<div class="mt-3">
 							<div><strong>Publisher</strong>: Akadémiai Kiadó</div>

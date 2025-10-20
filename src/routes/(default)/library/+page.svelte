@@ -2,13 +2,13 @@
 	import Item from '$lib/components/Item/Item.svelte';
 	import FilterBar from '$lib/components/Filters/FilterBar.svelte';
 	import FilterPanelLibrary from '$lib/components/Filters/FilterPanelLibrary.svelte';
-	import { getBooks } from '$lib/scripts/getBooks';
+	import { getItems } from '$lib/scripts/getItems';
 	import { onMount } from 'svelte';
 	import { Sidebar } from '$lib/scripts/sidebar';
 	import ControlIcon from '$lib/components/ControlIcon.svelte';
 
-	const seriesBooks = getBooks(10, { type: 'series' });
-	const defaultBooks = getBooks(10, { type: 'doc' });
+	const seriesBooks = getItems(10, { type: 'series' });
+	const defaultBooks = getItems(10, { type: 'doc' });
 
 	onMount(() => {
 		Sidebar.init();
@@ -36,6 +36,7 @@
 							author={book.author}
 							title={book.title}
 							subtitle={book.subtitle}
+							categories={book.categories}
 							access={book.access}
 							trial={book.trial}
 							tag={book.tag}
@@ -59,6 +60,7 @@
 							author={book.author}
 							title={book.title}
 							subtitle={book.subtitle}
+							categories={book.categories}
 							access={book.access}
 							trial={book.trial}
 							tag={book.tag}
@@ -78,6 +80,7 @@
 						author={book.author}
 						title={book.title}
 						subtitle={book.subtitle}
+						categories={book.categories}
 						access={book.access}
 						trial={book.trial}
 						tag={book.tag}

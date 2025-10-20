@@ -46,6 +46,7 @@ $colors: (
 
 $primary:         $blue;
 $primary-light:   fade-out($primary, 0.75);
+$primary-lighter: fade-out($primary, 0.90);
 $secondary:       $green;
 $secondary-light: fade-out($secondary, 0.75);
 $tertiary:        $red;
@@ -69,6 +70,16 @@ $theme-colors: (
   "info":       $info,
   "warning":    $warning,
   "danger":     $danger,
+  "blue":       $blue,
+  "purple":     $purple,
+  "pink":       $pink,
+  "red":        $red,
+  "orange":     $orange,
+  "yellow":     $yellow,
+  "green":      $green,
+  "cyan":       $cyan,
+  "black":      $black,
+  "white":      $white,
   "lighter":    $lighter,
   "light":      $light,
   "middle":     $middle,
@@ -86,8 +97,13 @@ $font-family-monospace: Fira Mono;
 $font-family-sans-serif: Fira Sans;
 
 $font-size-base: 1rem;
+$font-size-xs: .75rem;
 $font-size-sm: .875rem;
 $font-size-lg: 1.25rem;
+
+$font-size-xs-em: .75em;
+$font-size-sm-em: .875em;
+$font-size-lg-em: 1.25em;
 
 $font-weight-light:     300;
 $font-weight-normal:    400;

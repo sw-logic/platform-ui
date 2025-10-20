@@ -1,7 +1,7 @@
 <script>
 import { base } from '$app/paths';
 
-let {author, title, subtitle, excerpt, search, access, trial } = $props();
+let {author, title, subtitle, categories, excerpt, search, access, trial } = $props();
 
 </script>
 
@@ -36,7 +36,7 @@ let {author, title, subtitle, excerpt, search, access, trial } = $props();
 				</li>
 			</ul>
 		{:else}
-			<div class="book-meta mt-2">
+			<div class="item-meta mt-3">
 				<div><strong>Publisher</strong>: Akadémiai Kiadó</div>
 				<div><strong>Online publication</strong>: 2025</div>
 				<div><strong>ISBN</strong>: 978 963 664 115 3</div>
@@ -44,13 +44,18 @@ let {author, title, subtitle, excerpt, search, access, trial } = $props();
 				<div><strong>ISSN</strong>: 2786-4324</div>
 			</div>
 		{/if}
+		<div class="tags tags-rounded mt-3">
+			{#each categories.sort() as category, index (index)}
+				<a href="#" class="tag hover-bg-light">{category}</a>
+			{/each}
+		</div>
 	</div>
-	<div class="item-tags mt-2">
+	<div class="tags mt-3">
 		{#if !access}
 			{#if trial}
-				<span class="info-tag bg-warning text-white">Trial available</span>
+				<span class="tag outline-orange">Trial available</span>
 			{:else}
-				<span class="info-tag bg-light text-middle">Not accessible</span>
+				<span class="tag border bg-white">Not accessible</span>
 			{/if}
 		{/if}
 	</div>

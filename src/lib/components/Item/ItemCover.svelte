@@ -5,12 +5,13 @@
 	let type = props.type || 'doc';
 	let tag = props.tag || '';
 	let link = props.href || '';
+	let ai = props.ai || false;
 
 	import { base } from '$app/paths';
 </script>
 
 {#if link}
-	<a class="item-cover-link" href={link}>
+	<a class="item-cover-link" class:ai href={link}>
 		<picture class="item-cover-picture {type}">
 			<img src="{base}/images/book/{cover}" alt="Name of the book">
 			{#if tag}
