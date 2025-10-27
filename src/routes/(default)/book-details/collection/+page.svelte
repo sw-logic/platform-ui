@@ -10,7 +10,7 @@
 <div class="container py-3 py-md-4 py-lg-5">
 	<div class="d-flex flex-column flex-sm-row gap-0 gap-sm-3 gap-md-5">
 		<div class="col-sm-4 col-md-3 max-width-sm">
-			<ItemCover type="series" />
+			<ItemCover type="collection" />
 		</div>
 		<div class="col mt-3 mt-sm-0">
 			<h1 class=" mb-1">This is the very long title of the collection</h1>
