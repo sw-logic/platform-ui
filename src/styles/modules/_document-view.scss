@@ -23,7 +23,6 @@
         display: flex;
         flex-direction: row;
         align-items: center;
-        gap: 1rem;
 
         .nav-link.text-disabled {
           color: $black !important;
@@ -36,7 +35,7 @@
           flex-direction: row;
           gap: 1rem;
           align-items: center;
-          max-width: calc(100% - 30px - .5rem - clamp(25px, 5%, 50px));
+          max-width: calc(100% - 1rem);
 
           .breadcrumbs {
             display: flex;
@@ -70,7 +69,7 @@
         flex-direction: column;
         gap: .5rem;
         padding: 1rem 100px 1rem 1rem;
-        padding-right: clamp(25px, 5%, 50px);
+        padding-right: 50px;
       }
     }
 

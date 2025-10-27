@@ -13,7 +13,7 @@
 	});
 </script>
 
-<div class="toolbar document-toolbar">
+<div class="toolbar document-toolbar" id="documentToolbar">
 	<DocumentToolbarItem icon="list-bullet-dot" title="Table of contents">
 		<div class="content scroll">
 			<TOC />
@@ -255,7 +255,47 @@
 		<DocumentToolbarHighlights />
 	</DocumentToolbarItem>
 	<DocumentToolbarItem icon="settings" title="Settings">
-		Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam, aliquid asperiores cumque dolorem earum fuga
-		laboriosam modi natus nihil possimus quasi sed temporibus unde? Illo illum laborum sunt tempora voluptates!
+		<div class="content scroll gap-2">
+			<form class="form-column" action="">
+				<div class="form-group">
+					<label for="fontSize">Font size</label>
+					<div class="form-input">
+						<input type="range" class="form-range" id="fontSize" min="12" max="24" value="16">
+					</div>
+				</div>
+				<div class="form-group">
+					<label for="lineWidthSwitch">Lagre line width</label>
+					<div class="form-input">
+						<div class="form-check form-switch">
+							<input class="form-check-input" type="checkbox" role="switch" id="lineWidthSwitch">
+						</div>
+					</div>
+				</div>
+				<div class="form-group">
+					<label for="">Large line height</label>
+					<div class="form-input">
+						<div class="form-check form-switch">
+							<input class="form-check-input" type="checkbox" role="switch" id="lineWidthSwitch">
+						</div>
+					</div>
+				</div>
+				<div class="form-group">
+					<label for="">Infinity scroll</label>
+					<div class="form-input">
+						<div class="form-check form-switch">
+							<input class="form-check-input" type="checkbox" role="switch" id="lineWidthSwitch">
+						</div>
+					</div>
+				</div>
+				<div class="form-group">
+					<label for="">Warm background</label>
+					<div class="form-input">
+						<div class="form-check form-switch">
+							<input class="form-check-input" type="checkbox" role="switch" id="lineWidthSwitch">
+						</div>
+					</div>
+				</div>
+			</form>
+		</div>
 	</DocumentToolbarItem>
 </div>

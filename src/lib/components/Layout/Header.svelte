@@ -192,7 +192,7 @@
 
 	<nav id="main-navbar" class="bg-dark navbar py-0 navbar-expand-md" data-bs-theme="dark">
 		<div class="container d-flex align-items-center">
-			<ul class="navbar-nav gap-3 flex-row align-items-center">
+			<ul class="navbar-nav gap-3 flex-row-center">
 				<li class="nav-item collapse-nav-text"><NavLink href="{base}/library" title="Library" icon="filled-book-open" /></li>
 				<li class="nav-item collapse-nav-text"><NavLink href="{base}/favorites" title="Favorites" icon="filled-heart" /></li>
 				<li class="nav-item collapse-nav-text"><NavLink href="{base}/folders" title="Folders" icon="filled-folder" /></li>

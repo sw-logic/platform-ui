@@ -20,7 +20,7 @@
 			<div class="header-toolbar site-indent">
 				<div class="header-toolbar-nav">
 					<NavLink icon="arrow-left" title="Back" class="gap-1" />
-					<nav class="breadcrumbs small">
+					<nav class="breadcrumbs small d-none d-sm-flex">
 						<div class="wk-icon-filled-book"></div>
 						<NavLink title="Book Title" href="/document/xml/book-title" />
 						<span class="separator wk-icon-chevron-right"></span>
@@ -35,7 +35,7 @@
 						<ControlIcon
 							icon="layout"
 							title="Toggle toolbar"
-							class="active-toggle ms-3 hover-text-bg-primary"
+							class="active-toggle ms-3 hover-text-bg-primary d-none d-md-block"
 							data-toggle="#documentToolbar"
 							data-toggle-class="d-none"
 						/>
@@ -44,7 +44,7 @@
 				<div class="header-toolbar-end"></div>
 			</div>
 			<div class="ms-auto d-md-none">
-				<ControlIcon icon="filled-funnel" data-sidebar-target="#document-toolbar" aria-label="Toggle sidebar" />
+				<ControlIcon icon="filled-funnel" data-sidebar-target="#documentToolbar" aria-label="Toggle sidebar" />
 			</div>
 		</div>
 		<div class="document-body">
@@ -55,8 +55,7 @@
 				<div class="footer-toolbar-nav">
 					<div class="col-auto"><ControlIcon icon="chevron-left" title="Previous Chapter" class="hover-text-bg-primary" /></div>
 					<div class="col nav-slider" id="navSlider">
-						<div class="nav-slider-timeline"></div>
-						<div class="nav-slider-button"></div>
+						<input class="form-range" type="range" min="1" max="50" value="25" aria-label="Navigate through document" />
 					</div>
 					<div class="col-auto"><ControlIcon icon="chevron-right" title="Next Chapter" class="hover-text-bg-primary" /></div>
 				</div>
@@ -67,7 +66,7 @@
 	<div class="sidebar sidebar-collapse-md document-toolbar border-start shadow" id="documentToolbar">
 		<div class="sidebar-header d-md-none">
 			<h4>Toolbar</h4>
-			<ControlIcon icon="close" data-sidebar-close="#document-toolbar" aria-label="Close sidebar" />
+			<ControlIcon icon="close" data-sidebar-close="#documentToolbar" aria-label="Close sidebar" />
 		</div>
 		<div class="sidebar-body">
 			<DocumentToolbar />

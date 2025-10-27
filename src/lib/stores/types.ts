@@ -10,6 +10,7 @@ export interface SettingsState {
 	userLoggedIn: boolean;
 	userStartedTrial: boolean;
 	userSubscription: boolean;
+	userHasContent: boolean;
 	allowGuest: boolean;
 	showLibraryForGuests: boolean;
 	theme: Theme;

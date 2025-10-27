@@ -30,6 +30,10 @@
 		settings.update(s => ({ ...s, userSubscription: !s.userSubscription }));
 	}
 
+	function toggleUserHasContent() {
+		settings.update(s => ({ ...s, userHasContent: !s.userHasContent }));
+	}
+
 	function toggleAllowGuest() {
 		settings.update(s => ({ ...s, allowGuest: !s.allowGuest }));
 	}
@@ -177,6 +181,19 @@
 				>
 				<label class="form-check-label" for="userSubscription">
 					User has subscription
+				</label>
+			</div>
+
+			<div class="form-check mb-3">
+				<input
+					class="form-check-input"
+					type="checkbox"
+					id="userHasContent"
+					checked={$settings.userHasContent}
+					on:change={toggleUserHasContent}
+				>
+				<label class="form-check-label" for="userHasContent">
+					User has content
 				</label>
 			</div>
 		{/if}

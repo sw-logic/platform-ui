@@ -11,6 +11,7 @@ const defaultSettings: SettingsState = {
 	userLoggedIn: true,
 	userStartedTrial: false,
 	userSubscription: true,
+	userHasContent: true,
 	allowGuest: true,
 	showLibraryForGuests: true,
 	theme: 'light',
