@@ -1,11 +1,8 @@
 <script>
 	import ControlIcon from '$lib/components/ControlIcon.svelte';
-
-	let { onclick = () => {} } = $props();
 </script>
 
 <div class="folder-item">
-
 		<div class="flex-row-center gap-1 mb-2">
 			<div class="folder-icon">
 				<a href="#" aria-label="folder-icon">
@@ -15,7 +12,7 @@
 				</a>
 			</div>
 			<div class="folder-tools">
-				<ControlIcon icon="pencil" title="Edit Folder" {onclick} />
+				<ControlIcon icon="pencil" title="Edit Folder" data-bs-toggle="modal" data-bs-target="#editFolderModal" />
 				<!-- ControlIcon icon="trash" title="Delete Folder" /-->
 			</div>
 		</div>

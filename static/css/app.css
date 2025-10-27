@@ -13004,11 +13004,11 @@ textarea.form-control-lg {
 .item-cover-picture.image img {
   object-fit: contain;
 }
-.item-cover-picture.series {
+.item-cover-picture.series, .item-cover-picture.collection {
   padding-bottom: 142.2%;
   border: none;
 }
-.item-cover-picture.series img {
+.item-cover-picture.series img, .item-cover-picture.collection img {
   top: 0;
   left: 0;
   width: calc(100% - 10px);
@@ -13016,7 +13016,7 @@ textarea.form-control-lg {
   border: 1px solid #979797;
   z-index: 2;
 }
-.item-cover-picture.series:before, .item-cover-picture.series:after {
+.item-cover-picture.series:before, .item-cover-picture.series:after, .item-cover-picture.collection:before, .item-cover-picture.collection:after {
   content: "";
   position: absolute;
   width: calc(100% - 10px);
@@ -13024,13 +13024,13 @@ textarea.form-control-lg {
   background-color: #ffffff;
   border: 1px solid #979797;
 }
-.item-cover-picture.series:before {
+.item-cover-picture.series:before, .item-cover-picture.collection:before {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 1;
 }
-.item-cover-picture.series:after {
+.item-cover-picture.series:after, .item-cover-picture.collection:after {
   right: 0;
   bottom: 0;
   z-index: 0;
@@ -14334,6 +14334,181 @@ input[type=range]:focus::-ms-fill-upper {
   .item-grid.item-grid-6 {
     grid-template-columns: repeat(6, 1fr);
   }
+}
+
+.icon.icon-lg {
+  font-size: 1.5em;
+}
+.icon.icon-sm {
+  font-size: 0.875em;
+}
+
+.icon-primary.icon {
+  color: #007AC3 !important;
+}
+
+.icon-hover-primary.icon:hover {
+  color: #007AC3 !important;
+}
+
+.icon-secondary.icon {
+  color: #85BC20 !important;
+}
+
+.icon-hover-secondary.icon:hover {
+  color: #85BC20 !important;
+}
+
+.icon-success.icon {
+  color: #85BC20 !important;
+}
+
+.icon-hover-success.icon:hover {
+  color: #85BC20 !important;
+}
+
+.icon-info.icon {
+  color: #007AC3 !important;
+}
+
+.icon-hover-info.icon:hover {
+  color: #007AC3 !important;
+}
+
+.icon-warning.icon {
+  color: #EA8F00 !important;
+}
+
+.icon-hover-warning.icon:hover {
+  color: #EA8F00 !important;
+}
+
+.icon-danger.icon {
+  color: #E5202E !important;
+}
+
+.icon-hover-danger.icon:hover {
+  color: #E5202E !important;
+}
+
+.icon-blue.icon {
+  color: #007AC3 !important;
+}
+
+.icon-hover-blue.icon:hover {
+  color: #007AC3 !important;
+}
+
+.icon-purple.icon {
+  color: #940C72 !important;
+}
+
+.icon-hover-purple.icon:hover {
+  color: #940C72 !important;
+}
+
+.icon-pink.icon {
+  color: #FF6ECF !important;
+}
+
+.icon-hover-pink.icon:hover {
+  color: #FF6ECF !important;
+}
+
+.icon-red.icon {
+  color: #E5202E !important;
+}
+
+.icon-hover-red.icon:hover {
+  color: #E5202E !important;
+}
+
+.icon-orange.icon {
+  color: #EA8F00 !important;
+}
+
+.icon-hover-orange.icon:hover {
+  color: #EA8F00 !important;
+}
+
+.icon-yellow.icon {
+  color: #FFFF00 !important;
+}
+
+.icon-hover-yellow.icon:hover {
+  color: #FFFF00 !important;
+}
+
+.icon-green.icon {
+  color: #85BC20 !important;
+}
+
+.icon-hover-green.icon:hover {
+  color: #85BC20 !important;
+}
+
+.icon-cyan.icon {
+  color: #66CCFF !important;
+}
+
+.icon-hover-cyan.icon:hover {
+  color: #66CCFF !important;
+}
+
+.icon-black.icon {
+  color: #000000 !important;
+}
+
+.icon-hover-black.icon:hover {
+  color: #000000 !important;
+}
+
+.icon-white.icon {
+  color: #ffffff !important;
+}
+
+.icon-hover-white.icon:hover {
+  color: #ffffff !important;
+}
+
+.icon-lighter.icon {
+  color: #f5f5f5 !important;
+}
+
+.icon-hover-lighter.icon:hover {
+  color: #f5f5f5 !important;
+}
+
+.icon-light.icon {
+  color: #e7e7e7 !important;
+}
+
+.icon-hover-light.icon:hover {
+  color: #e7e7e7 !important;
+}
+
+.icon-middle.icon {
+  color: #979797 !important;
+}
+
+.icon-hover-middle.icon:hover {
+  color: #979797 !important;
+}
+
+.icon-dark.icon {
+  color: #373737 !important;
+}
+
+.icon-hover-dark.icon:hover {
+  color: #373737 !important;
+}
+
+.icon-darker.icon {
+  color: #272727 !important;
+}
+
+.icon-hover-darker.icon:hover {
+  color: #272727 !important;
 }
 
 .info-container {

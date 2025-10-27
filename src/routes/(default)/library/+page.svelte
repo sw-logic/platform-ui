@@ -8,6 +8,7 @@
 	import ControlIcon from '$lib/components/ControlIcon.svelte';
 
 	const seriesBooks = getItems(10, { type: 'series' });
+	const collectionBooks = getItems(10, { type: 'collection' });
 	const defaultBooks = getItems(10, { type: 'doc' });
 
 	onMount(() => {
@@ -40,6 +41,7 @@
 							access={book.access}
 							trial={book.trial}
 							tag={book.tag}
+							link="book-details/series"
 						/>
 					{/each}
 				</div>
@@ -53,7 +55,7 @@
 			</div>
 			<div class="collapse show" id="collapseCollections">
 				<div class="items item-grid">
-					{#each seriesBooks as book, index (index)}
+					{#each collectionBooks as book, index (index)}
 						<Item
 							type={book.type}
 							cover={book.cover}
@@ -64,6 +66,7 @@
 							access={book.access}
 							trial={book.trial}
 							tag={book.tag}
+							link="book-details/collection"
 						/>
 					{/each}
 				</div>

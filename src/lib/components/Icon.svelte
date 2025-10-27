@@ -17,8 +17,8 @@
 </script>
 
 {#if iconType === 'wk'}
-	<span title={props.title} class="wk-icon-{props.icon} {props.class}"></span>
+	<span title={props.title} class="icon wk-icon-{props.icon} {props.class}"></span>
 {:else}
-	<i title={props.title} class="{iconType} fa-{props.icon} {props.class}"></i>
+	<i title={props.title} class="icon {iconType} fa-{props.icon} {props.class}"></i>
 {/if}
 

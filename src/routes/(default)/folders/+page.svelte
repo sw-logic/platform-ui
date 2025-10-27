@@ -3,24 +3,28 @@
 	import { settings } from '$lib';
 	import FolderItem from '$lib/components/FolderItem.svelte';
 	import EditFolderModal from '$lib/components/Modals/EditFolderModal.svelte';
-
-	let editFolderModalElement: EditFolderModal;
+	import NavLink from '$lib/components/NavLink.svelte';
+	import ControlIcon from '$lib/components/ControlIcon.svelte';
+	import CreateFolderModal from '$lib/components/Modals/CreateFolderModal.svelte';
 </script>
 
 <div class="d-flex flex-column flex-grow-1">
 	{#if $settings.userLoggedIn === true}
 		{#if $settings.userHasContent}
 			<div class="container py-5">
-				<h1>Folders</h1>
+				<div class="flex-row-center justify-content-between">
+					<h1>Folders</h1>
+					<NavLink icon="filled-plus-circle" iconCSS="icon-lg icon-primary" href="#" title="New folder" data-bs-toggle="modal" data-bs-target="#createFolderModal" />
+				</div>
 				<div class="folders grid grid-cols-2 grid-cols-sm-3 grid-cols-md-4 grid-cols-md-6 grid-cols-lg-8 mt-5">
-					<FolderItem onclick={() => editFolderModalElement.show()} />
-					<FolderItem onclick={() => editFolderModalElement.show()} />
-					<FolderItem onclick={() => editFolderModalElement.show()} />
-					<FolderItem onclick={() => editFolderModalElement.show()} />
-					<FolderItem onclick={() => editFolderModalElement.show()} />
-					<FolderItem onclick={() => editFolderModalElement.show()} />
-					<FolderItem onclick={() => editFolderModalElement.show()} />
-					<FolderItem onclick={() => editFolderModalElement.show()} />
+					<FolderItem />
+					<FolderItem />
+					<FolderItem />
+					<FolderItem />
+					<FolderItem />
+					<FolderItem />
+					<FolderItem />
+					<FolderItem />
 				</div>
 			</div>
 		{:else}
@@ -41,4 +45,5 @@
 	{/if}
 </div>
 
-<EditFolderModal bind:this={editFolderModalElement} />
+<EditFolderModal />
+<CreateFolderModal />
