@@ -30,7 +30,6 @@
 .para-row {
   display: flex;
   flex-direction: row-reverse;
-  gap: .5rem;
 
   .para-tools {
     position: relative;
@@ -57,6 +56,11 @@
     gap: .5rem;
 
     padding-right: 1rem;
+
+    @media (max-width: $mobile) {
+      padding-right: .25rem;
+    }
+
     border-right: 1px solid transparent;
     transition: all .3s ease-in-out;
 
@@ -80,6 +84,10 @@
           flex-grow: 1;
           padding: 1rem;
           background-color: $primary-lighter;
+
+          @media (max-width: $mobile) {
+            padding: .5rem;
+          }
         }
       }
 
@@ -87,6 +95,10 @@
         display: none;
         padding: 1rem;
         background-color: $lighter;
+
+        @media (max-width: $mobile) {
+          padding: .5rem;
+        }
 
         .para-character-counter {
           position: absolute;
@@ -112,6 +124,10 @@
       padding: 1rem;
       background-color: $lighter;
 
+      @media (max-width: $mobile) {
+        padding: .5rem;
+      }
+
       table {
         width: 100%;
         font-size: $font-size-sm;
@@ -127,6 +143,26 @@
 
             &:last-child {
               padding-right: 0;
+            }
+          }
+
+          @media (max-width: $mobile) {
+            display: flex;
+            flex-direction: column;
+            gap: .25rem;
+
+            &:not(last-child) {
+              padding-bottom: .25rem;
+              margin-bottom: .5rem;
+            }
+
+            td {
+              display: block;
+              padding: 0;
+
+              &.text-end {
+                padding: .5rem 0;
+              }
             }
           }
         }

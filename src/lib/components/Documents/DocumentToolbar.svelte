@@ -7,6 +7,7 @@
 	import { base } from '$app/paths';
 	import ControlIcon from '$lib/components/ControlIcon.svelte';
 	import DocumentToolbarHighlights from '$lib/components/Documents/DocumentToolbarHighlights.svelte';
+	import DocumentToolbarSettings from '$lib/components/Documents/DocumentToolbarSettings.svelte';
 
 	onMount(() => {
 		Toolbar.init();
@@ -255,47 +256,6 @@
 		<DocumentToolbarHighlights />
 	</DocumentToolbarItem>
 	<DocumentToolbarItem icon="settings" title="Settings">
-		<div class="content scroll gap-2">
-			<form class="form-column" action="">
-				<div class="form-group">
-					<label for="fontSize">Font size</label>
-					<div class="form-input">
-						<input type="range" class="form-range" id="fontSize" min="12" max="24" value="16">
-					</div>
-				</div>
-				<div class="form-group">
-					<label for="lineWidthSwitch">Lagre line width</label>
-					<div class="form-input">
-						<div class="form-check form-switch">
-							<input class="form-check-input" type="checkbox" role="switch" id="lineWidthSwitch">
-						</div>
-					</div>
-				</div>
-				<div class="form-group">
-					<label for="">Large line height</label>
-					<div class="form-input">
-						<div class="form-check form-switch">
-							<input class="form-check-input" type="checkbox" role="switch" id="lineWidthSwitch">
-						</div>
-					</div>
-				</div>
-				<div class="form-group">
-					<label for="">Infinity scroll</label>
-					<div class="form-input">
-						<div class="form-check form-switch">
-							<input class="form-check-input" type="checkbox" role="switch" id="lineWidthSwitch">
-						</div>
-					</div>
-				</div>
-				<div class="form-group">
-					<label for="">Warm background</label>
-					<div class="form-input">
-						<div class="form-check form-switch">
-							<input class="form-check-input" type="checkbox" role="switch" id="lineWidthSwitch">
-						</div>
-					</div>
-				</div>
-			</form>
-		</div>
+		<DocumentToolbarSettings />
 	</DocumentToolbarItem>
 </div>

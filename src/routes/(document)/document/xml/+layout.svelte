@@ -24,9 +24,15 @@
 						<div class="wk-icon-filled-book"></div>
 						<NavLink title="Book Title" href="/document/xml/book-title" />
 						<span class="separator wk-icon-chevron-right"></span>
+						<NavLink title="Very Long Chapter Title" href="/document/xml/book-title" />
+						<span class="separator wk-icon-chevron-right"></span>
 						<NavLink title="Chapter Title" href="/document/xml/book-title" />
 						<span class="separator wk-icon-chevron-right"></span>
-						<NavLink title="Sub-Chapter Title" active={false} />
+						<NavLink title="Another Very Long Chapter Title" href="/document/xml/book-title" />
+						<span class="separator wk-icon-chevron-right"></span>
+						<NavLink title="Chapter Title" href="/document/xml/book-title" />
+						<span class="separator wk-icon-chevron-right"></span>
+						<NavLink title="Chapter Title" active={false} />
 					</nav>
 					<div class="header-toolbar-tools" data-active-toggle=".active-toggle">
 						<ControlIcon icon="info" title="Info" class="hover-text-bg-primary" />
@@ -35,7 +41,7 @@
 						<ControlIcon
 							icon="layout"
 							title="Toggle toolbar"
-							class="active-toggle ms-3 hover-text-bg-primary d-none d-md-block"
+							class="active-toggle ms-3 hover-text-bg-primary d-none d-md-flex"
 							data-toggle="#documentToolbar"
 							data-toggle-class="d-none"
 						/>

@@ -7,8 +7,7 @@ $toolbar-width: 350px;
   flex-direction: column;
   flex-grow: 1;
   width: $toolbar-width;
-  min-width: $toolbar-width;
-  max-width: $toolbar-width;
+  max-width: 100%;
   overflow: hidden;
   gap: 1px;
 

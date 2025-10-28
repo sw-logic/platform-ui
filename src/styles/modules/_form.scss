@@ -9,7 +9,7 @@ form.form-column {
 .form-group {
   display: flex;
   flex-flow: row nowrap;
-  align-items: start;
+  align-items: center;
   justify-content: space-between;
   gap: 1rem;
 
@@ -20,7 +20,7 @@ form.form-column {
     display: flex;
     flex-flow: row nowrap;
     justify-content: end;
-    max-width: 60%;
+    max-width: 50%;
   }
 }
 

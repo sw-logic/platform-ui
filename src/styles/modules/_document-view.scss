@@ -46,6 +46,16 @@
             .separator {
               font-size: 10px;
             }
+
+            .nav-link {
+              flex: 1 0 auto;
+
+              .nav-text {
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+              }
+            }
           }
 
           .header-toolbar-tools {
@@ -68,8 +78,11 @@
         display: flex;
         flex-direction: column;
         gap: .5rem;
-        padding: 1rem 100px 1rem 1rem;
-        padding-right: 50px;
+        padding: 1rem;
+
+        @media (max-width: $mobile) {
+          padding: .5rem;
+        }
       }
     }
 

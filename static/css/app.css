@@ -13123,7 +13123,7 @@ a.nav-link:hover {
   border: none;
   box-shadow: none;
   background-color: transparent;
-  padding: 0;
+  padding: 0.5rem;
   margin: 0;
   width: 2em;
   height: 2em;
@@ -13904,6 +13904,14 @@ a.nav-link:hover {
 .document-view .document-content .document-header .header-toolbar .header-toolbar-nav .breadcrumbs .separator {
   font-size: 10px;
 }
+.document-view .document-content .document-header .header-toolbar .header-toolbar-nav .breadcrumbs .nav-link {
+  flex: 1 0 auto;
+}
+.document-view .document-content .document-header .header-toolbar .header-toolbar-nav .breadcrumbs .nav-link .nav-text {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
 .document-view .document-content .document-header .header-toolbar .header-toolbar-nav .header-toolbar-tools {
   display: flex;
   flex-flow: row nowrap;
@@ -13918,8 +13926,12 @@ a.nav-link:hover {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
-  padding: 1rem 100px 1rem 1rem;
-  padding-right: 50px;
+  padding: 1rem;
+}
+@media (max-width: 599px) {
+  .document-view .document-content .document-body .document {
+    padding: 0.5rem;
+  }
 }
 .document-view .document-content .document-footer {
   display: flex;
@@ -14064,7 +14076,7 @@ form.form-column {
 .form-group {
   display: flex;
   flex-flow: row nowrap;
-  align-items: start;
+  align-items: center;
   justify-content: space-between;
   gap: 1rem;
 }
@@ -14073,7 +14085,7 @@ form.form-column {
   display: flex;
   flex-flow: row nowrap;
   justify-content: end;
-  max-width: 60%;
+  max-width: 50%;
 }
 
 .form-switch .form-check-input {
@@ -14913,7 +14925,6 @@ body footer .nav-link {
 .para-row {
   display: flex;
   flex-direction: row-reverse;
-  gap: 0.5rem;
 }
 .para-row .para-tools {
   position: relative;
@@ -14940,6 +14951,11 @@ body footer .nav-link {
   border-right: 1px solid transparent;
   transition: all 0.3s ease-in-out;
 }
+@media (max-width: 599px) {
+  .para-row .para-content {
+    padding-right: 0.25rem;
+  }
+}
 .para-row .para-content .para-note {
   display: flex;
   flex-direction: column;
@@ -14960,10 +14976,20 @@ body footer .nav-link {
   padding: 1rem;
   background-color: rgba(0, 122, 195, 0.1);
 }
+@media (max-width: 599px) {
+  .para-row .para-content .para-note .para-note-content .para-note-content-text {
+    padding: 0.5rem;
+  }
+}
 .para-row .para-content .para-note .para-note-input {
   display: none;
   padding: 1rem;
   background-color: #f5f5f5;
+}
+@media (max-width: 599px) {
+  .para-row .para-content .para-note .para-note-input {
+    padding: 0.5rem;
+  }
 }
 .para-row .para-content .para-note .para-note-input .para-character-counter {
   position: absolute;
@@ -14982,6 +15008,11 @@ body footer .nav-link {
   padding: 1rem;
   background-color: #f5f5f5;
 }
+@media (max-width: 599px) {
+  .para-row .para-content .para-refs {
+    padding: 0.5rem;
+  }
+}
 .para-row .para-content .para-refs table {
   width: 100%;
   font-size: 0.875rem;
@@ -14995,6 +15026,24 @@ body footer .nav-link {
 }
 .para-row .para-content .para-refs table tr td:last-child {
   padding-right: 0;
+}
+@media (max-width: 599px) {
+  .para-row .para-content .para-refs table tr {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+  .para-row .para-content .para-refs table tr:not(last-child) {
+    padding-bottom: 0.25rem;
+    margin-bottom: 0.5rem;
+  }
+  .para-row .para-content .para-refs table tr td {
+    display: block;
+    padding: 0;
+  }
+  .para-row .para-content .para-refs table tr td.text-end {
+    padding: 0.5rem 0;
+  }
 }
 .para-row .para-content .para-indent p {
   text-align: justify;
@@ -15352,8 +15401,7 @@ body footer .nav-link {
   flex-direction: column;
   flex-grow: 1;
   width: 350px;
-  min-width: 350px;
-  max-width: 350px;
+  max-width: 100%;
   overflow: hidden;
   gap: 1px;
 }

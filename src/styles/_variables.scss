@@ -92,6 +92,9 @@ $grid-breakpoints: ( xs: 0, sm: 600px, md: 1024px, lg: 1366px, xl: 1600px );
 $container-max-widths: ( sm: 100%, md: 100%, lg: 100%, xl: 1540px );
 $grid-gutter-width: 32px;
 
+$mobile: map-get($grid-breakpoints, sm) - 1;
+$desktop: map-get($grid-breakpoints, sm);
+
 // Typography for the custom theme
 $font-family-monospace: Fira Mono;
 $font-family-sans-serif: Fira Sans;
