@@ -1,6 +1,3 @@
-// Pool of predefined values for book generation
-import { K } from '../../../.svelte-kit/output/server/chunks';
-
 const BOOK_POOL = {
 	covers: [
 		'book-1.webp',
