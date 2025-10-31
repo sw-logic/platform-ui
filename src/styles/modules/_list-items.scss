@@ -99,5 +99,9 @@
   &-xl {
     width: 28px;
     height: 28px;
+
+    &.active, &:focus.active {
+      outline-width: 5px;
+    }
   }
 }
