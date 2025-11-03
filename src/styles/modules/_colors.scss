@@ -38,11 +38,19 @@
 
   .active-bg-#{$name}.active {
     background-color: $color !important;
+
+    &:hover {
+      background-color: $color !important;
+    }
   }
 
   .active-text-bg-#{$name}.active {
     color: best-contrast($color, $black, $white) !important;
     background-color: $color !important;
+
+    &:hover {
+      background-color: $color !important;
+    }
   }
 }
 

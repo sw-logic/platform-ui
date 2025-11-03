@@ -13,30 +13,3 @@ mark, em {
   font-weight: $font-weight-bold;
   color: $primary;
 }
-
-.tags {
-  display: flex;
-  flex-flow: row wrap;
-  gap: .25rem;
-
-  &.tags-rounded {
-    .tag {
-      padding: 0.25rem 0.75rem;
-      border-radius: 15px;
-    }
-  }
-}
-
-.tag {
-  font-size: $font-size-xs;
-  text-transform: uppercase;
-  text-decoration: none;
-  color: $dark;
-  background-color: $light;
-  padding: .25rem .5rem;
-  border-radius: 3px;
-
-  &.tag-rounded {
-    padding: 0.25rem 0.75rem;
-  }
-}
