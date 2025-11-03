@@ -1,4 +1,10 @@
 <script lang="ts">
+	import { ActiveToggle } from '$lib/scripts/activeToggle';
+	import { onMount } from 'svelte';
+
+	onMount(() => {
+		ActiveToggle.init();
+	});
 </script>
 
 <div class="modal fade" id="editFolderModal" tabindex="-1" aria-labelledby="editFolderModalLabel" aria-hidden="true">
@@ -9,9 +15,29 @@
 				<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
 			</div>
 			<div class="modal-body">
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum facilisis nunc vel lorem tempor, ac volutpat nisl consectetur. Mauris vehicula, turpis at scelerisque tincidunt, lorem magna hendrerit nunc, eu tempor elit massa sit amet magna.</p>
+				<form action="">
+					<div class="mb-3">
+						<label for="folderName" class="form-label">Folder Name</label>
+						<input type="text" class="form-control" id="folderName" placeholder="Enter folder name" />
+					</div>
+					<div class="mb-3">
+						<label for="folderDescription" class="form-label">Description</label>
+						<textarea class="form-control" id="folderDescription" rows="3" placeholder="Enter folder description"></textarea>
+					</div>
+					<div class="flex-row-center gap-3 mb-3">
+						<label for="selectColor" class="form-label m-0">Select color</label>
+						<div class="mt-2" data-active-toggle=".bullet" data-active-toggle-one="true">
+							<button type="button" class="bullet bullet-xl bullet-middle active" aria-label="Color selector"></button>
+							<button type="button" class="bullet bullet-xl bullet-blue" aria-label="Color selector"></button>
+							<button type="button" class="bullet bullet-xl bullet-green" aria-label="Color selector"></button>
+							<button type="button" class="bullet bullet-xl bullet-orange" aria-label="Color selector"></button>
+							<button type="button" class="bullet bullet-xl bullet-red" aria-label="Color selector"></button>
+						</div>
+					</div>
+				</form>
 			</div>
 			<div class="modal-footer">
+				<button type="button" class="btn btn-outline-red me-auto">Delete folder</button>
 				<button type="button" class="btn btn-outline-dark" data-bs-dismiss="modal">Cancel</button>
 				<button type="button" class="btn btn-primary">OK</button>
 			</div>

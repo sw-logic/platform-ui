@@ -12,9 +12,16 @@
 	{#if $settings.userLoggedIn === true}
 		{#if $settings.userHasContent}
 			<div class="container py-5">
-				<div class="flex-row-center justify-content-between">
-					<h1>Folders</h1>
-					<NavLink icon="filled-plus-circle" iconCSS="icon-lg icon-primary" href="#" title="New folder" data-bs-toggle="modal" data-bs-target="#createFolderModal" />
+				<div class="flex-row-center flex-wrap justify-content-between mb-3">
+					<h1 class="col-12 col-sm-6">Folders</h1>
+					<div class="filter-bar mt-3 mt-sm-0">
+						<NavLink icon="filled-plus-circle" iconCSS="icon-lg icon-primary" href="#" title="New folder" data-bs-toggle="modal" data-bs-target="#createFolderModal" />
+						<select class="form-select" aria-label="Select sort">
+							<option value="1" selected>Title</option>
+							<option value="2">Popularity</option>
+							<option value="3">Date</option>
+						</select>
+					</div>
 				</div>
 				<div class="folders grid grid-cols-2 grid-cols-sm-3 grid-cols-md-4 grid-cols-md-6 grid-cols-lg-8 mt-5">
 					<FolderItem />

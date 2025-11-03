@@ -13047,6 +13047,7 @@ textarea.form-control-lg {
 }
 .item-info .item-title {
   font-size: 1.25em;
+  line-height: 1.2em;
   color: #007AC3;
 }
 .item-info .item-subtitle {
@@ -13111,6 +13112,7 @@ a.nav-link {
   flex-flow: row nowrap !important;
   align-items: center !important;
   gap: 0.25rem;
+  white-space: nowrap;
 }
 a.nav-link:hover {
   color: #007AC3;
@@ -14869,6 +14871,13 @@ body footer .nav-link {
 .bullet-lg {
   width: 15px;
   height: 15px;
+}
+.bullet-xl {
+  width: 28px;
+  height: 28px;
+}
+.bullet-xl.active, .bullet-xl:focus.active {
+  outline-width: 5px;
 }
 
 @media screen and (max-width: 767px) {
