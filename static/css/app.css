@@ -13119,7 +13119,8 @@ a.nav-link:hover {
   color: #007AC3;
 }
 
-.btn-control {
+.btn-control,
+a.btn-control {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -13131,30 +13132,39 @@ a.nav-link:hover {
   width: 2em;
   height: 2em;
   color: inherit;
+  text-decoration: none;
 }
-.btn-control:hover {
+.btn-control:hover,
+a.btn-control:hover {
   background-color: #e7e7e7;
 }
-.btn-control.active {
+.btn-control.active,
+a.btn-control.active {
   color: #007AC3;
   background-color: #e7e7e7;
 }
-.btn-control.active.btn-control-favorite > span::before {
+.btn-control.active.btn-control-favorite > span::before,
+a.btn-control.active.btn-control-favorite > span::before {
   content: "\e17d";
 }
-.btn-control.active.btn-control-folder > span::before {
+.btn-control.active.btn-control-folder > span::before,
+a.btn-control.active.btn-control-folder > span::before {
   content: "\e3f5";
 }
-.btn-control.active.btn-control-refs > span::before {
+.btn-control.active.btn-control-refs > span::before,
+a.btn-control.active.btn-control-refs > span::before {
   content: "\e235";
 }
-.btn-control.active.btn-control-info > span::before {
+.btn-control.active.btn-control-info > span::before,
+a.btn-control.active.btn-control-info > span::before {
   content: "\e425";
 }
-.btn-control.active.btn-control-bookmark > span::before {
+.btn-control.active.btn-control-bookmark > span::before,
+a.btn-control.active.btn-control-bookmark > span::before {
   content: "\e3de";
 }
-.btn-control.active.btn-control-note > span::before {
+.btn-control.active.btn-control-note > span::before,
+a.btn-control.active.btn-control-note > span::before {
   content: "\e34f";
 }
 

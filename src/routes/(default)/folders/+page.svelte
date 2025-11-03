@@ -4,7 +4,6 @@
 	import FolderItem from '$lib/components/FolderItem.svelte';
 	import EditFolderModal from '$lib/components/Modals/EditFolderModal.svelte';
 	import NavLink from '$lib/components/NavLink.svelte';
-	import ControlIcon from '$lib/components/ControlIcon.svelte';
 	import CreateFolderModal from '$lib/components/Modals/CreateFolderModal.svelte';
 </script>
 

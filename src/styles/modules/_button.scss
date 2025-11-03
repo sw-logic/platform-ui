@@ -35,7 +35,8 @@ a.nav-link {
 
 }
 
-.btn-control {
+.btn-control,
+a.btn-control {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -48,6 +49,7 @@ a.nav-link {
   height: 2em;
 
   color: inherit;
+  text-decoration: none;
 
   &:hover {
     background-color: $light;
