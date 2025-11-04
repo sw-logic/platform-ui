@@ -3,13 +3,13 @@
 	import ParaReferences from '$lib/components/Documents/ParaReferences.svelte';
 	import ParaNote from '$lib/components/Documents/ParaNote.svelte';
 
-	let { children, ...props } = $props();
+	let { children, note, class: className, ...props } = $props();
 </script>
 
-<div class="para-row" {...props}>
+<div class="para-row {className}" {...props}>
 	<ParaTools id={props.id} />
 	<div class="para-content">
-		<ParaNote id="para-note-{props.id}" />
+		<ParaNote id="para-note-{props.id}" {note} />
 		<ParaReferences id="para-refs-{props.id}" />
 		<div class="para-indent selectable">
 			{@render children()}

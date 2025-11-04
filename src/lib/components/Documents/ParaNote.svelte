@@ -3,7 +3,7 @@ import Icon from '$lib/components/Icon.svelte';
 let props = $props();
 </script>
 
-<div class="para-note">
+<div class="para-note {props.note ? 'show' : ''}">
 	<div class="para-note-content">
 		<div class="para-note-content-label"><Icon icon="chat-box" /></div>
 		<div class="para-note-content-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab atque consectetur cumque eius enim eveniet, fugiat fugit impedit iusto ullam! Adipisci ipsa natus neque, nostrum odit omnis possimus repudiandae sit!</div>

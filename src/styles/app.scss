@@ -30,3 +30,6 @@
 @use 'modules/trial';
 @use 'modules/typography';
 
+// Import document styles
+@use 'document/variables';
+

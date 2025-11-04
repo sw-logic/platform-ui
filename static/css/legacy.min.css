@@ -1,0 +1,1243 @@
+@charset "UTF-8";
+@keyframes load {
+    0% {
+        left: -150px
+    }
+    to {
+        left: 100%
+    }
+}
+
+@-webkit-keyframes sk-bouncedelay {
+    0%, 80%, to {
+        -webkit-transform: scale(0)
+    }
+    40% {
+        -webkit-transform: scale(1)
+    }
+}
+
+@keyframes sk-bouncedelay {
+    0%, 80%, to {
+        -webkit-transform: scale(0);
+        transform: scale(0)
+    }
+    40% {
+        -webkit-transform: scale(1);
+        transform: scale(1)
+    }
+}
+
+/* PLATFORM CHANGE */
+/*#bookdiv {
+    margin-top: 30px;
+    text-align: justify;
+    font-family: "Charis SIL", serif;
+    letter-spacing: 0;
+    font-weight: 500
+}*/
+
+#bookdiv a {
+    color: #23b;
+    text-decoration: unset
+}
+#bookdiv a:active, #bookdiv a:link, #bookdiv a:visited {
+    text-decoration: none
+}
+#bookdiv a h1, #bookdiv a h2, #bookdiv a h3, #bookdiv a h4, #bookdiv a h5, #bookdiv a h6 {
+    font-size: 100%;
+    margin-bottom: .5rem;
+    margin-top: .5rem;
+    display: inline-block;
+    position: relative
+}
+#bookdiv a h1:hover:after, #bookdiv a h2:hover:after, #bookdiv a h3:hover:after, #bookdiv a h4:hover:after, #bookdiv a h5:hover:after, #bookdiv a h6:hover:after {
+    content: "";
+    position: absolute;
+    width: calc(100% - 11px);
+    height: 1px;
+    bottom: 2px;
+    left: 11px;
+    background-color: #0ae
+}
+#bookdiv div.h-link a {
+    display: inline-block
+}
+#bookdiv div.h-link a.h-link {
+    font-size: 1.2rem !important;
+    font-weight: 600;
+    text-decoration: underline;
+    vertical-align: top
+}
+#bookdiv h1, #bookdiv h2, #bookdiv h3, #bookdiv h4, #bookdiv h5, #bookdiv h6 {
+    font-weight: 700;
+    font-style: normal;
+    text-align: left;
+    text-transform: unset;
+    text-indent: 0;
+    margin-left: 7px
+}
+#bookdiv .para-link.collapse .para-link-wrapper h1, #bookdiv .para-link.collapse .para-link-wrapper h2, #bookdiv .para-link.collapse .para-link-wrapper h3, #bookdiv .para-link.collapse .para-link-wrapper h4, #bookdiv .para-link.collapse .para-link-wrapper h5, #bookdiv .para-link.collapse .para-link-wrapper h6, #bookdiv .para-link.collapsing .para-link-wrapper h1, #bookdiv .para-link.collapsing .para-link-wrapper h2, #bookdiv .para-link.collapsing .para-link-wrapper h3, #bookdiv .para-link.collapsing .para-link-wrapper h4, #bookdiv .para-link.collapsing .para-link-wrapper h5, #bookdiv .para-link.collapsing .para-link-wrapper h6 {
+    margin-left: 0
+}
+#bookdiv .article > .reader-sect-title {
+    text-align: center
+}
+#bookdiv #spanselection div > strong {
+    display: inline-block;
+    max-width: calc(100% - 40px)
+}
+#bookdiv .bookinfo, #bookdiv .reader-chapter-title, #bookdiv .reader-sect-title {
+    max-width: calc(100% - 40px);
+    color: #111
+}
+#bookdiv h1 {
+    font-size: 150%;
+    line-height: 150%;
+    margin-top: .6em;
+    margin-bottom: .6em
+}
+#bookdiv h2, #bookdiv h3 {
+    font-size: 140%;
+    line-height: 140%;
+    margin-top: .5em;
+    margin-bottom: .5em
+}
+#bookdiv h4 {
+    font-size: 130%;
+    line-height: 130%;
+    margin-top: .4em;
+    margin-bottom: .4em
+}
+#bookdiv h5, #bookdiv h6 {
+    font-size: 120%;
+    line-height: 120%;
+    margin-top: .3em;
+    margin-bottom: .3em
+}
+#bookdiv div.epigraph {
+    font-style: italic;
+    padding-bottom: 2em;
+    text-align: right
+}
+#bookdiv .h_bontas {
+    margin-bottom: .91em
+}
+#bookdiv div.epigraph-attribution {
+    text-align: right
+}
+#bookdiv .ugrocelXXX:before {
+    content: "";
+    display: block;
+    height: 60px;
+    margin: -60px 0 0;
+    z-index: -1;
+    position: relative;
+    cursor: default
+}
+#bookdiv .ugrocel, #bookdiv .ugrocel-inline {
+    border-top: 60px solid transparent;
+    margin-top: -60px;
+    -webkit-background-clip: padding-box;
+    -moz-background-clip: padding;
+    background-clip: padding-box;
+    z-index: -1;
+    cursor: default;
+    display: block
+}
+#bookdiv .ugrocel-inline {
+    display: inline
+}
+#bookdiv .solr_em {
+    font-style: normal;
+    font-weight: 700;
+    border-bottom: 2px solid #0ae;
+    border-radius: 4px
+}
+#bookdiv .solr_em .m-bg-mark-red {
+    background-color: rgba(136, 26, 94, .3)
+}
+#bookdiv .solr_em .m-bg-mark-yellow {
+    background-color: rgba(145, 128, 94, .3)
+}
+#bookdiv .solr_em .m-bg-mark-green {
+    background-color: rgba(17, 111, 94, .3)
+}
+#bookdiv .solr_em .m-bg-mark-blue {
+    background-color: rgba(17, 111, 213, .3)
+}
+#bookdiv .bookinfo {
+    text-align: center;
+    font-size: 120%;
+    margin-bottom: 2em
+}
+#bookdiv .reader-book-subtitle {
+    text-align: center;
+    font-weight: 700;
+    font-style: normal;
+    width: calc(100% - 40px)
+}
+#bookdiv .authorgroup {
+    font-style: normal;
+    font-weight: 400
+}
+#bookdiv .para_indent {
+    text-indent: 2em;
+    margin-left: 0;
+    word-wrap: break-word
+}
+#bookdiv .para_gloss {
+    text-indent: -1.5em;
+    margin-left: 1em
+}
+#bookdiv .para_nonindent {
+    white-space: normal
+}
+#bookdiv .para_noindent, #bookdiv .para_nonindent {
+    text-indent: 0;
+    margin-left: 0;
+    word-wrap: break-word
+}
+#bookdiv .para_hanging {
+    text-indent: -2em;
+    margin-left: 2em
+}
+#bookdiv .para_irodalom {
+    text-indent: -1em;
+    margin-left: 1em
+}
+#bookdiv .para_crt {
+    text-indent: 0;
+    margin-left: 0;
+    text-align: center !important
+}
+#bookdiv .para_center {
+    text-indent: 0;
+    margin-left: 0;
+    text-align: center
+}
+#bookdiv .para_right {
+    text-indent: 0;
+    margin-left: 0;
+    text-align: right
+}
+#bookdiv .para_forras {
+    text-indent: 0;
+    margin-left: 0;
+    font-size: .91em
+}
+#bookdiv .para_paragrafus {
+    text-indent: 1em;
+    margin-left: 0
+}
+#bookdiv .para_paragrafus-tompa {
+    text-indent: 0;
+    margin-left: 0
+}
+#bookdiv .para_char1 {
+    float: left;
+    text-align: right;
+    width: 62.5%;
+    min-width: 5em;
+    margin: 0;
+    padding: 0
+}
+#bookdiv .para_char2 {
+    float: left;
+    text-align: left;
+    width: 37.5%;
+    min-width: 3em;
+    margin: 0;
+    padding: 0
+}
+#bookdiv .char {
+    display: block;
+    width: 100%;
+    min-width: 8em;
+    text-align: left
+}
+#bookdiv .para_tabla_szoveg_kozep {
+    text-align: center
+}
+#bookdiv .para_tabla_szoveg {
+    text-align: left
+}
+#bookdiv .bridgehead_italic {
+    font-style: italic;
+    max-width: calc(100% - 40px)
+}
+#bookdiv .bridgehead_bold {
+    font-weight: 700;
+    max-width: calc(100% - 40px)
+}
+
+@media (max-width: 767px) {
+    #bookdiv .bridgehead_bold {
+        max-width: unset
+    }
+}
+
+#bookdiv .bridgehead_strong {
+    font-weight: 700;
+    max-width: calc(100% - 40px)
+}
+#bookdiv .bridgehead_bold-italic {
+    font-style: italic;
+    font-weight: 700;
+    max-width: calc(100% - 40px)
+}
+#bookdiv .bridgehead_smallcaps {
+    font-variant: small-caps;
+    max-width: calc(100% - 40px)
+}
+#bookdiv .bridgehead_P1_bridgehead_kozep, #bookdiv .bridgehead_center, #bookdiv .para_P1_bridgehead_kozep {
+    font-weight: 700;
+    text-align: center
+}
+#bookdiv .italic {
+    font-style: italic
+}
+#bookdiv .bold, #bookdiv .strong {
+    font-weight: 700
+}
+#bookdiv .bold-italic {
+    font-weight: 700;
+    font-style: italic
+}
+#bookdiv .smallcaps {
+    font-variant: small-caps;
+    font-size: 110%
+}
+#bookdiv .nostrong {
+    font-weight: 400
+}
+#bookdiv .subscript {
+    vertical-align: sub;
+    font-size: 80%;
+    line-height: 0
+}
+#bookdiv .superscript {
+    vertical-align: super;
+    font-size: 80%;
+    line-height: 0
+}
+#bookdiv .superscript a {
+    vertical-align: middle
+}
+#bookdiv .underline {
+    text-decoration: underline;
+    text-underline-offset: 4px;
+    text-decoration-skip-ink: auto
+}
+#bookdiv .underline_dashed, #bookdiv .underline_dotted {
+    text-decoration: underline;
+    text-decoration-style: dotted;
+    text-underline-offset: 4px;
+    text-decoration-skip-ink: auto
+}
+#bookdiv .underline_dashed {
+    text-decoration-style: dashed
+}
+#bookdiv .underline_double, #bookdiv .underline_wavy {
+    text-decoration: underline;
+    text-decoration-style: wavy;
+    text-underline-offset: 4px;
+    text-decoration-skip-ink: auto
+}
+#bookdiv .underline_double {
+    text-decoration-style: double
+}
+#bookdiv .strikethrough {
+    text-decoration: line-through
+}
+#bookdiv .font1 {
+    font-family: "font1"
+}
+#bookdiv .font2 {
+    font-family: "font2"
+}
+#bookdiv .font10 {
+    font-family: "font10"
+}
+#bookdiv .color_kek {
+    color: #1818ff
+}
+#bookdiv .color_lila {
+    color: #a731f1
+}
+#bookdiv .color_sarga {
+    color: gold
+}
+#bookdiv .color_narancs {
+    color: orange
+}
+#bookdiv .color_zold {
+    color: #359535
+}
+#bookdiv .color_cian {
+    color: #3cf
+}
+#bookdiv .color_piros {
+    color: red
+}
+#bookdiv .color_bordo {
+    color: #7f1734
+}
+#bookdiv .color_szurke {
+    color: gray
+}
+#bookdiv .color_szold {
+    color: #20b2aa
+}
+#bookdiv .color_vzold {
+    color: #90ee90
+}
+#bookdiv .forras, #bookdiv .table_textobject .textobject {
+    color: #6c757d !important
+}
+#bookdiv [class*=_blockquote] {
+    margin: 18px 0
+}
+#bookdiv .kiadvany_blockquote {
+    margin-left: 0;
+    padding-left: 1em;
+    padding-right: 1em;
+    border-left: 10px solid #bdbdbd
+}
+#bookdiv .kiadvany_blockquote_box2 {
+    margin-left: 0;
+    padding: .5em 1em;
+    background-color: #e6e6e6;
+    border-left: 10px
+}
+#bookdiv .kiadvany_blockquote_box3 {
+    margin-left: 0;
+    padding: .5em 1.5em;
+    border-left: 10px
+}
+#bookdiv .kiadvany_blockquote_box3 .col.para-content, #bookdiv .kiadvany_tablazat .para-row .para-content {
+    max-width: unset !important
+}
+#bookdiv .kiadvany_blockquote_box4 {
+    margin-left: 0;
+    padding: .5em 1em;
+    border: 1px solid #6e6e6e
+}
+#bookdiv .newline {
+    height: 1em
+}
+#bookdiv .footnote-first {
+    margin-top: 1em;
+    margin-left: 0;
+    padding-top: 1em;
+    font-size: 90%;
+    border-width: 1px;
+    border-style: dotted none none
+}
+#bookdiv .footnote-notfirst {
+    margin-top: 1em;
+    margin-left: 0;
+    font-size: 90%;
+    border-width: 1px;
+    border-style: none
+}
+#bookdiv .footnote-para:first-child {
+    display: inline;
+    margin-top: 0;
+    margin-left: 0
+}
+#bookdiv .footnote p {
+    margin-bottom: 0
+}
+#bookdiv .footnote p + p {
+    text-indent: 2em;
+    margin-left: 0
+}
+#bookdiv .kiadvany_footnoteref {
+    font-size: 80%;
+    vertical-align: super;
+    line-height: 0
+}
+#bookdiv .literallayout, #bookdiv .programlisting {
+    margin-right: 1em;
+    margin-left: .5em;
+    padding: .5em;
+    white-space: pre-wrap
+}
+#bookdiv .programlisting {
+    white-space: pre;
+    font-family: monospace;
+    font-size: 1em;
+    overflow-y: hidden;
+    overflow-x: auto
+}
+#bookdiv .programlisting-entry {
+    white-space: pre-wrap;
+    font-family: monospace;
+    font-size: 1em;
+    margin-right: 1em;
+    margin-left: .5em;
+    padding: .5em
+}
+#bookdiv .computeroutput {
+    font-family: monospace;
+    font-size: 1em
+}
+#bookdiv table, #bookdiv table.table {
+    line-height: 150%;
+    font-size: 1.4rem;
+    margin: 3rem 0
+}
+#bookdiv table thead tr th, #bookdiv table.table thead tr th {
+    background: 0 0;
+    color: #000;
+    font-size: 1em
+}
+#bookdiv .table-title-szam {
+    font-weight: 400;
+    font-style: italic;
+    font-size: .91em
+}
+#bookdiv .table-title, #bookdiv .table_textobject {
+    font-size: .91em;
+    font-weight: 400;
+    font-style: normal
+}
+#bookdiv .tablazat {
+    max-width: 100%;
+    overflow-x: auto
+}
+#bookdiv .tablazat.table-big .btn.btn-picture .btn-picture-overlay:hover {
+    background-color: rgba(0, 0, 0, .2)
+}
+#bookdiv .tablazat.table-big .btn.btn-picture picture img {
+    max-width: 500px
+}
+#bookdiv .tablazat table, #bookdiv .tablazat table.table {
+    margin: 0
+}
+#bookdiv .nextsect-first {
+    margin-top: 50px
+}
+#bookdiv .nextsect h1 {
+    font-size: 140%;
+    line-height: 140%
+}
+#bookdiv .nextsect h2 {
+    font-size: 130%;
+    line-height: 130%
+}
+#bookdiv .nextsect h3 {
+    font-size: 120%;
+    line-height: 120%
+}
+#bookdiv .nextsect h4 {
+    font-size: 110%;
+    line-height: 110%
+}
+#bookdiv .nextsect h5, #bookdiv .nextsect h6 {
+    font-size: 100%;
+    line-height: 100%
+}
+#bookdiv .chapter .nextsect {
+    width: unset
+}
+#bookdiv ol ol, #bookdiv ol ul, #bookdiv ul ol, #bookdiv ul ul {
+    transform: translateX(0)
+}
+#bookdiv ol[class^=itemizedlist-], #bookdiv ol[class^=orderedlist-], #bookdiv ul[class^=itemizedlist-], #bookdiv ul[class^=orderedlist-] {
+    display: block !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    text-align: justify;
+    list-style-position: inside
+}
+#bookdiv ol[class^=itemizedlist-] > li, #bookdiv ol[class^=orderedlist-] > li, #bookdiv ul[class^=itemizedlist-] > li, #bookdiv ul[class^=orderedlist-] > li {
+    padding-left: 1.5em;
+    text-align: justify
+}
+#bookdiv ol[class^=itemizedlist-] > li:before, #bookdiv ol[class^=orderedlist-] > li:before, #bookdiv ul[class^=itemizedlist-] > li:before, #bookdiv ul[class^=orderedlist-] > li:before {
+    position: absolute;
+    left: 0
+}
+#bookdiv ol[class^=itemizedlist-] .para-content, #bookdiv ol[class^=orderedlist-] .para-content, #bookdiv ul[class^=itemizedlist-] .para-content, #bookdiv ul[class^=orderedlist-] .para-content {
+    max-width: 100% !important
+}
+#bookdiv ol.orderedlist-upperroman > li, #bookdiv ul.orderedlist-upperroman > li {
+    padding-left: 2.25em
+}
+#bookdiv .itemizedlist-none {
+    list-style-type: none;
+    text-align: justify
+}
+#bookdiv .itemizedlist-bullet, #bookdiv .itemizedlist-dash, #bookdiv .itemizedlist-free, #bookdiv .itemizedlist-opencircle, #bookdiv .itemizedlist-square {
+    list-style-type: none
+}
+#bookdiv .itemizedlist-dash > li {
+    padding-left: 1.25em
+}
+#bookdiv .itemizedlist-dash > li:before {
+    content: "-"
+}
+#bookdiv .itemizedlist-bullet > li, #bookdiv .itemizedlist-square > li {
+    position: relative
+}
+#bookdiv .itemizedlist-bullet > li:before {
+    content: "•";
+    font-size: 1.65em;
+    top: -.1em
+}
+#bookdiv .itemizedlist-square > li:before {
+    content: "▪";
+    font-size: 1.65em;
+    top: -.1em
+}
+#bookdiv .itemizedlist-opencircle > li:before {
+    content: "○";
+    font-size: .95em
+}
+#bookdiv .itemizedlist-free > li {
+    padding-left: 1.5em
+}
+#bookdiv .itemizedlist-free > li > span {
+    display: inline-block;
+    width: 1em;
+    margin-left: -1.8em;
+    margin-right: .8em
+}
+#bookdiv .orderedlist-arabic {
+    list-style-type: none;
+    counter-reset: incrementer
+}
+#bookdiv .orderedlist-arabic > li:before {
+    content: counter(incrementer) ".";
+    counter-increment: incrementer
+}
+#bookdiv .orderedlist-arabic > li[value]:before {
+    content: attr(value) "."
+}
+#bookdiv .orderedlist-arabic.bracket > li:before {
+    content: "(" counter(incrementer) ")";
+    counter-increment: incrementer
+}
+#bookdiv .orderedlist-arabic.bracket > li[value]:before {
+    content: "(" attr(value) ")"
+}
+#bookdiv .orderedlist-lowerroman {
+    counter-reset: ol-lroman;
+    list-style-type: none
+}
+#bookdiv .orderedlist-lowerroman > li:before {
+    content: counter(ol-lroman, lower-roman) ") ";
+    counter-increment: ol-lroman
+}
+#bookdiv .orderedlist-lowerroman.bracket > li:before {
+    content: "(" counter(ol-lroman, lower-roman) ") ";
+    counter-increment: ol-lroman
+}
+#bookdiv .orderedlist-upperroman {
+    display: block;
+    list-style-type: none;
+    counter-reset: upper_roman_counter
+}
+#bookdiv .orderedlist-upperroman > li:before {
+    content: counter(upper_roman_counter, upper-roman) ".";
+    counter-increment: upper_roman_counter
+}
+#bookdiv .orderedlist-upperroman.bracket > li:before {
+    content: "(" counter(upper_roman_counter, upper-roman) ") ";
+    counter-increment: upper_roman_counter
+}
+#bookdiv .orderedlist-loweralpha {
+    counter-reset: item;
+    list-style-type: none
+}
+#bookdiv .orderedlist-loweralpha > li:before {
+    content: counter(item, lower-alpha) ") ";
+    counter-increment: item
+}
+#bookdiv .orderedlist-loweralpha.bracket > li.lt-bold:before, #bookdiv .orderedlist-loweralpha > li.lt-bold:before {
+    font-weight: 700
+}
+#bookdiv .orderedlist-loweralpha.bracket > li.lt-italic:before, #bookdiv .orderedlist-loweralpha > li.lt-italic:before {
+    font-style: italic
+}
+#bookdiv .orderedlist-loweralpha.bracket > li.lt-bold-italic:before, #bookdiv .orderedlist-loweralpha > li.lt-bold-italic:before {
+    font-weight: 700;
+    font-style: italic
+}
+#bookdiv .orderedlist-loweralpha.bracket > li:before {
+    content: "(" counter(item, lower-alpha) ") ";
+    counter-increment: item
+}
+#bookdiv .orderedlist-upperalpha {
+    counter-reset: item3;
+    list-style-type: none
+}
+#bookdiv .orderedlist-upperalpha > li:before {
+    content: counter(item3, upper-alpha) ") ";
+    counter-increment: item3
+}
+#bookdiv .orderedlist-upperalpha.bracket > li:before {
+    content: "(" counter(item3, upper-alpha) ") ";
+    counter-increment: item3
+}
+#bookdiv .figure {
+    display: block;
+    vertical-align: top;
+    box-sizing: border-box
+}
+#bookdiv .figure-text {
+    display: block
+}
+#bookdiv .figure-title-szam {
+    font-weight: 400;
+    font-style: italic
+}
+#bookdiv .figure-title {
+    font-size: .91em;
+    font-weight: 400;
+    font-style: normal
+}
+#bookdiv .figure-caption {
+    font-size: 80%;
+    font-weight: 400;
+    font-style: normal
+}
+#bookdiv .figure-mediaobject {
+    display: inline-block;
+    margin: 0 10px
+}
+#bookdiv .bibliodiv {
+    margin: 1em 0
+}
+#bookdiv .bibliolist {
+    margin: 1em 0 1em 1em
+}
+#bookdiv .bibliomixed {
+    margin: 0 0 0 1em;
+    text-indent: -1em
+}
+#bookdiv .bibliomset-title {
+    font-weight: 400;
+    font-style: italic
+}
+#bookdiv .bibliodiv-bridgehead, #bookdiv .bibliodiv-title {
+    font-weight: 700;
+    font-style: normal;
+    font-size: 125%;
+    margin-top: 1em;
+    margin-bottom: 1em
+}
+#bookdiv .bibliodiv-bridgehead {
+    font-weight: 400;
+    font-size: 110%
+}
+#bookdiv .kiadvany_tablazat {
+    font-size: 91%;
+    overflow: hidden
+}
+#bookdiv .kiadvany_tablazat.fontsize100 {
+    font-size: 100%
+}
+#bookdiv .kiadvany_tablazat_td {
+    padding: 5px
+}
+#bookdiv .kiadvany_tablazat_thead {
+    border: inherit
+}
+#bookdiv .kiadvany_tablazat_tfoot {
+    border: inherit;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 80%;
+    text-align: left
+}
+#bookdiv .equation {
+    font-weight: 400
+}
+#bookdiv .videoWrapper {
+    position: relative;
+    padding-bottom: 56.25%;
+    padding-top: 25px;
+    height: 0
+}
+#bookdiv .videoWrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%
+}
+#bookdiv .doi {
+    font-size: .75em;
+    text-align: right;
+    max-width: calc(100% - 45px)
+}
+#bookdiv .para_commentary-citation {
+    font-weight: 700;
+    font-size: 90%
+}
+#bookdiv .para_commentary-citation.separator::before {
+    content: "";
+    border-top: 1px solid #000;
+    margin-top: 1rem;
+    padding-top: .25rem;
+    width: 110px;
+    display: block
+}
+#bookdiv .para_cz_image_title {
+    font-weight: 700;
+    text-align: center;
+    margin-left: 10%;
+    margin-right: 10%
+}
+#bookdiv .para_cz_image_subtitle {
+    font-size: 90%;
+    line-height: 1.4;
+    text-align: justify;
+    margin-left: 10%;
+    margin-right: 10%
+}
+
+#MathJax_ZoomFrame {
+    position: absolute !important
+}
+
+.m-landing-chapter-navigation-container {
+    --bg-active: #2233BB;
+    --bg-past: #d3d3d3;
+    --thumb-size: 1.2rem;
+    --slider-y-gap: 2rem;
+    padding: calc(var(--slider-y-gap) * .5) 0;
+    width: 100%
+}
+.m-landing-chapter-navigation-container a {
+    height: 2rem;
+    width: 2rem;
+    padding: .625rem;
+    background: var(--bg-active);
+    border-radius: 100%;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    z-index: 2;
+    text-decoration: none
+}
+.m-landing-chapter-navigation-container a .material-icons {
+    color: #fff
+}
+.m-landing-chapter-navigation-container .m-slider-wrapper {
+    width: 100%;
+    position: relative
+}
+.m-landing-chapter-navigation-container .m-slider-wrapper .m-slider-arrow {
+    transition: left 100ms ease, opacity 100ms ease
+}
+.m-landing-chapter-navigation-container .m-slider-wrapper .m-slider-to-arrow {
+    position: absolute;
+    width: 0;
+    height: 0;
+    top: 100%;
+    transform: translateY(calc(-1px - var(--slider-y-gap)));
+    border-style: solid;
+    border-width: 8px 8px 0;
+    border-color: #fff transparent transparent
+}
+.m-landing-chapter-navigation-container .m-slider-wrapper .m-slider-from-arrow {
+    opacity: 0;
+    position: absolute;
+    width: 0;
+    height: 0;
+    bottom: 100%;
+    transform: translateY(calc(1px + var(--slider-y-gap)));
+    border-style: solid;
+    border-width: 0 8px 8px;
+    border-color: transparent transparent var(--bg-active) transparent
+}
+.m-landing-chapter-navigation-container .m-slider-wrapper .m-slider-container .m-slider-base {
+    display: none;
+    position: absolute;
+    width: var(--thumb-size);
+    height: var(--thumb-size);
+    box-shadow: inset 0 0 0 2px var(--bg-active);
+    background: #fff;
+    border-radius: 50%;
+    top: 50%;
+    transform: translateY(-50%)
+}
+.m-landing-chapter-navigation-container .m-slider-wrapper .m-slider-container .m-pages-slider {
+    -webkit-appearance: none;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(to right, var(--bg-active) 0%, var(--bg-active) 50%, var(--bg-past) 50%, var(--bg-past) 100%);
+    outline: 0;
+    transform: translateY(-4px)
+}
+.m-landing-chapter-navigation-container .m-slider-wrapper .m-slider-container .m-pages-slider:hover::-webkit-slider-thumb {
+    transform-origin: center;
+    transform: scale(1.25);
+    position: relative;
+    z-index: 3
+}
+.m-landing-chapter-navigation-container .m-slider-wrapper .m-slider-container .m-pages-slider:hover::-moz-range-thumb {
+    transform-origin: center;
+    transform: scale(1.25);
+    position: relative;
+    z-index: 3
+}
+.m-landing-chapter-navigation-container .m-slider-wrapper .m-slider-container .m-pages-slider::-webkit-slider-thumb {
+    transition: transform 100ms ease-in-out;
+    -webkit-appearance: none;
+    appearance: none;
+    width: var(--thumb-size);
+    height: var(--thumb-size);
+    border-radius: 50%;
+    background: var(--bg-active);
+    cursor: pointer;
+    position: relative;
+    z-index: 3
+}
+.m-landing-chapter-navigation-container .m-slider-wrapper .m-slider-container .m-pages-slider::-moz-range-thumb {
+    transition: transform 100ms ease-in-out;
+    width: var(--thumb-size);
+    height: var(--thumb-size);
+    border-radius: 50%;
+    background: var(--bg-active);
+    cursor: pointer;
+    position: relative;
+    z-index: 3
+}
+.m-landing-chapter-navigation-container .m-slider-wrapper .m-slider-to {
+    bottom: 0;
+    transform: translateY(calc(var(--slider-y-gap) * -1));
+    background-color: #fff
+}
+.m-landing-chapter-navigation-container .m-slider-wrapper .m-slider-from {
+    top: 0;
+    opacity: 0;
+    transform: translateY(var(--slider-y-gap))
+}
+.m-landing-chapter-navigation-container .m-slider-wrapper .m-slider-label {
+    position: absolute;
+    transition: left 100ms ease, opacity 100ms ease
+}
+.m-landing-chapter-navigation-container .m-slider-wrapper .m-slider-label .m-slider-label-span {
+    display: block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    border: 0;
+    padding: 8px 10px;
+    position: relative;
+    text-align: center;
+    font-size: 14px;
+    user-select: none
+}
+.m-landing-chapter-navigation-container .m-slider-wrapper .m-slider-label .m-slider-label-span.m-slider-label-from {
+    background: var(--bg-active);
+    border: 0;
+    color: #fff
+}
+.m-landing-chapter-navigation-container .m-slider-wrapper .m-slider-label .m-slider-label-span .m-spinner {
+    min-height: unset
+}
+.m-landing-chapter-navigation-container .m-spinner {
+    text-align: center
+}
+.m-landing-chapter-navigation-container .m-spinner > div {
+    width: .6rem;
+    height: .6rem;
+    margin: 0 .2rem;
+    background-color: var(--bg-active);
+    border-radius: 100%;
+    display: inline-block;
+    -webkit-animation: sk-bouncedelay 1.4s infinite ease-in-out both;
+    animation: sk-bouncedelay 1.4s infinite ease-in-out both
+}
+.m-landing-chapter-navigation-container .m-spinner .m-bounce1 {
+    -webkit-animation-delay: -.32s;
+    animation-delay: -.32s
+}
+.m-landing-chapter-navigation-container .m-spinner .m-bounce2 {
+    -webkit-animation-delay: -.16s;
+    animation-delay: -.16s
+}
+
+#bookdiv a:hover {
+    text-decoration: underline
+}
+#bookdiv .card.card-body {
+    border: 0
+}
+#bookdiv .link-list {
+    margin: 3rem 0
+}
+#bookdiv .link-list a, #bookdiv .tablazat.table-big .btn.btn-picture .btn-picture-overlay:hover i, #bookdiv .tablazat.table-big .btn.btn-picture picture {
+    display: block
+}
+#bookdiv .bookinfo .para_crt {
+    font-size: 1rem;
+    margin: 0;
+    text-align: left;
+    padding-top: .2em
+}
+#bookdiv .para_crt {
+}
+#bookdiv .para-row {
+    display: flex;
+    flex-direction: row-reverse !important;
+    justify-content: flex-end
+}
+#bookdiv .marker-buttons {
+    display: flex;
+    flex-direction: row
+}
+
+@media (min-width: 992px) {
+    #bookdiv .marker-buttons {
+        justify-content: flex-end
+    }
+}
+
+@media (max-width: 767px) {
+    #bookdiv .marker-buttons {
+        justify-content: left;
+        margin-bottom: 10px
+    }
+
+    #bookdiv .marker-buttons button {
+        padding: 0 2px
+    }
+}
+
+#bookdiv .marker-buttons button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 3rem;
+    line-height: inherit;
+    padding: 0
+}
+#bookdiv .marker-buttons .marker-add-note-button.btn, #bookdiv .marker-buttons .marker-link-button.btn {
+    color: #aaa
+}
+#bookdiv .marker-buttons .marker-link-button.btn.active {
+    color: #0ae
+}
+#bookdiv .marker-buttons .marker-add-note-button.btn i:nth-child(2), #bookdiv .marker-buttons .marker-add-note-button.btn.active i:nth-child(1) {
+    display: none
+}
+#bookdiv .marker-buttons .marker-add-note-button.btn.active {
+    color: #fc0
+}
+#bookdiv .marker-buttons .marker-add-note-button.btn.active i:nth-child(2) {
+    display: block
+}
+#bookdiv [data-marker=note].collapse-marker-add-note .collapse-marker-add-note-content {
+    display: block !important
+}
+#bookdiv [data-marker=bookmark].collapse-marker-add-note .card.card-body .collapse-marker-add-note-content, #bookdiv [data-marker=bookmark].collapse-marker-add-note .card.card-body .collapse-marker-add-note-content-input, #bookdiv [data-marker=note].collapse-marker-add-note .collapse-marker-add-note-content-input {
+    display: none !important
+}
+#bookdiv [data-marker=bookmark].collapse-marker-add-note {
+    border: unset !important;
+    border-top: 2px dashed #df9d00 !important
+}
+#bookdiv [data-marker=bookmark].collapse-marker-add-note .card.card-body {
+    padding: 0;
+    margin: 0;
+    border: 0
+}
+#bookdiv [class*=collapse-marker] {
+    font-size: 1.4rem;
+    font-weight: 400;
+    margin-top: 2rem;
+    margin-bottom: 2rem
+}
+#bookdiv [class*=collapse-marker].collapse-marker-add-note {
+    border: 1px solid #fc0
+}
+#bookdiv [class*=collapse-marker].collapse-marker-add-note .collapse-marker-add-note-content {
+    margin-top: 0;
+    margin-bottom: 0
+}
+#bookdiv [class*=collapse-marker].collapse-marker-link {
+    border: 1px solid #0ae
+}
+#bookdiv [class*=collapse-marker] .collapse-marker-add-note-content {
+    display: none
+}
+#bookdiv .tartalomjegyzek h1, #bookdiv .tartalomjegyzek h2, #bookdiv .tartalomjegyzek h3, #bookdiv .tartalomjegyzek h4, #bookdiv .tartalomjegyzek h5, #bookdiv .tartalomjegyzek h6, #bookdiv [class*=collapse-marker] h5 {
+    margin-top: 1rem;
+    margin-bottom: 1rem
+}
+#bookdiv .tartalomjegyzek a {
+    font-size: 1.6rem
+}
+#bookdiv .figure {
+    width: 100%;
+    text-align: center;
+    padding: calc(3rem / 2) 0;
+    margin: 0
+}
+#bookdiv .figure video {
+    display: block;
+    margin: 0 auto;
+    width: auto;
+    height: auto;
+    max-height: 40vh;
+    max-width: 100%;
+    object-fit: contain
+}
+#bookdiv .figure .figure-mediaobject {
+    display: block !important;
+    margin: 20px 0
+}
+#bookdiv .figure .figure-mediaobject img {
+    max-width: 100%
+}
+#bookdiv .figure .figure-text, #bookdiv .figure .figure-text a {
+    font-weight: 400
+}
+#bookdiv .figure .figure-text .figure-title-szam {
+    font-size: .91em;
+    font-style: italic
+}
+#bookdiv .tablazat.table-big .btn.btn-picture {
+    display: block;
+    position: relative
+}
+#bookdiv .tablazat.table-big .btn.btn-picture .btn-picture-overlay {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    transition: all .5s ease
+}
+#bookdiv .tablazat.table-big .btn.btn-picture .btn-picture-overlay i {
+    display: none;
+    color: #fff;
+    font-size: 4rem
+}
+#bookdiv .modal.modal-table .modal-dialog .modal-title .modal-table-title-szam, #bookdiv .tablazat .table-title-szam {
+    font-style: italic
+}
+#bookdiv .figure-mediaobject {
+    display: flex;
+    align-items: center;
+    justify-content: center
+}
+#bookdiv ol, #bookdiv ul {
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+    padding-left: 2rem;
+    position: relative
+}
+#bookdiv .inline-media-object {
+    display: inline-block !important;
+    text-indent: 0 !important;
+    vertical-align: text-bottom
+}
+#bookdiv .inline-media-object.equation, #bookdiv .inline-media-object.valigncenter {
+    vertical-align: unset
+}
+#bookdiv .inline-media-object.equation .figure-mediaobject {
+    margin: 0 !important
+}
+#bookdiv .inline-media-object.valigncenter img {
+    vertical-align: middle
+}
+#bookdiv .inline-media-object img {
+    vertical-align: bottom
+}
+#bookdiv .modal.modal-table .modal-dialog {
+    max-width: 1200px
+}
+#bookdiv .modal.modal-table .modal-dialog .modal-title {
+    margin: 0 !important;
+    color: #aaa;
+    font-size: 1.4rem
+}
+#bookdiv .modal.modal-table .modal-dialog .modal-body {
+    min-width: 100%;
+    min-height: 680px
+}
+#bookdiv .modal.modal-table .modal-dialog .modal-body table thead tr th {
+    background-color: #0ae;
+    color: #fff;
+    font-size: 1.2rem;
+    min-width: 150px
+}
+#bookdiv .modal.modal-table .modal-dialog .modal-body table tbody tr td {
+    font-size: 1.2rem
+}
+#bookdiv .downloadable-link {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    padding-left: 3rem
+}
+#bookdiv .downloadable-link i.icon {
+    left: 0;
+    position: absolute;
+    font-size: 3rem
+}
+#bookdiv .footnotes {
+    margin-top: 2.5rem;
+    padding-top: 1.5rem;
+    border-top: 1px dotted #aaa
+}
+#bookdiv .footnotes table {
+    line-height: unset;
+    font-size: unset;
+    margin: 0
+}
+#bookdiv .footnotes .footnote {
+    font-size: 91%;
+    font-weight: 400;
+    line-height: 1.6
+}
+#bookdiv .footnotes .footnote td:first-child {
+    vertical-align: top;
+    padding-right: 3px;
+    text-align: right
+}
+html body .note-reader, html body .note-reader .note-title .btn-group button i, html body .note-reader div, html body .note-reader ol, html body .note-reader p, html body .note-reader ul {
+    font-size: 16px
+}
+html body .note-reader .note-title {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px
+}
+html body .note-reader .note-title .note-title--text {
+    flex: 1;
+    font-size: 24px
+}
+html body .note-reader .note-title .btn-group {
+    margin-left: 20px
+}
+html body .note-reader .note-title .btn-group button {
+    background-color: #0ae;
+    border-color: #009fdf
+}
+html body .note-reader .note-title .btn-group button:hover {
+    background-color: #0098d5
+}
+html body .note-reader dl, html body .note-reader img, html body .note-reader p {
+    margin-bottom: 10px !important
+}
+
+#MathJax_Zoom {
+    max-width: unset;
+    color: #000;
+    max-height: unset !important
+}

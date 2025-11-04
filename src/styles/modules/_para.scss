@@ -1,98 +1,145 @@
 @import '../variables';
 
-.para-bookmark {
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: calc(100% - 30px - 1.5rem);
-  text-align: center;
-  margin: .5rem 0 .25rem;
-
-  &::before {
-    content: '';
-    position: absolute;
-    display: block;
-    width: 100%;
-    height: 0px;
-    border-bottom: 1px dashed $primary;
-  }
-
-  [class*="wk-icon-"] {
-    z-index: 1;
-    box-sizing: content-box;
-    padding: 0 .5rem;
-    color: $primary;
-    background-color: white;
-  }
-}
-
-.para-row {
-  display: flex;
-  flex-direction: row-reverse;
-
-  .para-tools {
+#bookdiv.document {
+  .para-bookmark {
     position: relative;
     display: flex;
-    flex-direction: column;
-    flex: 1 0 auto;
-    width: 30px;
+    align-items: center;
+    justify-content: center;
+    width: calc(100% - 30px - 1.5rem);
+    text-align: center;
+    margin: .5rem 0 .25rem;
 
-    .para-buttons {
+    &::before {
+      content: '';
       position: absolute;
-      top: 0;
-      left: 0;
-      display: flex;
-      opacity: 0;
-      flex-direction: column;
-      align-items: start;
-      transition: all .3s ease-in-out;
+      display: block;
+      width: 100%;
+      height: 0px;
+      border-bottom: 1px dashed $primary;
+    }
+
+    [class*="wk-icon-"] {
+      z-index: 1;
+      box-sizing: content-box;
+      padding: 0 .5rem;
+      color: $primary;
+      background-color: white;
     }
   }
 
-  .para-content {
+  .para-row {
     display: flex;
-    flex-direction: column;
-    gap: .5rem;
+    flex-direction: row-reverse;
 
-    padding-right: 1rem;
-
-    @media (max-width: $mobile) {
-      padding-right: .25rem;
-    }
-
-    border-right: 1px solid transparent;
-    transition: all .3s ease-in-out;
-
-    .para-note {
+    > .para-tools {
+      position: relative;
       display: flex;
       flex-direction: column;
+      flex: 0 0 auto;
+      width: 30px;
+
+      .para-buttons {
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: flex;
+        opacity: 0;
+        flex-direction: column;
+        align-items: start;
+        transition: all .3s ease-in-out;
+      }
+    }
+
+    > .para-content {
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
       gap: .5rem;
 
-      .para-note-content {
-        display: flex;
-        flex-flow: row nowrap;
-        background-color: $lighter;
+      .selectable {
+        padding: 5px;
+      }
 
-        .para-note-content-label {
-          padding: .5rem;
-          color: $white;
-          background-color: $primary;
+      .para-row {
+        width: fit-content;
+        margin: 0 auto;
+
+        > .para-content {
+          flex-grow: 0;
+        }
+      }
+
+      padding-right: .5rem;
+
+      @media (max-width: $mobile) {
+        padding-right: .25rem;
+      }
+
+      border-right: 1px solid transparent;
+      transition: all .3s ease-in-out;
+
+      > .para-note {
+        display: none;
+        flex-direction: column;
+        gap: .5rem;
+
+        &.show {
+          display: flex;
         }
 
-        .para-note-content-text {
-          flex-grow: 1;
+        .para-note-content {
+          display: flex;
+          flex-flow: row nowrap;
+          background-color: $lighter;
+
+          .para-note-content-label {
+            padding: .5rem;
+            color: $white;
+            background-color: $primary;
+          }
+
+          .para-note-content-text {
+            flex-grow: 1;
+            padding: 1rem;
+            background-color: $primary-lighter;
+
+            @media (max-width: $mobile) {
+              padding: .5rem;
+            }
+          }
+        }
+
+        .para-note-input {
+          display: none;
           padding: 1rem;
-          background-color: $primary-lighter;
+          background-color: $lighter;
 
           @media (max-width: $mobile) {
             padding: .5rem;
           }
+
+          .para-character-counter {
+            position: absolute;
+            bottom: 5px;
+            right: 10px;
+            font-size: $font-size-sm;
+            color: $middle;
+          }
+
+          &.show {
+            display: block;
+          }
+        }
+
+        &:has(.para-note-input.show) {
+          .para-note-content {
+            display: none !important;
+          }
         }
       }
 
-      .para-note-input {
-        display: none;
+      .para-refs {
         padding: 1rem;
         background-color: $lighter;
 
@@ -100,94 +147,81 @@
           padding: .5rem;
         }
 
-        .para-character-counter {
-          position: absolute;
-          bottom: 5px;
-          right: 10px;
+        table {
+          width: 100%;
           font-size: $font-size-sm;
-          color: $middle;
-        }
 
-        &.show {
-          display: block;
-        }
-      }
-
-      &:has(.para-note-input.show) {
-        .para-note-content {
-          display: none !important;
-        }
-      }
-    }
-
-    .para-refs {
-      padding: 1rem;
-      background-color: $lighter;
-
-      @media (max-width: $mobile) {
-        padding: .5rem;
-      }
-
-      table {
-        width: 100%;
-        font-size: $font-size-sm;
-
-        tr {
-          &:not(:last-child) {
-            border-bottom: 1px solid $gray-300;
-          }
-
-          td {
-            padding: .5rem 1rem .5rem 0;
-            vertical-align: top;
-
-            &:last-child {
-              padding-right: 0;
-            }
-          }
-
-          @media (max-width: $mobile) {
-            display: flex;
-            flex-direction: column;
-            gap: .25rem;
-
-            &:not(last-child) {
-              padding-bottom: .25rem;
-              margin-bottom: .5rem;
+          tr {
+            &:not(:last-child) {
+              border-bottom: 1px solid $gray-300;
             }
 
             td {
-              display: block;
-              padding: 0;
+              padding: .5rem 1rem .5rem 0;
+              vertical-align: top;
 
-              &.text-end {
-                padding: .5rem 0;
+              &:last-child {
+                padding-right: 0;
+              }
+            }
+
+            @media (max-width: $mobile) {
+              display: flex;
+              flex-direction: column;
+              gap: .25rem;
+
+              &:not(last-child) {
+                padding-bottom: .25rem;
+                margin-bottom: .5rem;
+              }
+
+              td {
+                display: block;
+                padding: 0;
+
+                &.text-end {
+                  padding: .5rem 0;
+                }
               }
             }
           }
         }
       }
+
+      .para-indent {
+        p {
+          text-align: justify;
+          margin: 0;
+        }
+      }
     }
 
-    .para-indent {
-      p {
-        text-align: justify;
-        margin: 0;
+    &[data-anchor]:not(:has([data-anchor]:hover)):hover {
+      > .para-tools {
+        .para-buttons {
+          display: flex;
+          opacity: 1;
+          z-index: 1;
+        }
+      }
+
+      > .para-content {
+        border-right-color: $primary;
+
+        > .selectable {
+          background-color: $lighter;
+        }
       }
     }
   }
+}
 
-  &[data-anchor]:hover {
-    .para-tools {
-      .para-buttons {
-        display: flex;
-        opacity: 1;
-        z-index: 1;
+.no-selection {
+  [data-anchor]:not(:has([data-anchor]:hover)):hover {
+    > .para-content {
+      > .selectable {
+        background-color: unset !important;
       }
-    }
-
-    .para-content {
-      border-right-color: $primary;
     }
   }
 }
