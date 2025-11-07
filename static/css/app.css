@@ -14004,14 +14004,17 @@ a.btn-control.active.btn-control-note > span::before {
   flex-direction: row;
 }
 .document-view .document-content {
+  position: relative;
   flex-grow: 1;
   display: flex;
   flex-direction: column;
+  overflow: hidden;
 }
 .document-view .document-content .document-header {
   display: flex;
   flex-direction: row;
   align-items: center;
+  max-width: 100%;
   height: 2rem;
   background-color: #e7e7e7;
   padding: 0 1rem;
@@ -14021,37 +14024,37 @@ a.btn-control.active.btn-control-note > span::before {
   display: flex;
   flex-direction: row;
   align-items: center;
+  gap: 1rem;
+  max-width: 100%;
 }
 .document-view .document-content .document-header .header-toolbar .nav-link.text-disabled {
   color: #000000 !important;
   font-weight: 500 !important;
 }
-.document-view .document-content .document-header .header-toolbar .header-toolbar-nav {
-  flex-grow: 1;
+.document-view .document-content .document-header .header-toolbar .breadcrumbs {
   display: flex;
   flex-direction: row;
-  gap: 1rem;
-  align-items: center;
-  max-width: calc(100% - 1rem);
-}
-.document-view .document-content .document-header .header-toolbar .header-toolbar-nav .breadcrumbs {
-  display: flex;
-  flex-direction: row;
+  flex-shrink: 1;
   align-items: center;
   gap: 0.25rem;
+  overflow: hidden;
 }
-.document-view .document-content .document-header .header-toolbar .header-toolbar-nav .breadcrumbs .separator {
+.document-view .document-content .document-header .header-toolbar .breadcrumbs .separator {
   font-size: 10px;
 }
-.document-view .document-content .document-header .header-toolbar .header-toolbar-nav .breadcrumbs .nav-link {
-  flex: 1 0 auto;
-}
-.document-view .document-content .document-header .header-toolbar .header-toolbar-nav .breadcrumbs .nav-link .nav-text {
+.document-view .document-content .document-header .header-toolbar .breadcrumbs .nav-link {
+  flex: 1 1 0;
+  max-width: fit-content;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
 }
-.document-view .document-content .document-header .header-toolbar .header-toolbar-nav .header-toolbar-tools {
+.document-view .document-content .document-header .header-toolbar .breadcrumbs .nav-link .nav-text {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.document-view .document-content .document-header .header-toolbar .header-toolbar-tools {
   display: flex;
   flex-flow: row nowrap;
   align-items: stretch;

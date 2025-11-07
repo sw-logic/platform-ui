@@ -6,14 +6,17 @@
   flex-direction: row;
 
   .document-content {
+    position: relative;
     flex-grow: 1;
     display: flex;
     flex-direction: column;
+    overflow: hidden;
 
     .document-header {
       display: flex;
       flex-direction: row;
       align-items: center;
+      max-width: 100%;
       height: 2rem;
       background-color: $light;
       padding: 0 1rem;
@@ -23,50 +26,47 @@
         display: flex;
         flex-direction: row;
         align-items: center;
+        gap: 1rem;
+        max-width: 100%;
 
         .nav-link.text-disabled {
           color: $black !important;
           font-weight: $font-weight-bold !important;
         }
 
-        .header-toolbar-nav {
-          flex-grow: 1;
+        .breadcrumbs {
           display: flex;
           flex-direction: row;
-          gap: 1rem;
+          flex-shrink: 1;
           align-items: center;
-          max-width: calc(100% - 1rem);
+          gap: .25rem;
+          overflow: hidden;
 
-          .breadcrumbs {
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-            gap: .25rem;
-
-            .separator {
-              font-size: 10px;
-            }
-
-            .nav-link {
-              flex: 1 0 auto;
-
-              .nav-text {
-                overflow: hidden;
-                text-overflow: ellipsis;
-                white-space: nowrap;
-              }
-            }
+          .separator {
+            font-size: 10px;
           }
 
-          .header-toolbar-tools {
-            display: flex;
-            flex-flow: row nowrap;
-            align-items: stretch;
-            margin-left: auto;
+          .nav-link {
+            flex: 1 1 0;
+            max-width: fit-content;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+
+            .nav-text {
+              overflow: hidden;
+              text-overflow: ellipsis;
+              white-space: nowrap;
+            }
           }
         }
 
-        .header-toolbar-end {}
+        .header-toolbar-tools {
+          display: flex;
+          flex-flow: row nowrap;
+          align-items: stretch;
+          margin-left: auto;
+        }
       }
     }
 

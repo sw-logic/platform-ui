@@ -18,39 +18,39 @@
 	<div class="document-content">
 		<div class="document-header">
 			<div class="header-toolbar site-indent">
-				<div class="header-toolbar-nav">
-					<NavLink icon="arrow-left" title="Back" class="gap-1" />
-					<nav class="breadcrumbs small d-none d-sm-flex">
-						<div class="wk-icon-filled-book"></div>
-						<NavLink title="Book Title" href="/document/xml/book-title" />
-						<span class="separator wk-icon-chevron-right"></span>
-						<NavLink title="Very Long Chapter Title" href="/document/xml/book-title" />
-						<span class="separator wk-icon-chevron-right"></span>
-						<NavLink title="Chapter Title" href="/document/xml/book-title" />
-						<span class="separator wk-icon-chevron-right"></span>
-						<NavLink title="Another Very Long Chapter Title" href="/document/xml/book-title" />
-						<span class="separator wk-icon-chevron-right"></span>
-						<NavLink title="Chapter Title" href="/document/xml/book-title" />
-						<span class="separator wk-icon-chevron-right"></span>
-						<NavLink title="Chapter Title" active={false} />
-					</nav>
-					<div class="header-toolbar-tools" data-active-toggle=".active-toggle">
-						<ControlIcon icon="info" title="Info" class="hover-text-bg-primary" />
-						<ControlIcon icon="heart" title="Add to favorites" class="hover-text-bg-primary" />
-						<ControlIcon icon="folder" title="Add to folder" class="hover-text-bg-primary" />
-						<ControlIcon
-							icon="layout"
-							title="Toggle toolbar"
-							class="active-toggle ms-3 hover-text-bg-primary d-none d-md-flex"
-							data-toggle="#documentToolbar"
-							data-toggle-class="d-none"
-						/>
-					</div>
+				<NavLink icon="arrow-left" title="Back" class="gap-1" />
+				<nav class="breadcrumbs small d-none d-sm-flex">
+					<div class="wk-icon-filled-book"></div>
+					<NavLink title="Book Title" href="/document/xml/book-title" />
+					<span class="separator wk-icon-chevron-right"></span>
+					<NavLink title="Very Long Chapter Title" href="/document/xml/book-title" />
+					<span class="separator wk-icon-chevron-right"></span>
+					<NavLink title="Chapter Title" href="/document/xml/book-title" />
+					<span class="separator wk-icon-chevron-right"></span>
+					<NavLink title="Another Very Long Chapter Title" href="/document/xml/book-title" />
+					<span class="separator wk-icon-chevron-right"></span>
+					<NavLink title="Chapter Title" href="/document/xml/book-title" />
+					<span class="separator wk-icon-chevron-right"></span>
+					<NavLink title="Chapter Title" active={false} />
+				</nav>
+				<div class="header-toolbar-tools" data-active-toggle=".active-toggle">
+					<ControlIcon icon="info" title="Info" class="hover-text-bg-primary" />
+					<ControlIcon icon="heart" title="Add to favorites" class="hover-text-bg-primary" />
+					<ControlIcon icon="folder" title="Add to folder" class="hover-text-bg-primary" />
+					<ControlIcon
+						icon="layout"
+						title="Toggle toolbar"
+						class="active-toggle ms-3 hover-text-bg-primary d-none d-md-flex"
+						data-toggle="#documentToolbar"
+						data-toggle-class="d-none"
+					/>
+					<ControlIcon
+						icon="layout"
+						class="ms-3 d-md-none"
+						data-sidebar-target="#documentToolbar"
+						aria-label="Toggle sidebar"
+					/>
 				</div>
-				<div class="header-toolbar-end"></div>
-			</div>
-			<div class="ms-auto d-md-none">
-				<ControlIcon icon="filled-funnel" data-sidebar-target="#documentToolbar" aria-label="Toggle sidebar" />
 			</div>
 		</div>
 		<div class="document-body">
@@ -65,7 +65,6 @@
 					</div>
 					<div class="col-auto"><ControlIcon icon="chevron-right" title="Next Chapter" class="hover-text-bg-primary" /></div>
 				</div>
-				<div class="footer-toolbar-end"></div>
 			</div>
 		</div>
 	</div>
