@@ -130,6 +130,10 @@
           &.show {
             display: block;
           }
+
+          &.collapsing {
+            transition: height 0.15s ease;
+          }
         }
 
         &:has(.para-note-input.show) {
