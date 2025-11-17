@@ -31,6 +31,13 @@ form.form-column {
   }
 }
 
+.page-nav {
+  input {
+    width: 4rem;
+    text-align: right;
+  }
+}
+
 $track-color: $light;
 $thumb-color: $primary;
 

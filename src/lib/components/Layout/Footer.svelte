@@ -8,7 +8,7 @@
 		<div class="row align-items-center">
 			<div class="col-12 col-md-6 d-flex gap-3 justify-content-center justify-content-md-start">
 				<nav class="navbar navbar-expand-sm py-0">
-					<ul class="navbar-nav gap-3">
+					<ul class="navbar-nav gap-1 gap-sm-3 align-items-center mb-3 mb-sm-2 mb-md-0">
 						<li class="nav-item small"><NavLink href="{base}/docs/disclaimer" title="Disclaimer" /></li>
 						<li class="nav-item small"><NavLink href="{base}/docs/privacy-policy" title="Privacy Policy" /></li>
 						<li class="nav-item small"><NavLink href="{base}/docs/terms-and-conditions" title="Terms & conditions" /></li>

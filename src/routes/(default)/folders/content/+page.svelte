@@ -24,7 +24,7 @@
 				<div class="flex-row-center flex-wrap justify-content-between mb-3">
 					<div class="flex-row-center">
 						<ControlIcon icon="arrow-left" iconCSS="icon-lg" name="back" title="Back to folders" href="{base}/folders" />
-						<h1 class="ms-2 col-12 col-sm-6 text-nowrap">Name of the folder</h1>
+						<h1>Name of the folder</h1>
 					</div>
 					<FilterBar />
 				</div>

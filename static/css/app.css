@@ -14088,7 +14088,8 @@ a.btn-control.active.btn-control-note > span::before {
   display: flex;
   flex-direction: row;
   align-items: center;
-  gap: 1rem;
+  justify-content: space-between;
+  padding-right: 2.5rem;
 }
 .document-view .document-content .document-footer .footer-toolbar .footer-toolbar-nav {
   flex-grow: 1;
@@ -14235,6 +14236,11 @@ form.form-column {
 
 .form-switch .form-check-input {
   border-radius: 1rem;
+}
+
+.page-nav input {
+  width: 4rem;
+  text-align: right;
 }
 
 input[type=range]:focus {
