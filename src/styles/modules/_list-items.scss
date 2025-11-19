@@ -105,3 +105,9 @@
     }
   }
 }
+
+@each $name, $color in $colors {
+  .hide-bullet-#{$name} .list-item:has(.bullet-#{$name}) {
+    display: none;
+  }
+}
