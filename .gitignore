@@ -22,7 +22,3 @@ Thumbs.db
 vite.config.js.timestamp-*
 vite.config.ts.timestamp-*
 /.idea/
-
-# static css
-/static/css/app.css
-/static/css/app.css.map
