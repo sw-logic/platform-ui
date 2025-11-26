@@ -4,7 +4,7 @@
 	"version": "0.0.1",
 	"type": "module",
 	"scripts": {
-		"dev": "concurrently \"vite dev\" \"yarn sass:watch\"",
+		"dev": "concurrently \"vite dev --host\" \"yarn sass:watch\"",
 		"sass:watch": "sass --watch --source-map --quiet src/styles/app.scss:static/css/app.css",
 		"build": "vite build",
 		"preview": "vite preview",

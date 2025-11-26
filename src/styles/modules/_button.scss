@@ -53,11 +53,13 @@ a.btn-control {
 
   &:hover {
     background-color: $light;
+    mix-blend-mode: multiply;
   }
 
   &.active {
     color: $primary;
     background-color: $light;
+    mix-blend-mode: multiply;
 
     &.btn-control-favorite > span::before {
       content: $icon-favorite-hover;

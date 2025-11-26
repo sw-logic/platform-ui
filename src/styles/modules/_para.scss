@@ -214,6 +214,7 @@
 
         > .selectable {
           background-color: $lighter;
+          mix-blend-mode: multiply;
         }
       }
     }
