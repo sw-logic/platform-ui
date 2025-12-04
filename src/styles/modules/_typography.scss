@@ -13,3 +13,7 @@ mark, em {
   font-weight: $font-weight-bold;
   color: $primary;
 }
+
+.text-balanced {
+  text-wrap: balance;
+}

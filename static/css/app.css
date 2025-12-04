@@ -14104,14 +14104,6 @@ a.btn-control.active.btn-control-note > span::before {
   position: relative;
   height: 1rem;
 }
-.document-view .document-content .document-footer .footer-toolbar .footer-toolbar-nav .nav-slider .nav-slider-timeline {
-  position: absolute;
-  top: 50%;
-  left: 0;
-  width: 100%;
-  height: 1px;
-  background-color: #979797;
-}
 .document-view .document-content .document-footer .footer-toolbar .footer-toolbar-nav .nav-slider .nav-slider-button {
   position: absolute;
   top: calc(50% - 8px);
@@ -14124,6 +14116,56 @@ a.btn-control.active.btn-control-note > span::before {
 .document-view .document-content .document-footer .footer-toolbar .footer-toolbar-nav .nav-slider .nav-slider-button:hover {
   background-color: #007AC3;
 }
+.document-view .document-content .document-footer .footer-toolbar .footer-toolbar-nav .nav-slider .slider-bubble {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  transform: translateY(-2rem);
+  background-color: #fff;
+  border-radius: 999px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+  padding: 0.25rem 0.5rem;
+  white-space: nowrap;
+  font-size: 0.75rem;
+  opacity: 0;
+  transition: left 100ms ease, opacity 100ms ease;
+  z-index: 3;
+}
+.document-view .document-content .document-footer .footer-toolbar .footer-toolbar-nav .nav-slider .slider-bubble .slider-bubble-text {
+  display: inline-block;
+  max-width: 260px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.document-view .document-content .document-footer .footer-toolbar .footer-toolbar-nav .nav-slider .slider-bubble .spinner {
+  display: inline-block;
+  margin-left: 0.25rem;
+  vertical-align: middle;
+}
+.document-view .document-content .document-footer .footer-toolbar .footer-toolbar-nav .nav-slider .slider-bubble .spinner > div {
+  width: 0.4rem;
+  height: 0.4rem;
+  margin: 0 0.1rem;
+  background-color: #007AC3;
+  border-radius: 100%;
+  display: inline-block;
+  animation: sk-bouncedelay 1.4s infinite ease-in-out both;
+}
+.document-view .document-content .document-footer .footer-toolbar .footer-toolbar-nav .nav-slider .slider-bubble .spinner .bounce1 {
+  animation-delay: -0.32s;
+}
+.document-view .document-content .document-footer .footer-toolbar .footer-toolbar-nav .nav-slider .slider-bubble .spinner .bounce2 {
+  animation-delay: -0.16s;
+}
+@keyframes sk-bouncedelay {
+  0%, 80%, 100% {
+    transform: scale(0);
+  }
+  40% {
+    transform: scale(1);
+  }
+}
+
 .filter-bar {
   display: flex;
   flex-direction: row;
@@ -15172,6 +15214,9 @@ body footer .nav-link {
 #bookdiv.document .para-row > .para-content > .para-note .para-note-input.show {
   display: block;
 }
+#bookdiv.document .para-row > .para-content > .para-note .para-note-input.collapsing {
+  transition: height 0.15s ease;
+}
 #bookdiv.document .para-row > .para-content > .para-note:has(.para-note-input.show) .para-note-content {
   display: none !important;
 }
@@ -15689,6 +15734,10 @@ mark, em {
   font-style: normal;
   font-weight: 500;
   color: #007AC3;
+}
+
+.text-balanced {
+  text-wrap: balance;
 }
 
 /*# sourceMappingURL=app.css.map */
