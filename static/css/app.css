@@ -13077,7 +13077,7 @@ textarea.form-control-lg {
 }
 
 .item-list {
-  display: block !important;
+  display: block;
 }
 .item-list .item {
   display: flex;
@@ -13137,11 +13137,13 @@ a.btn-control {
 .btn-control:hover,
 a.btn-control:hover {
   background-color: #e7e7e7;
+  mix-blend-mode: multiply;
 }
 .btn-control.active,
 a.btn-control.active {
   color: #007AC3;
   background-color: #e7e7e7;
+  mix-blend-mode: multiply;
 }
 .btn-control.active.btn-control-favorite > span::before,
 a.btn-control.active.btn-control-favorite > span::before {
@@ -13229,6 +13231,18 @@ a.btn-control.active.btn-control-note > span::before {
   background-color: #007AC3 !important;
 }
 
+.bg-mark-primary {
+  color: #ffffff !important;
+  background-color: #007AC3 !important;
+  padding: 0 0.1em;
+  border-radius: 0.15em;
+}
+
+.hide-bg-mark-primary mark.bg-mark-primary {
+  background-color: transparent !important;
+  color: inherit !important;
+}
+
 .outline-secondary {
   color: #85BC20 !important;
   background-color: transparent !important;
@@ -13265,6 +13279,18 @@ a.btn-control.active.btn-control-note > span::before {
 }
 .active-text-bg-secondary.active:hover {
   background-color: #85BC20 !important;
+}
+
+.bg-mark-secondary {
+  color: #000000 !important;
+  background-color: #85BC20 !important;
+  padding: 0 0.1em;
+  border-radius: 0.15em;
+}
+
+.hide-bg-mark-secondary mark.bg-mark-secondary {
+  background-color: transparent !important;
+  color: inherit !important;
 }
 
 .outline-success {
@@ -13305,6 +13331,18 @@ a.btn-control.active.btn-control-note > span::before {
   background-color: #85BC20 !important;
 }
 
+.bg-mark-success {
+  color: #000000 !important;
+  background-color: #85BC20 !important;
+  padding: 0 0.1em;
+  border-radius: 0.15em;
+}
+
+.hide-bg-mark-success mark.bg-mark-success {
+  background-color: transparent !important;
+  color: inherit !important;
+}
+
 .outline-info {
   color: #007AC3 !important;
   background-color: transparent !important;
@@ -13341,6 +13379,18 @@ a.btn-control.active.btn-control-note > span::before {
 }
 .active-text-bg-info.active:hover {
   background-color: #007AC3 !important;
+}
+
+.bg-mark-info {
+  color: #ffffff !important;
+  background-color: #007AC3 !important;
+  padding: 0 0.1em;
+  border-radius: 0.15em;
+}
+
+.hide-bg-mark-info mark.bg-mark-info {
+  background-color: transparent !important;
+  color: inherit !important;
 }
 
 .outline-warning {
@@ -13381,6 +13431,18 @@ a.btn-control.active.btn-control-note > span::before {
   background-color: #EA8F00 !important;
 }
 
+.bg-mark-warning {
+  color: #000000 !important;
+  background-color: #EA8F00 !important;
+  padding: 0 0.1em;
+  border-radius: 0.15em;
+}
+
+.hide-bg-mark-warning mark.bg-mark-warning {
+  background-color: transparent !important;
+  color: inherit !important;
+}
+
 .outline-danger {
   color: #E5202E !important;
   background-color: transparent !important;
@@ -13417,6 +13479,18 @@ a.btn-control.active.btn-control-note > span::before {
 }
 .active-text-bg-danger.active:hover {
   background-color: #E5202E !important;
+}
+
+.bg-mark-danger {
+  color: #ffffff !important;
+  background-color: #E5202E !important;
+  padding: 0 0.1em;
+  border-radius: 0.15em;
+}
+
+.hide-bg-mark-danger mark.bg-mark-danger {
+  background-color: transparent !important;
+  color: inherit !important;
 }
 
 .outline-blue {
@@ -13457,6 +13531,18 @@ a.btn-control.active.btn-control-note > span::before {
   background-color: #007AC3 !important;
 }
 
+.bg-mark-blue {
+  color: #ffffff !important;
+  background-color: #007AC3 !important;
+  padding: 0 0.1em;
+  border-radius: 0.15em;
+}
+
+.hide-bg-mark-blue mark.bg-mark-blue {
+  background-color: transparent !important;
+  color: inherit !important;
+}
+
 .outline-purple {
   color: #940C72 !important;
   background-color: transparent !important;
@@ -13493,6 +13579,18 @@ a.btn-control.active.btn-control-note > span::before {
 }
 .active-text-bg-purple.active:hover {
   background-color: #940C72 !important;
+}
+
+.bg-mark-purple {
+  color: #ffffff !important;
+  background-color: #940C72 !important;
+  padding: 0 0.1em;
+  border-radius: 0.15em;
+}
+
+.hide-bg-mark-purple mark.bg-mark-purple {
+  background-color: transparent !important;
+  color: inherit !important;
 }
 
 .outline-pink {
@@ -13533,6 +13631,18 @@ a.btn-control.active.btn-control-note > span::before {
   background-color: #FF6ECF !important;
 }
 
+.bg-mark-pink {
+  color: #000000 !important;
+  background-color: #FF6ECF !important;
+  padding: 0 0.1em;
+  border-radius: 0.15em;
+}
+
+.hide-bg-mark-pink mark.bg-mark-pink {
+  background-color: transparent !important;
+  color: inherit !important;
+}
+
 .outline-red {
   color: #E5202E !important;
   background-color: transparent !important;
@@ -13569,6 +13679,18 @@ a.btn-control.active.btn-control-note > span::before {
 }
 .active-text-bg-red.active:hover {
   background-color: #E5202E !important;
+}
+
+.bg-mark-red {
+  color: #ffffff !important;
+  background-color: #E5202E !important;
+  padding: 0 0.1em;
+  border-radius: 0.15em;
+}
+
+.hide-bg-mark-red mark.bg-mark-red {
+  background-color: transparent !important;
+  color: inherit !important;
 }
 
 .outline-orange {
@@ -13609,6 +13731,18 @@ a.btn-control.active.btn-control-note > span::before {
   background-color: #EA8F00 !important;
 }
 
+.bg-mark-orange {
+  color: #000000 !important;
+  background-color: #EA8F00 !important;
+  padding: 0 0.1em;
+  border-radius: 0.15em;
+}
+
+.hide-bg-mark-orange mark.bg-mark-orange {
+  background-color: transparent !important;
+  color: inherit !important;
+}
+
 .outline-yellow {
   color: #FFFF00 !important;
   background-color: transparent !important;
@@ -13645,6 +13779,18 @@ a.btn-control.active.btn-control-note > span::before {
 }
 .active-text-bg-yellow.active:hover {
   background-color: #FFFF00 !important;
+}
+
+.bg-mark-yellow {
+  color: #000000 !important;
+  background-color: #FFFF00 !important;
+  padding: 0 0.1em;
+  border-radius: 0.15em;
+}
+
+.hide-bg-mark-yellow mark.bg-mark-yellow {
+  background-color: transparent !important;
+  color: inherit !important;
 }
 
 .outline-green {
@@ -13685,6 +13831,18 @@ a.btn-control.active.btn-control-note > span::before {
   background-color: #85BC20 !important;
 }
 
+.bg-mark-green {
+  color: #000000 !important;
+  background-color: #85BC20 !important;
+  padding: 0 0.1em;
+  border-radius: 0.15em;
+}
+
+.hide-bg-mark-green mark.bg-mark-green {
+  background-color: transparent !important;
+  color: inherit !important;
+}
+
 .outline-cyan {
   color: #66CCFF !important;
   background-color: transparent !important;
@@ -13721,6 +13879,18 @@ a.btn-control.active.btn-control-note > span::before {
 }
 .active-text-bg-cyan.active:hover {
   background-color: #66CCFF !important;
+}
+
+.bg-mark-cyan {
+  color: #000000 !important;
+  background-color: #66CCFF !important;
+  padding: 0 0.1em;
+  border-radius: 0.15em;
+}
+
+.hide-bg-mark-cyan mark.bg-mark-cyan {
+  background-color: transparent !important;
+  color: inherit !important;
 }
 
 .outline-black {
@@ -13761,6 +13931,18 @@ a.btn-control.active.btn-control-note > span::before {
   background-color: #000000 !important;
 }
 
+.bg-mark-black {
+  color: #ffffff !important;
+  background-color: #000000 !important;
+  padding: 0 0.1em;
+  border-radius: 0.15em;
+}
+
+.hide-bg-mark-black mark.bg-mark-black {
+  background-color: transparent !important;
+  color: inherit !important;
+}
+
 .outline-white {
   color: #ffffff !important;
   background-color: transparent !important;
@@ -13797,6 +13979,18 @@ a.btn-control.active.btn-control-note > span::before {
 }
 .active-text-bg-white.active:hover {
   background-color: #ffffff !important;
+}
+
+.bg-mark-white {
+  color: #000000 !important;
+  background-color: #ffffff !important;
+  padding: 0 0.1em;
+  border-radius: 0.15em;
+}
+
+.hide-bg-mark-white mark.bg-mark-white {
+  background-color: transparent !important;
+  color: inherit !important;
 }
 
 .outline-lighter {
@@ -13837,6 +14031,18 @@ a.btn-control.active.btn-control-note > span::before {
   background-color: #f5f5f5 !important;
 }
 
+.bg-mark-lighter {
+  color: #000000 !important;
+  background-color: #f5f5f5 !important;
+  padding: 0 0.1em;
+  border-radius: 0.15em;
+}
+
+.hide-bg-mark-lighter mark.bg-mark-lighter {
+  background-color: transparent !important;
+  color: inherit !important;
+}
+
 .outline-light {
   color: #e7e7e7 !important;
   background-color: transparent !important;
@@ -13873,6 +14079,18 @@ a.btn-control.active.btn-control-note > span::before {
 }
 .active-text-bg-light.active:hover {
   background-color: #e7e7e7 !important;
+}
+
+.bg-mark-light {
+  color: #000000 !important;
+  background-color: #e7e7e7 !important;
+  padding: 0 0.1em;
+  border-radius: 0.15em;
+}
+
+.hide-bg-mark-light mark.bg-mark-light {
+  background-color: transparent !important;
+  color: inherit !important;
 }
 
 .outline-middle {
@@ -13913,6 +14131,18 @@ a.btn-control.active.btn-control-note > span::before {
   background-color: #979797 !important;
 }
 
+.bg-mark-middle {
+  color: #000000 !important;
+  background-color: #979797 !important;
+  padding: 0 0.1em;
+  border-radius: 0.15em;
+}
+
+.hide-bg-mark-middle mark.bg-mark-middle {
+  background-color: transparent !important;
+  color: inherit !important;
+}
+
 .outline-dark {
   color: #373737 !important;
   background-color: transparent !important;
@@ -13951,6 +14181,18 @@ a.btn-control.active.btn-control-note > span::before {
   background-color: #373737 !important;
 }
 
+.bg-mark-dark {
+  color: #ffffff !important;
+  background-color: #373737 !important;
+  padding: 0 0.1em;
+  border-radius: 0.15em;
+}
+
+.hide-bg-mark-dark mark.bg-mark-dark {
+  background-color: transparent !important;
+  color: inherit !important;
+}
+
 .outline-darker {
   color: #272727 !important;
   background-color: transparent !important;
@@ -13987,6 +14229,23 @@ a.btn-control.active.btn-control-note > span::before {
 }
 .active-text-bg-darker.active:hover {
   background-color: #272727 !important;
+}
+
+.bg-mark-darker {
+  color: #ffffff !important;
+  background-color: #272727 !important;
+  padding: 0 0.1em;
+  border-radius: 0.15em;
+}
+
+.hide-bg-mark-darker mark.bg-mark-darker {
+  background-color: transparent !important;
+  color: inherit !important;
+}
+
+.bg-transparent-all mark {
+  background-color: transparent !important;
+  color: inherit !important;
 }
 
 .text-disabled {
@@ -14278,6 +14537,7 @@ form.form-column {
 
 .form-switch .form-check-input {
   border-radius: 1rem;
+  cursor: pointer;
 }
 
 .page-nav input {
@@ -15071,6 +15331,66 @@ body footer .nav-link {
   outline-width: 5px;
 }
 
+.hide-bullet-blue .list-item:has(.bullet-blue) {
+  display: none;
+}
+
+.hide-bullet-purple .list-item:has(.bullet-purple) {
+  display: none;
+}
+
+.hide-bullet-pink .list-item:has(.bullet-pink) {
+  display: none;
+}
+
+.hide-bullet-red .list-item:has(.bullet-red) {
+  display: none;
+}
+
+.hide-bullet-orange .list-item:has(.bullet-orange) {
+  display: none;
+}
+
+.hide-bullet-yellow .list-item:has(.bullet-yellow) {
+  display: none;
+}
+
+.hide-bullet-green .list-item:has(.bullet-green) {
+  display: none;
+}
+
+.hide-bullet-cyan .list-item:has(.bullet-cyan) {
+  display: none;
+}
+
+.hide-bullet-black .list-item:has(.bullet-black) {
+  display: none;
+}
+
+.hide-bullet-white .list-item:has(.bullet-white) {
+  display: none;
+}
+
+.hide-bullet-lighter .list-item:has(.bullet-lighter) {
+  display: none;
+}
+
+.hide-bullet-light .list-item:has(.bullet-light) {
+  display: none;
+}
+
+.hide-bullet-middle .list-item:has(.bullet-middle) {
+  display: none;
+}
+
+.hide-bullet-dark .list-item:has(.bullet-dark) {
+  display: none;
+}
+
+.hide-bullet-darker .list-item:has(.bullet-darker) {
+  display: none;
+}
+
 @media screen and (max-width: 767px) {
   #main-navbar .navbar-nav {
     width: 100%;
@@ -15275,6 +15595,7 @@ body footer .nav-link {
 }
 #bookdiv.document .para-row[data-anchor]:not(:has([data-anchor]:hover)):hover > .para-content > .selectable {
   background-color: #f5f5f5;
+  mix-blend-mode: multiply;
 }
 
 .no-selection [data-anchor]:not(:has([data-anchor]:hover)):hover > .para-content > .selectable {

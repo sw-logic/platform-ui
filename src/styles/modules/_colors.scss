@@ -12,6 +12,11 @@
   }
 }
 
+@mixin text-bg-variant($color) {
+  color: best-contrast($color, $black, $white) !important;
+  background-color: $color !important;
+}
+
 @each $name, $color in $theme-colors {
   .outline-#{$name} {
     color: $color !important;
@@ -28,8 +33,7 @@
   }
 
   .hover-text-bg-#{$name}:hover {
-    color: best-contrast($color, $black, $white) !important;
-    background-color: $color !important;
+    @include text-bg-variant($color);
   }
 
   .active-text-#{$name}.active {
@@ -45,12 +49,29 @@
   }
 
   .active-text-bg-#{$name}.active {
-    color: best-contrast($color, $black, $white) !important;
-    background-color: $color !important;
+    @include text-bg-variant($color);
 
     &:hover {
       background-color: $color !important;
     }
+  }
+
+  .bg-mark-#{$name} {
+    @include text-bg-variant($color);
+    padding: 0 0.1em;
+    border-radius: 0.15em;
+  }
+
+  .hide-bg-mark-#{$name} mark.bg-mark-#{$name} {
+    background-color: transparent !important;
+    color: inherit !important;
+  }
+}
+
+.bg-transparent-all {
+  mark {
+    background-color: transparent !important;
+    color: inherit !important;
   }
 }
 
