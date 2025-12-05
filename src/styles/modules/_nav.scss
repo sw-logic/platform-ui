@@ -31,3 +31,17 @@
         }
     }
 }
+
+.mobile-menu {
+  max-width: 80vw;
+
+  .mobil-navbar {
+    a.nav-link {
+      color: #555;
+
+      &:hover {
+        color: #000;
+      }
+    }
+  }
+}
