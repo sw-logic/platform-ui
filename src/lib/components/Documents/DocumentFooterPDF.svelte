@@ -4,8 +4,8 @@
 
 <div class="footer-toolbar site-indent">
 	<nav class="page-nav flex-row-center" aria-label="Page navigation">
-		<ControlIcon icon="chevron-double-left" class="hover-text-bg-primary" aria-label="Previous page" />
-		<ControlIcon icon="chevron-left" class="hover-text-bg-primary" aria-label="Previous page" />
+		<ControlIcon icon="chevron-double-left" class="hover-text-bg-primary disabled" disabled aria-label="Previous page" />
+		<ControlIcon icon="chevron-left" class="hover-text-bg-primary disabled" disabled aria-label="Previous page" />
 		<div class="flex-row-center">
 			<span class="small mx-1">Page</span>
 			<input type="number" size="4" min="1" max="1000" value="1" class="form-input form-input-sm text-center mx-1" aria-label="Current page number" />
