@@ -1,5 +1,9 @@
 @import "../variables";
 
+form {
+  margin: 0;
+}
+
 form.form-column {
   display: flex;
   flex-direction: column;
