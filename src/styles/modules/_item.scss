@@ -167,7 +167,10 @@
     flex-flow: row wrap;
     gap: .25rem;
   }
-  .item-excerpt {}
+  .item-excerpt {
+    font-size: $font-size-sm;
+  }
+
   .item-results {
     font-size: $font-size-sm;
   }
