@@ -4,7 +4,6 @@
 	import { ClassToggle } from '$lib/scripts/classToggle';
 	import ControlIcon from '$lib/components/ControlIcon.svelte';
 	import DocumentToolbar from '$lib/components/Documents/DocumentToolbar.svelte';
-	import NavLink from '$lib/components/NavLink.svelte';
 	import DocumentHeaderToolbar from '$lib/components/Documents/DocumentHeaderToolbar.svelte';
 	import DocumentFooterPDF from '$lib/components/Documents/DocumentFooterPDF.svelte';
 
