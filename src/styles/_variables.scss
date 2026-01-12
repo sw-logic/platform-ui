@@ -27,21 +27,23 @@ $gray-900: #272727;
 $black:    #000000;
 
 $colors: (
-        "blue":       $blue,
-        "purple":     $purple,
-        "pink":       $pink,
-        "red":        $red,
-        "orange":     $orange,
-        "yellow":     $yellow,
-        "green":      $green,
-        "cyan":       $cyan,
-        "black":      $black,
-        "white":      $white,
-        "lighter":    $gray-100,
-        "light":      $gray-200,
-        "middle":     $gray-500,
-        "dark":       $gray-800,
-        "darker":     $gray-900
+        "blue":         $blue,
+        "purple":       $purple,
+        "pink":         $pink,
+        "red":          $red,
+        "orange":       $orange,
+        "yellow":       $yellow,
+        "green":        $green,
+        "cyan":         $cyan,
+        "black":        $black,
+        "white":        $white,
+        "lighter":      $gray-100,
+        "light":        $gray-200,
+        "middle-light": $gray-400,
+        "middle":       $gray-500,
+        "middle-dark":  $gray-600,
+        "dark":         $gray-800,
+        "darker":       $gray-900
 );
 
 $primary:         $blue;
@@ -58,7 +60,9 @@ $danger:          $red;
 $error:           $red;
 $lighter:         $gray-100;
 $light:           $gray-200;
+$middle-light:    $gray-400;
 $middle:          $gray-500;
+$middle-dark:     $gray-600;
 $dark:            $gray-800;
 $darker:          $gray-900;
 
@@ -67,27 +71,29 @@ $disabled:        $gray-400;
 
 // scss-docs-start theme-colors-map
 $theme-colors: (
-  "primary":    $primary,
-  "secondary":  $secondary,
-  "success":    $success,
-  "info":       $info,
-  "warning":    $warning,
-  "danger":     $danger,
-  "blue":       $blue,
-  "purple":     $purple,
-  "pink":       $pink,
-  "red":        $red,
-  "orange":     $orange,
-  "yellow":     $yellow,
-  "green":      $green,
-  "cyan":       $cyan,
-  "black":      $black,
-  "white":      $white,
-  "lighter":    $lighter,
-  "light":      $light,
-  "middle":     $middle,
-  "dark":       $dark,
-  "darker":     $darker
+  "primary":      $primary,
+  "secondary":    $secondary,
+  "success":      $success,
+  "info":         $info,
+  "warning":      $warning,
+  "danger":       $danger,
+  "blue":         $blue,
+  "purple":       $purple,
+  "pink":         $pink,
+  "red":          $red,
+  "orange":       $orange,
+  "yellow":       $yellow,
+  "green":        $green,
+  "cyan":         $cyan,
+  "black":        $black,
+  "white":        $white,
+  "lighter":      $lighter,
+  "light":        $light,
+  "middle-light": $middle-light,
+  "middle":       $middle,
+  "middle-dark":  $middle-dark,
+  "dark":         $dark,
+  "darker":       $darker
 );
 
 // Grid system for the custom theme
