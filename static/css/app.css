@@ -339,7 +339,7 @@ blockquote {
 
 b,
 strong {
-  font-weight: 600;
+  font-weight: 500;
 }
 
 small, .small {
@@ -444,6 +444,7 @@ caption {
 }
 
 th {
+  font-weight: 500;
   text-align: inherit;
   text-align: -webkit-match-parent;
 }
@@ -9289,7 +9290,7 @@ textarea.form-control-lg {
 }
 
 .fw-bolder {
-  font-weight: 600 !important;
+  font-weight: 500 !important;
 }
 
 .lh-1 {
@@ -13072,6 +13073,9 @@ textarea.form-control-lg {
   flex-flow: row wrap;
   gap: 0.25rem;
 }
+.item-info .item-excerpt {
+  font-size: 0.875rem;
+}
 .item-info .item-results {
   font-size: 0.875rem;
 }
@@ -13117,6 +13121,11 @@ a.nav-link {
 }
 a.nav-link:hover {
   color: #007AC3;
+}
+
+[disabled] {
+  color: #b7b7b7;
+  pointer-events: none;
 }
 
 .btn-control,
@@ -13168,6 +13177,11 @@ a.btn-control.active.btn-control-bookmark > span::before {
 .btn-control.active.btn-control-note > span::before,
 a.btn-control.active.btn-control-note > span::before {
   content: "\e34f";
+}
+.btn-control.disabled,
+a.btn-control.disabled {
+  color: #b7b7b7;
+  pointer-events: none;
 }
 
 .no-hover {
@@ -13243,6 +13257,10 @@ a.btn-control.active.btn-control-note > span::before {
   color: inherit !important;
 }
 
+.fill-primary {
+  fill: #007AC3;
+}
+
 .outline-secondary {
   color: #85BC20 !important;
   background-color: transparent !important;
@@ -13291,6 +13309,10 @@ a.btn-control.active.btn-control-note > span::before {
 .hide-bg-mark-secondary mark.bg-mark-secondary {
   background-color: transparent !important;
   color: inherit !important;
+}
+
+.fill-secondary {
+  fill: #85BC20;
 }
 
 .outline-success {
@@ -13343,6 +13365,10 @@ a.btn-control.active.btn-control-note > span::before {
   color: inherit !important;
 }
 
+.fill-success {
+  fill: #85BC20;
+}
+
 .outline-info {
   color: #007AC3 !important;
   background-color: transparent !important;
@@ -13391,6 +13417,10 @@ a.btn-control.active.btn-control-note > span::before {
 .hide-bg-mark-info mark.bg-mark-info {
   background-color: transparent !important;
   color: inherit !important;
+}
+
+.fill-info {
+  fill: #007AC3;
 }
 
 .outline-warning {
@@ -13443,6 +13473,10 @@ a.btn-control.active.btn-control-note > span::before {
   color: inherit !important;
 }
 
+.fill-warning {
+  fill: #EA8F00;
+}
+
 .outline-danger {
   color: #E5202E !important;
   background-color: transparent !important;
@@ -13491,6 +13525,10 @@ a.btn-control.active.btn-control-note > span::before {
 .hide-bg-mark-danger mark.bg-mark-danger {
   background-color: transparent !important;
   color: inherit !important;
+}
+
+.fill-danger {
+  fill: #E5202E;
 }
 
 .outline-blue {
@@ -13543,6 +13581,10 @@ a.btn-control.active.btn-control-note > span::before {
   color: inherit !important;
 }
 
+.fill-blue {
+  fill: #007AC3;
+}
+
 .outline-purple {
   color: #940C72 !important;
   background-color: transparent !important;
@@ -13591,6 +13633,10 @@ a.btn-control.active.btn-control-note > span::before {
 .hide-bg-mark-purple mark.bg-mark-purple {
   background-color: transparent !important;
   color: inherit !important;
+}
+
+.fill-purple {
+  fill: #940C72;
 }
 
 .outline-pink {
@@ -13643,6 +13689,10 @@ a.btn-control.active.btn-control-note > span::before {
   color: inherit !important;
 }
 
+.fill-pink {
+  fill: #FF6ECF;
+}
+
 .outline-red {
   color: #E5202E !important;
   background-color: transparent !important;
@@ -13691,6 +13741,10 @@ a.btn-control.active.btn-control-note > span::before {
 .hide-bg-mark-red mark.bg-mark-red {
   background-color: transparent !important;
   color: inherit !important;
+}
+
+.fill-red {
+  fill: #E5202E;
 }
 
 .outline-orange {
@@ -13743,6 +13797,10 @@ a.btn-control.active.btn-control-note > span::before {
   color: inherit !important;
 }
 
+.fill-orange {
+  fill: #EA8F00;
+}
+
 .outline-yellow {
   color: #FFFF00 !important;
   background-color: transparent !important;
@@ -13791,6 +13849,10 @@ a.btn-control.active.btn-control-note > span::before {
 .hide-bg-mark-yellow mark.bg-mark-yellow {
   background-color: transparent !important;
   color: inherit !important;
+}
+
+.fill-yellow {
+  fill: #FFFF00;
 }
 
 .outline-green {
@@ -13843,6 +13905,10 @@ a.btn-control.active.btn-control-note > span::before {
   color: inherit !important;
 }
 
+.fill-green {
+  fill: #85BC20;
+}
+
 .outline-cyan {
   color: #66CCFF !important;
   background-color: transparent !important;
@@ -13891,6 +13957,10 @@ a.btn-control.active.btn-control-note > span::before {
 .hide-bg-mark-cyan mark.bg-mark-cyan {
   background-color: transparent !important;
   color: inherit !important;
+}
+
+.fill-cyan {
+  fill: #66CCFF;
 }
 
 .outline-black {
@@ -13943,6 +14013,10 @@ a.btn-control.active.btn-control-note > span::before {
   color: inherit !important;
 }
 
+.fill-black {
+  fill: #000000;
+}
+
 .outline-white {
   color: #ffffff !important;
   background-color: transparent !important;
@@ -13991,6 +14065,10 @@ a.btn-control.active.btn-control-note > span::before {
 .hide-bg-mark-white mark.bg-mark-white {
   background-color: transparent !important;
   color: inherit !important;
+}
+
+.fill-white {
+  fill: #ffffff;
 }
 
 .outline-lighter {
@@ -14043,6 +14121,10 @@ a.btn-control.active.btn-control-note > span::before {
   color: inherit !important;
 }
 
+.fill-lighter {
+  fill: #f5f5f5;
+}
+
 .outline-light {
   color: #e7e7e7 !important;
   background-color: transparent !important;
@@ -14091,6 +14173,10 @@ a.btn-control.active.btn-control-note > span::before {
 .hide-bg-mark-light mark.bg-mark-light {
   background-color: transparent !important;
   color: inherit !important;
+}
+
+.fill-light {
+  fill: #e7e7e7;
 }
 
 .outline-middle {
@@ -14143,6 +14229,10 @@ a.btn-control.active.btn-control-note > span::before {
   color: inherit !important;
 }
 
+.fill-middle {
+  fill: #979797;
+}
+
 .outline-dark {
   color: #373737 !important;
   background-color: transparent !important;
@@ -14193,6 +14283,10 @@ a.btn-control.active.btn-control-note > span::before {
   color: inherit !important;
 }
 
+.fill-dark {
+  fill: #373737;
+}
+
 .outline-darker {
   color: #272727 !important;
   background-color: transparent !important;
@@ -14241,6 +14335,10 @@ a.btn-control.active.btn-control-note > span::before {
 .hide-bg-mark-darker mark.bg-mark-darker {
   background-color: transparent !important;
   color: inherit !important;
+}
+
+.fill-darker {
+  fill: #272727;
 }
 
 .bg-transparent-all mark {
@@ -14514,6 +14612,10 @@ a.btn-control.active.btn-control-note > span::before {
   color: #979797;
 }
 
+form {
+  margin: 0;
+}
+
 form.form-column {
   display: flex;
   flex-direction: column;
@@ -14590,6 +14692,15 @@ input[type=range]:focus::-ms-fill-lower {
 }
 input[type=range]:focus::-ms-fill-upper {
   background: none;
+}
+
+.error-message {
+  padding: 0.25em 0;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  gap: 0.25em;
+  font-size: 0.875rem;
 }
 
 .grid-cols-1 {
@@ -15044,8 +15155,8 @@ picture {
 .avatar {
   position: relative;
   display: inline-block;
-  width: 40px;
-  height: 40px;
+  width: 32px;
+  height: 32px;
   border-radius: 50%;
   overflow: hidden;
 }
@@ -15973,8 +16084,11 @@ body footer .nav-link {
   color: #007AC3;
   text-decoration: underline;
 }
-.table-of-contents li > a {
+.table-of-contents li .content-list-title > a:first-child {
   margin-left: 1.4rem;
+}
+.table-of-contents li > .toc-btn {
+  padding-left: 1.4rem;
 }
 .table-of-contents li > ul {
   padding-left: 1.5rem;
