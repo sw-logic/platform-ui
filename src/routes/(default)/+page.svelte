@@ -15,8 +15,8 @@
 	<div class="carousel-inner">
 		<div class="carousel-item active">
 			<div class="container expand">
-				<div class="row h-100">
-					<div class="col col-12 col-md-6 h-100 d-flex flex-column flex-grow-1">
+				<div class="row flex-column flex-md-row	 h-100">
+					<div class="col col-12 col-md-6 banner-left">
 						<div class="wk-line-green my-4"></div>
 						<div class="flex-grow-1 d-flex flex-column py-4">
 							<h1 class="display-5 fw-bold">Vitajte v ASPI Akadémii</h1>
@@ -26,7 +26,7 @@
 							<img src="images/banner/aspi_logo.webp" height="auto" width="200" />
 						</div>
 					</div>
-					<div class="col col-12 col-md-6">
+					<div class="col col-12 col-md-6 banner-right mt-3 mt-md-0">
 						<picture class="position-relative">
 							<img class="fit-cover position-absolute" alt="Welcome banner" src="images/banner/main_banner_sk_2026_650x450.webp" />
 						</picture>

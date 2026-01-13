@@ -1,4 +1,5 @@
 @import "../variables";
+@import "mixins";
 
 body {
   display: flex;
@@ -69,11 +70,42 @@ body {
   .carousel-inner {
     height: 450px;
 
+    @include media-down(md) {
+      height: 70vh;
+    }
+
+    &:has(> .carousel-item:only-child) ~ .carousel-control-prev,
+    &:has(> .carousel-item:only-child) ~ .carousel-control-next {
+      display: none;
+    }
+
     .carousel-item {
         height: 100%;
         display: flex;
         flex-direction: column;
         justify-content: center;
+
+      .banner-left,
+      .banner-right {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1;
+      }
+
+      .banner-left {
+        @include media-down(md) {
+          order: 1;
+          flex-grow: 0;
+          height: unset !important;
+        }
+      }
+
+      .banner-right {
+        @include media-down(md) {
+
+        }
+      }
     }
   }
 }

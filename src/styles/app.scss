@@ -1,6 +1,8 @@
 // Import Modules
 @use 'bootstrap-override';
 
+@use 'modules/mixins';
+
 @use 'modules/accordion';
 @use 'modules/animation';
 @use 'modules/breadcrumbs';

@@ -3,9 +3,11 @@
 </script>
 
 <a class="navbar-brand" href="{base}/" aria-label="Platform Logo">
-	<div class="logo-desktop d-none d-sm-block fw-bold">PLATFORM</div>
+	<div class="logo-desktop d-none d-sm-block fw-bold">
+		<img src="images/misc/ASPI_logo.svg" height="auto" width="200" />
+	</div>
 	<div class="logo-mobile d-sm-none">
-		<span>P</span>
+		<img src="images/misc/ASPI_logo_mobile.svg" height="auto" width="100" />
 	</div>
 </a>
 

@@ -1,0 +1,95 @@
+// Responsive breakpoint mixins based on $grid-breakpoints
+
+// Media query for minimum width (mobile-first approach)
+// Usage: @include media-up(md) { ... }
+@mixin media-up($breakpoint) {
+  @if map-has-key($grid-breakpoints, $breakpoint) {
+    $min: map-get($grid-breakpoints, $breakpoint);
+    @if $min != 0 {
+      @media (min-width: $min) {
+        @content;
+      }
+    } @else {
+      @content;
+    }
+  } @else {
+    @warn "Unknown breakpoint: #{$breakpoint}. Available: #{map-keys($grid-breakpoints)}";
+  }
+}
+
+// Media query for maximum width
+// Usage: @include media-down(md) { ... }
+@mixin media-down($breakpoint) {
+  @if map-has-key($grid-breakpoints, $breakpoint) {
+    $max: map-get($grid-breakpoints, $breakpoint) - 0.02px;
+    @if $max != 0 {
+      @media (max-width: $max) {
+        @content;
+      }
+    } @else {
+      @content;
+    }
+  } @else {
+    @warn "Unknown breakpoint: #{$breakpoint}. Available: #{map-keys($grid-breakpoints)}";
+  }
+}
+
+// Media query for range between two breakpoints
+// Usage: @include media-between(sm, lg) { ... }
+@mixin media-between($lower, $upper) {
+  @if map-has-key($grid-breakpoints, $lower) and map-has-key($grid-breakpoints, $upper) {
+    $min: map-get($grid-breakpoints, $lower);
+    $max: map-get($grid-breakpoints, $upper) - 0.02px;
+    @media (min-width: $min) and (max-width: $max) {
+      @content;
+    }
+  } @else {
+    @warn "Unknown breakpoints: #{$lower} or #{$upper}. Available: #{map-keys($grid-breakpoints)}";
+  }
+}
+
+// Media query for specific breakpoint only
+// Usage: @include media-only(md) { ... }
+@mixin media-only($breakpoint) {
+  @if map-has-key($grid-breakpoints, $breakpoint) {
+    $breakpoint-names: map-keys($grid-breakpoints);
+    $index: index($breakpoint-names, $breakpoint);
+
+    @if $index < length($breakpoint-names) {
+      $next-breakpoint: nth($breakpoint-names, $index + 1);
+      @include media-between($breakpoint, $next-breakpoint) {
+        @content;
+      }
+    } @else {
+      @include media-up($breakpoint) {
+        @content;
+      }
+    }
+  } @else {
+    @warn "Unknown breakpoint: #{$breakpoint}. Available: #{map-keys($grid-breakpoints)}";
+  }
+}
+
+// Generate responsive utility classes with suffixes
+// Usage: @include responsive-classes('d', 'display', (none, block, flex))
+@mixin responsive-classes($prefix, $property, $values) {
+  @each $breakpoint-name, $breakpoint-value in $grid-breakpoints {
+    @if $breakpoint-value == 0 {
+      // Generate base classes without breakpoint suffix
+      @each $suffix, $value in $values {
+        .#{$prefix}-#{$suffix} {
+          #{$property}: $value;
+        }
+      }
+    } @else {
+      // Generate responsive classes with breakpoint suffix
+      @include media-up($breakpoint-name) {
+        @each $suffix, $value in $values {
+          .#{$prefix}-#{$breakpoint-name}-#{$suffix} {
+            #{$property}: $value;
+          }
+        }
+      }
+    }
+  }
+}

@@ -15548,13 +15548,34 @@ body footer .nav-link {
 .carousel .carousel-inner {
   height: 450px;
 }
+@media (max-width: 1023.98px) {
+  .carousel .carousel-inner {
+    height: 70vh;
+  }
+}
+.carousel .carousel-inner:has(> .carousel-item:only-child) ~ .carousel-control-prev, .carousel .carousel-inner:has(> .carousel-item:only-child) ~ .carousel-control-next {
+  display: none;
+}
 .carousel .carousel-inner .carousel-item {
   height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
-
+.carousel .carousel-inner .carousel-item .banner-left,
+.carousel .carousel-inner .carousel-item .banner-right {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+@media (max-width: 1023.98px) {
+  .carousel .carousel-inner .carousel-item .banner-left {
+    order: 1;
+    flex-grow: 0;
+    height: unset !important;
+  }
+}
 .divider {
   position: relative;
   display: flex;
