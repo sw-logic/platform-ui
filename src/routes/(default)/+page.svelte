@@ -11,19 +11,25 @@
 	});
 </script>
 
-<div id="headerCarousel" class="carousel slide">
+<div id="headerCarousel" class="carousel slide bg-lighter">
 	<div class="carousel-inner">
 		<div class="carousel-item active">
-			<picture class="bg-image">
-				<img alt="Welcome banner" src="images/header/home-dark.webp">
-			</picture>
-			<div class="container text-light">
-				<div class="row">
-					<div class="col-12 col-sm-6">
-						<h1 class="display-1">Welcome!</h1>
-						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium exercitationem id quo autem aliquid eum
-							voluptas vero doloremque itaque magni blanditis, suscipit laborum assumenda nulla ea animi illo consectetur
-							ab!</p>
+			<div class="container expand">
+				<div class="row h-100">
+					<div class="col col-12 col-md-6 h-100 d-flex flex-column flex-grow-1">
+						<div class="wk-line-green my-4"></div>
+						<div class="flex-grow-1 d-flex flex-column py-4">
+							<h1 class="display-5 fw-bold">Vitajte v ASPI Akadémii</h1>
+							<p class="fs-1">Jedna platforma – stovky odborných titulov</p>
+						</div>
+						<div>
+							<img src="images/banner/aspi_logo.webp" height="auto" width="200" />
+						</div>
+					</div>
+					<div class="col col-12 col-md-6">
+						<picture class="position-relative">
+							<img class="fit-cover position-absolute" alt="Welcome banner" src="images/banner/main_banner_sk_2026_650x450.webp" />
+						</picture>
 					</div>
 				</div>
 			</div>
