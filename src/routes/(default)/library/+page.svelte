@@ -36,6 +36,7 @@
 							cover={book.cover}
 							author={book.author}
 							title={book.title}
+							excerpt=true
 							subtitle={book.subtitle}
 							categories={book.categories}
 							access={book.access}

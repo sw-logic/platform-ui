@@ -13149,6 +13149,7 @@ textarea.form-control-lg {
 .item-cover-picture {
   position: relative;
   display: block;
+  height: unset !important;
   border: 1px solid #979797;
 }
 .item-cover-picture img {
@@ -15440,6 +15441,8 @@ picture {
   display: block;
   width: 100%;
   height: 100%;
+  margin: 0;
+  padding: 0;
 }
 
 .bg-image {
@@ -16566,6 +16569,12 @@ mark, em {
 }
 .wk-line-blue {
   background-color: #007AC3;
+}
+.wk-line-purple {
+  background-color: #940C72;
+}
+.wk-line-orange {
+  background-color: #EA8F00;
 }
 
 /*# sourceMappingURL=app.css.map */

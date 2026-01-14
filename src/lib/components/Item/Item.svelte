@@ -15,7 +15,7 @@
 	export let access = true;
 	export let trial = false;
 	export let search = false;
-	export let excerpt = false;
+	export let excerpt = '';
 	export let link = 'book-details';
 	export let ai = false;
 

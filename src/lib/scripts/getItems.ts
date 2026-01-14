@@ -1,11 +1,5 @@
 const BOOK_POOL = {
-	covers: [
-		'book-1.webp',
-		'book-2.webp',
-		'book-3.webp',
-		'book-4.webp',
-		'book-5.webp'
-	],
+	covers: ['book-1.webp', 'book-2.webp', 'book-3.webp', 'book-4.webp', 'book-5.webp'],
 	authors: [
 		'John Smith & William Martinez',
 		'Jane Doe',
@@ -43,20 +37,8 @@ const BOOK_POOL = {
 		'A New Beginning'
 	],
 	types: ['book', 'series', 'collection', 'magazine', 'journal'],
-	tags: [
-		'New',
-		'',
-		'',
-		'Updated',
-		'',
-		'',
-		'Featured',
-		'',
-		''
-	],
-	categories: [
-		'Agriculture', 'Biology', 'Chemistry', 'Diplomacy', 'Energetics',
-	],
+	tags: ['New', '', '', 'Updated', '', '', 'Featured', '', ''],
+	categories: ['Agriculture', 'Biology', 'Chemistry', 'Diplomacy', 'Energetics'],
 	access: [true, false],
 	trial: [true, false]
 };
@@ -111,8 +93,6 @@ function getRandomItems<K extends keyof typeof BOOK_POOL>(
 
 	return result;
 }
-
-
 
 /**
  * Get a random item from an array, excluding a specific value

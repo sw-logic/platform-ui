@@ -30,6 +30,7 @@
 .item-cover-picture {
   position: relative;
   display: block;
+  height: unset !important;
 
   border: 1px solid $middle;
 

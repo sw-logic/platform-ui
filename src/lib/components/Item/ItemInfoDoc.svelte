@@ -15,7 +15,17 @@ let {author, title, subtitle, categories, excerpt, search, access, trial } = $pr
 		{#if excerpt}
 			<div class="item-excerpt mt-2">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad adipisci aspernatur
 				assumenda dignissimos, eligendi fugiat in modi molestias necessitatibus nemo neque non omnis perspiciatis
-				quaerat quos sed voluptate voluptatem. Eius.
+				quaerat quos sed voluptate voluptatem. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad adipisci aspernatur
+				assumenda dignissimos, eligendi fugiat in modi molestias necessitatibus nemo neque non omnis perspiciatis
+				quaerat quos sed voluptate voluptatem. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad adipisci aspernatur
+				assumenda dignissimos, eligendi fugiat in modi molestias necessitatibus nemo neque non omnis perspiciatis
+				quaerat quos sed voluptate voluptatem. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad adipisci aspernatur
+				assumenda dignissimos, eligendi fugiat in modi molestias necessitatibus nemo neque non omnis perspiciatis
+				quaerat quos sed voluptate voluptatem. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad adipisci aspernatur
+				assumenda dignissimos, eligendi fugiat in modi molestias necessitatibus nemo neque non omnis perspiciatis
+				quaerat quos sed voluptate voluptatem. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad adipisci aspernatur
+				assumenda dignissimos, eligendi fugiat in modi molestias necessitatibus nemo neque non omnis perspiciatis
+				quaerat quos sed voluptate voluptatem.
 			</div>
 		{/if}
 		{#if search}
