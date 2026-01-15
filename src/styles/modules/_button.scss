@@ -21,7 +21,8 @@ $icon-bookmark-hover: "\e3de";
 $icon-note: "\eb1f";
 $icon-note-hover: "\e34f";
 
-a.nav-link {
+a.nav-link,
+button.nav-link {
   display: flex !important;
   flex-flow: row nowrap !important;
   align-items: center !important;
