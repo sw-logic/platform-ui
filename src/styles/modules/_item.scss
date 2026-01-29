@@ -1,4 +1,5 @@
 @import "../variables";
+@import "mixins";
 
 .items {}
 
@@ -23,6 +24,12 @@
     .item-subtitle {
       color: $gray-600 !important;
     }
+  }
+
+  @include media-only(xs) {
+    max-width: 300px;
+    width: 100%;
+    margin: 0 auto;
   }
 }
 
