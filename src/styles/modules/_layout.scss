@@ -71,7 +71,7 @@ body {
     height: 450px;
 
     @include media-down(md) {
-      height: 70vh;
+      height: unset !important;
     }
 
     &:has(> .carousel-item:only-child) ~ .carousel-control-prev,
@@ -91,6 +91,12 @@ body {
         display: flex;
         flex-direction: column;
         flex-grow: 1;
+
+        @include media-down(md) {
+          picture {
+            padding-bottom: 70%;
+          }
+        }
       }
 
       .banner-left {
